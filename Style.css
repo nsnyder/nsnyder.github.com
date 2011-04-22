@@ -1,3 +1,8 @@
+  body {
+    
+    background-color: #000000;
+    
+}
   h1 .PageTitle {
       
     font-family: 'Orbitron', arial, serif;
@@ -68,15 +73,40 @@
       float:left;
 }
 
-  .content {
+  .ProfileImage {
+      
+      float: right;
+      
+}
+
+  .ContentPadding {
       
       position: relative;
       
-      color:#ffffff;
+      background-color: rgba(51, 00, 153, 0.4);
+      
+      width: 50%;
       
       float:left;
       
-      padding-left: 5%;
+      margin-left: 5%;
+      
+     -moz-border-radius: 10px;
+    
+     -webkit-border-radius: 10px;
+    
+     -khtml-border-radius: 10px;
+    
+
+}
+
+  .content {
+      
+      color:#ffffff;
+      
+      font-family: 'Ubuntu', arial, serif;
+      
+      padding:3%;
 }
 
   .padding {
