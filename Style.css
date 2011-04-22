@@ -93,6 +93,14 @@ border : 1px solid #0266C8;
 
 }
 
+  a.Blogger:hover {
+
+background-color: #FF6600;
+
+border : 1px solid #FF6600;
+
+}
+
 a.Twitter:hover {
 
 background-color: #33CCFF;
