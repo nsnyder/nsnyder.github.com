@@ -53,10 +53,13 @@
 }
 
   a.extLink:Hover {
--webkit-transition-property:background-color, border;  
- -webkit-transition-duration: .5s, .5s;  
- -webkit-transition-timing-function: ease-in, ease-in; 
-
+ 
+ -webkit-transition: all .5s ease-in-out;
+ -moz-transition: all .5s ease-in-out;
+ -o-transition: all .5s ease-in-out;
+ -ms-transition: all .5s ease-in-out;
+ transition: all .5s ease-in-out;
+ 
 
 }
 
@@ -78,7 +81,7 @@
 
   .padding {
 
-height:5px;
+height:10px;
 
 }
 
