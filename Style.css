@@ -2,7 +2,9 @@
       
     font-family: 'Orbitron', arial, serif;
     
-    font-size: 60px; color:#666666;
+    font-size: 60px;
+    
+    color:#666666;
     
     text-align:right;
     
@@ -20,11 +22,15 @@
 
   a.extLink {
 
-    display : block;
+    display : inline-block;
     
     text-decoration:none;
     
     width:200px;
+    
+    line-height:30px;
+    
+    vertical-align: middle;
     
     text-align:center;
     
@@ -46,8 +52,28 @@
 
 }
 
+  a.extLink:Hover {
+-webkit-transition-property:background-color, border;  
+ -webkit-transition-duration: .5s, .5s;  
+ -webkit-transition-timing-function: ease-in, ease-in; 
+
+
+}
+
   .sidebar {
+      width:200px;
+      float:left;
+}
+
+  .content {
       
+      position: relative;
+      
+      color:#ffffff;
+      
+      float:left;
+      
+      padding-left: 5%;
 }
 
   .padding {
