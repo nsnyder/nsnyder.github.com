@@ -29,6 +29,8 @@
 
     display : inline-block;
     
+    font-size: 22px;
+    
     text-decoration:none;
     
     width:200px;
@@ -55,17 +57,12 @@
     
     /* font-weight: bold; */
 
-}
 
-  a.extLink:Hover {
- 
- -webkit-transition: all .5s ease-in-out;
- -moz-transition: all .5s ease-in-out;
- -o-transition: all .5s ease-in-out;
- -ms-transition: all .5s ease-in-out;
- transition: all .5s ease-in-out;
- 
-
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
   .sidebar {
