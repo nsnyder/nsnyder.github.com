@@ -1,0 +1,89 @@
+  h1 .PageTitle {
+      
+    font-family: 'Orbitron', arial, serif;
+    
+    font-size: 60px; color:#666666;
+    
+    text-align:right;
+    
+    padding-right:40px;
+    
+    display:block
+        
+}
+
+  a.PageTitle {
+      
+      text-decoration:  none;
+      
+}
+
+  a.extLink {
+
+    display : block;
+    
+    text-decoration:none;
+    
+    width:200px;
+    
+    text-align:center;
+    
+    border : 1px solid #333333;
+    
+    background-color : #333333;
+    
+    color:#eeeeee;
+    
+     -moz-border-radius: 10px;
+    
+     -webkit-border-radius: 10px;
+    
+     -khtml-border-radius: 10px;
+    
+    font-family: 'Ubuntu', arial, serif;
+    
+    /* font-weight: bold; */
+
+}
+
+  .sidebar {
+      
+}
+
+  .padding {
+
+height:5px;
+
+}
+
+  a.Google:hover {
+
+background-color: #0266C8;
+
+border : 1px solid #0266C8;
+
+}
+
+a.Twitter:hover {
+
+background-color: #33CCFF;
+
+border : 1px solid #33CCFF;
+
+}
+
+  a.Facebook:hover {
+
+background-color: #3B5998;
+
+border : 1px solid #3B5998;
+
+}
+
+  a.Gmail:hover {
+
+background-color: #F60000;
+
+border : 1px solid #F60000;
+
+}
