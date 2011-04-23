@@ -41,7 +41,7 @@
 
 <a class="Gmail extLink" href="mailto:snyderxc@gmail.com">Email</a><div class="padding" /></div>
 
-<img src="http://www.clker.com/cliparts/6/a/b/9/11949848321894304005simple_cross_01_01.svg" width="100%">
+<img src="http://dl.dropbox.com/u/2672524/Website/cross.svg" width="100%">
 
 <SCRIPT LANGUAGE="JavaScript">
 //store the quotations in arrays
@@ -77,4 +77,37 @@ document.write("<div class=\"source\">" + "&mdash;" + authors[index] + "</div></
 <div class="ContentPadding"><div class="content">
 Content here<img class="ProfileImage" src="https://lh5.googleusercontent.com/--mJBNr-7Uos/AAAAAAAAAAI/AAAAAAAAdyI/roDtzSoIM04/photo.jpg?sz=200">
 </div></div>
+<div class="RightBar">
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 4,
+  interval: 6000,
+  width: 250,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#333333',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#000000',
+      color: '#ffffff',
+      links: '#FF5522'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    hashtags: true,
+    timestamp: true,
+    avatars: false,
+    behavior: 'all'
+  }
+}).render().setUser('snyderxc').start();
+</script>
+</div>
 </body>
