@@ -19,6 +19,12 @@
         
 }
 
+  h2 {
+      
+    font-family: 'Orbitron', arial, serif;
+    margin: 0px;
+}
+
   a.PageTitle {
       
       text-decoration:  none;
@@ -229,6 +235,6 @@ border : 1px solid #F60000;
     clear: both;
     font-family: 'Ubuntu', arial, serif;
     text-align: center;
-    color: #222222;
+    color: #333333;
     padding: 10px;
 }
