@@ -29,6 +29,8 @@
 
     display : block;
     
+    margin-bottom: 10px;
+    
     font-size: 22px;
     
     text-decoration:none;
@@ -84,7 +86,7 @@
       
       width: 40%;
       
-      float:left;
+      float: left;
       
       margin-left: 5%;
       
@@ -99,17 +101,12 @@
 
   .content {
       
+      
       color:#ffffff;
       
       font-family: 'Ubuntu', arial, serif;
       
       margin:15px;
-}
-
-  .padding {
-
-height:10px;
-
 }
 
   a.Google:hover {
@@ -184,11 +181,11 @@ border : 1px solid #F60000;
 
   .QuoteBlock {
       
-      font-family: 'Ubuntu', arial, serif;
+    font-family: 'Ubuntu', arial, serif;
       
     display : block;
     
-    width:100%;
+    width:auto;
     
     padding: 5px;
     
@@ -217,16 +214,21 @@ border : 1px solid #F60000;
       margin-bottom: 10px;
 }
 
+
   .RightBar {
     
       position: relative;
       
-      //background-color: rgba(255, 85, 34, 0.4);
-      
       width: auto;
-      
-      float:left;
-      
+      float: left;
       margin-left: 5%;
     
+}
+
+  #footer {
+    clear: both;
+    font-family: 'Ubuntu', arial, serif;
+    text-align: center;
+    color: #222222;
+    padding: 10px;
 }
