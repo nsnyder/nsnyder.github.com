@@ -18,10 +18,25 @@
     display:block
         
 }
+  #employer {
+      
+}
 
-  h2 {
+  #position {
+      font-size:80%;
+      font-style: italic;
+}
+
+
+h3 {
+    margin-bottom: 3px;
+    font-weight:bold;
+}
+
+h2 {
       
     font-family: 'Orbitron', arial, serif;
+    font-size: 18px;
     margin: 0px;
 }
 
