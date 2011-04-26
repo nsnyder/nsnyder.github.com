@@ -92,22 +92,26 @@ h2 {
       width:17%;
       float:left;
 }
-
+  .twtr-widget .twtr-widget-profile .twtr-doc .twtr-hd {
+      z-index:-1;
+}
   .ProfileImage {
       margin: 3px;
+      width: 200px;
       float: right;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    -ms-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    z-index:1;
 }
 
-  .ProfileImage:hover {
+  .ProfileImage:active {
       -webkit-transform-style: preserve3d;
       -webkit-transform-perspective;
-      -webkit-transform: rotateY(180deg);
-      
+      -webkit-transform: rotateY(180deg) translate(-200px,0);
+      z-index:1;
 }
 
   .ContentPadding {
