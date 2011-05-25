@@ -1,5 +1,5 @@
   body {
-    min-width: 751px;
+    min-width: 990px;
     background-color: #000000;
     
 }
@@ -122,6 +122,7 @@ h2 {
       
       width: 40%;
       
+      
       float: left;
       
       margin-left: 5%;
@@ -182,6 +183,14 @@ border : 1px solid #3B5998;
 background-color: #F60000;
 
 border : 1px solid #F60000;
+
+}
+
+  a.Memolane:hover {
+
+background-color: #CCCCCC;
+
+border : 1px solid #CCCCCC;
 
 }
 
