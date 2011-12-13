@@ -327,10 +327,28 @@ border : 1px solid #CCCCCC;
     
 }
 
+  .social {
+      text-align: center;
+      
+
+}
+
   #footer {
     clear: both;
     font-family: 'Ubuntu', arial, serif;
     text-align: center;
     color: #333333;
     padding: 10px;
+}
+  a.credits:link {
+      color: #333333; text-decoration: none;
+}
+  a.credits:active {
+      color: #333333; text-decoration: none; 
+}
+  a.credits:visited {
+      color: #333333; text-decoration: none;
+}
+  a.credits:hover {
+      color: #333333; text-decoration: underline;
 }
