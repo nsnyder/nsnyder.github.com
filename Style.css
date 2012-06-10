@@ -32,6 +32,7 @@ body {
 }
 
 .expand {
+    font-family: 'Ubuntu', arial, serif;
 	bottom: 5px;
 	height: 40px;
 	padding-top: 13px;
