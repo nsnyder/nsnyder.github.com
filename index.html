@@ -2,6 +2,11 @@
 "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; utf-8">
 
 <title>Nathan Snyder</title>
+
+
+<!-- <script type="text/javascript" src="https://getfirebug.com/firebug-lite-debug.js"></script> -->
+
+
 <link rel="shortcut icon" href="http://faviconist.com/icons/f383c5a9abaeb9de7ce6032f04bcb2e8/favicon.ico" />
 <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css' />
 <link href='http://fonts.googleapis.com/css?family=Raleway:100&v2' rel='stylesheet' type='text/css'>
@@ -18,7 +23,7 @@
 
 
  </style>
- 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -36,64 +41,55 @@
 </head>
 
 <body>
-
-<div class="headdiv"><a href="a-beautiful-story.html" class="storylink"><div class="story"><div class="storytxt">A Beautiful<br>Story</div></div><h1></a><a href="http://www.snydern.com/" class="PageTitle">Nathan Snyder</a></h1></div>
-
-<hr color=#333333>
-<div class="wrap">
-    <div class="sidebar">
-    
-    <a class="Google extLink" href="https://profiles.google.com/snyderxc">Google</a>
-    
+<div class="sidebar">
+<a class="PageTitle" href="http://snydern.com/">
+<h1 class="first">Nathan</h1><h1 class="last">Snyder</h1>
+</a>
+<div class="column">
+    <a class="Google extLink" href="https://plus.google.com/111709870730171883810/posts">Google</a>
     <a class="Facebook extLink" href="https://www.facebook.com/snyderxc">Facebook</a>
-    
     <a class="Twitter extLink" href="https://www.twitter.com/snyderxc">Twitter</a>
-    
     <a class="Blogger extLink" href="http://blog.snydern.com">Blog</a>
-    
     <a class="Memolane extLink" href="http://memolane.com/nathansnyder">Memolane</a>
-    
     <a class="Gmail extLink" href="mailto:nathan@snydern.com">Email</a>
-    
-    <img preserveAspectRation="none meet" src="cross.svg" width="100%" />
-    
-    <SCRIPT LANGUAGE="JavaScript">
-    //store the quotations in arrays
-    quotes = new Array(6);
-    authors = new Array(6);
-    quotes[0] = "And if our God is for us, then who can ever stop us?";
-    authors[0] = "Romans 8:31";
-    quotes[1] = "Your attitude should be the same as that of Christ Jesus ... taking the very nature of a servant.";
-    authors[1] = "Philippians 2:5-7";
-    quotes[2] = "I&#39;ll stand ... In awe of the One who gave it all";
-    authors[2] = "Hillsong";
-    quotes[3] = "To give anything less than your best is to sacrifice the gift.";
-    authors[3] = "Steve Prefontaine";
-    quotes[4] = "Greater things have yet to come, and greater things are still to be done in this city.";
-    authors[4] = "Chris Tomlin";
-    quotes[5] = "So then faith comes by hearing, and hearing by the word of God.";
-    authors[5] = "Romans 10:17";
-    quotes[6] = "Oh praise the one who paid my debt and raised this life up from the dead.";
-    authors[6] = "Hillsong";
-    
-    //calculate a random index
-    index = Math.floor(Math.random() * quotes.length);
-    
-    //display the quotation
-    
-    document.write("<div class=\"QuoteBlock\"><div class=\"quote\">" + "\"" + quotes[index] + "\"</div>" + "\n");
-    document.write("<div class=\"source\">" + "&mdash;" + authors[index] + "</div></div>" + "\n");
-    
-    
-    //done
-    </SCRIPT>
-    
-    
-    </div>
+</div>
+<div class="column">
+	<a class="LastFM extLink" href="http://www.last.fm/user/snyderxc">Last.fm</a>
+    <a class="Digg extLink" href="http://digg.com/snyderxc">Digg</a>
+    <a class="Fiverr extLink" href="http://fiverr.com/snyderxc">Fiverr</a>
+	<a class="YouTube extLink" href="http://www.youtube.com/nathanasnyder">YouTube</a>
+    <a class="FriendFeed extLink" href="http://friendfeed.com/snyderxc">FriendFeed</a>
+    <a class="Quora extLink" href="http://www.quora.com/Nathan-Snyder">Quora</a>
+</div>
+<div class="column">
+	<a class="Pandora extLink" href="http://www.pandora.com/profile/snyderxc">Pandora</a>
+    <a class="Flickr extLink" href="http://www.flickr.com/photos/nathansnyder">Flickr</a>
+    <a class="Yelp extLink" href="http://www.yelp.com/user_details?userid=zGK5p4GtcqTExVsaQQi9yQ">Yelp</a>
+	<a class="StumbleUpon extLink" href="http://www.stumbleupon.com/stumbler/snyderxc">StumbleUpon</a>
+</div>
+<a href="#"><div class="expand">MORE</div></a>
+<script>
+	$(".expand").toggle(function (){
+		$(this).text("Less")
+		.stop();
+	}, function(){
+		$(this).text("More")
+		.stop();
+	});
+    $(".expand").click(function () {
+       $('.content').toggleClass('open closed');
+       //$('.sidebar').toggleClass('open closed');
+       //$('.column').toggleClass('hidden shown');
+	   
+    });
+</script>
+</div>
 
+<div class="content closed">
 
-<div class="ContentPadding"><div class="content">
+<div class="InnerContent">
 <img class="ProfileImage" src="https://lh5.googleusercontent.com/--mJBNr-7Uos/AAAAAAAAAAI/AAAAAAAAdyI/roDtzSoIM04/photo.jpg?sz=200" />
+
 
 <h2>Bio:</h2>
 <p>From a young age, Nathan Abel Snyder has been both academically and
@@ -112,9 +108,9 @@ attending Grove City College and studying computer science. He will graduate in
     <ul>C++</ul>
     <ul>HTML</ul>
     <ul>CSS</ul>
-    <ul>Javascript</ul>
 </ul>
 <ul><h3>Employment:</h3>
+	<ul><span id="employer"><a href="http://sololabs.com/">SOLO Labs</a></span> <span id="position">Internship</span></ul>
     <ul><span id="employer">Computer Repair Business</span> <span id="position">Self Run</span></ul>
 </ul>
 <ul><h3>Community:</h3>
@@ -133,50 +129,8 @@ attending Grove City College and studying computer science. He will graduate in
     <ul>Best of Berks Reading Eagle Nominee in Computer Science</ul>
 </ul>
 <ul><h3>Activities (College):</h3>
-    <ul>Cross Country<span id="position">1 year</span></ul>
+    <ul>Cross Country <span id="position">1 year</span></ul>
 </ul>
-
-</div></div>
-
-<div class="RightBar">
-<div class="social">
-<g:plusone count="false"></g:plusone> &nbsp;<a href="http://twitter.com/snyderxc" class="twitter-follow-button" data-button="grey" data-text-color="#FFFFFF" data-link-color="#00AEFF" data-show-count="false" data-width="140px">Follow @snyderxc</a>
-<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsnydern.com&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=dark&amp;font=verdana&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
-</div><br>
-<script src="http://widgets.twimg.com/j/2/widget.js"></script>
-<script>
-new TWTR.Widget({
-  version: 2,
-  type: 'profile',
-  rpp: 4,
-  interval: 6000,
-  width: 250,
-  height: 300,
-  theme: {
-    shell: {
-      background: '#333333',
-      color: '#ffffff'
-    },
-    tweets: {
-      background: '#000000',
-      color: '#ffffff',
-      links: '#FF5522'
-    }
-  },
-  features: {
-    scrollbar: false,
-    loop: false,
-    live: false,
-    hashtags: true,
-    timestamp: true,
-    avatars: false,
-    behavior: 'all'
-  }
-}).render().setUser('snyderxc').start();
-</script>
-
-
-</div></div>
-<div id="footer">Designed by Nathan Snyder &copy;2012<br>Bio written with help
-from <a class="credits" href="http://coherentfaithapologetics.weebly.com/scott-m-alford.html">Scott Alford</a></div>
+</div>
+</div>
 </body></html>
