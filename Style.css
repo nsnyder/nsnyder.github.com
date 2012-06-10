@@ -60,7 +60,20 @@ body {
 }
 
 .expand:active {
-	bottom: 4px;
+	bottom: 3px;
+}
+
+#footer {
+    margin-left: 25px;
+    background-color: #3F3F3F;
+    width: 70%;
+    height: auto;
+    padding: 15px;
+	margin-top: 25px;
+    margin-bottom: 25px;
+    clear: right;
+	color: #fff;
+	font-family: 'Ubuntu', arial, serif;
 }
 
 .InnerContent {
