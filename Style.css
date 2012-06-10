@@ -84,7 +84,8 @@ body {
     transition: all .5s ease-in-out;
 	margin-top: -8px;
 	padding-right: 8px;
-	position: relative;
+	position: absolute;
+	top:0;
 	height: 100%;
 	width: 80.5%;
 	margin-left: 19.5%;
