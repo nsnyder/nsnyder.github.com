@@ -16,10 +16,6 @@
 
 <style type="text/css" media="all">
 
-<!--[if IE]>
-<style type="text/css" media="all">@import url( /IEOnly.css );</style>
-<script type="text/javascript" language="JavaScript" src="/IEOnly.js"></SCRIPT>
-<![endif]-->
 
 
  </style>
@@ -70,19 +66,23 @@
 <a href="#"><div class="expand">More</div></a>
 <script>
 	$(".expand").toggle(function (){
-		$(this).text("Less")
+        $(this).text("Less")
 		.stop();
 	}, function(){
 		$(this).text("More")
 		.stop();
 	});
     $(".expand").click(function () {
+        
        $('.content').toggleClass('open closed');
        //$('.sidebar').toggleClass('open closed');
        //$('.column').toggleClass('hidden shown');
 	   
     });
 </script>
+<!--[if IE]>
+<script src="IEOnly.js"></SCRIPT>
+<![endif]-->
 </div>
 
 <div class="content closed">
