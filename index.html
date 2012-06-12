@@ -13,13 +13,12 @@
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css' />
 
 <link href='Style.css' rel='stylesheet' type='text/css' />
+<!--[if lte IE 7]>
 
-<style type="text/css" media="all">
-
-
-
- </style>
+<link href='IE7.css' rel='stylesheet' type='text/css' />
+<![endif]-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -50,7 +49,7 @@
     <a class="Gmail extLink" href="mailto:nathan@snydern.com">Email</a>
 </div>
 <div class="column">
-	<a class="LastFM extLink" href="http://www.last.fm/user/snyderxc">Last.fm</a>
+    <a class="LastFM extLink" href="http://www.last.fm/user/snyderxc">Last.fm</a>
     <a class="Digg extLink" href="http://digg.com/snyderxc">Digg</a>
     <a class="Fiverr extLink" href="http://fiverr.com/snyderxc">Fiverr</a>
 	<a class="YouTube extLink" href="http://www.youtube.com/nathanasnyder">YouTube</a>
@@ -64,9 +63,12 @@
 	<a class="StumbleUpon extLink" href="http://www.stumbleupon.com/stumbler/snyderxc">StumbleUpon</a>
 </div>
 <a href="#"><div class="expand">More</div></a>
-
-<!--[if IE]>
+<!--[if gte IE 8]>
 <script src="IEOnly.js"></SCRIPT>
+<![endif]-->
+<!--[if lte IE 7]>
+<script src="IE7.js"></SCRIPT>
+<script src="IE7.css"></SCRIPT>
 <![endif]-->
 <script>
 	$(".expand").toggle(function (){
