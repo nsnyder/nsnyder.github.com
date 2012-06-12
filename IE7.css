@@ -1,6 +1,6 @@
-.open.content {
+.content .open {
     margin-left: 0% !IMPORTANT;
 }
-.closed.content {
+.content .closed {
 	margin-left: -40% !IMPORTANT;
 }
