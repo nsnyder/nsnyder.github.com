@@ -39,7 +39,7 @@
 <a class="PageTitle" href="http://snydern.com/">
 <h1 class="first">Nathan</h1><h1 class="last">Snyder</h1>
 </a>
-<div class="column">
+<div class="links"><div class="column">
     <a class="Google extLink" href="https://plus.google.com/111709870730171883810/posts">Google</a>
     <a class="Facebook extLink" href="https://www.facebook.com/snyderxc">Facebook</a>
     <a class="Twitter extLink" href="https://www.twitter.com/snyderxc">Twitter</a>
@@ -60,7 +60,40 @@
     <a class="Flickr extLink" href="http://www.flickr.com/photos/nathansnyder">Flickr</a>
     <a class="Yelp extLink" href="http://www.yelp.com/user_details?userid=zGK5p4GtcqTExVsaQQi9yQ">Yelp</a>
 	<a class="StumbleUpon extLink" href="http://www.stumbleupon.com/stumbler/snyderxc">StumbleUpon</a>
-</div>
+</div></div>
+<div class="contentWrapper">
+<div class="sideContent"><div class="crossContainer">
+<center><img class="cross" src="http://dl.dropbox.com/u/2672524/Website/cross.svg" /></center></div>
+</div><SCRIPT LANGUAGE="JavaScript">
+    //store the quotations in arrays
+    quotes = new Array(6);
+    authors = new Array(6);
+    quotes[0] = "And if our God is for us, then who can ever stop us?";
+    authors[0] = "Romans 8:31";
+    quotes[1] = "Your attitude should be the same as that of Christ Jesus ... taking the very nature of a servant.";
+    authors[1] = "Philippians 2:5-7";
+    quotes[2] = "I&#39;ll stand ... In awe of the One who gave it all";
+    authors[2] = "Hillsong";
+    quotes[3] = "To give anything less than your best is to sacrifice the gift.";
+    authors[3] = "Steve Prefontaine";
+    quotes[4] = "Greater things have yet to come, and greater things are still to be done in this city.";
+    authors[4] = "Chris Tomlin";
+    quotes[5] = "So then faith comes by hearing, and hearing by the word of God.";
+    authors[5] = "Romans 10:17";
+    quotes[6] = "Oh praise the one who paid my debt and raised this life up from the dead.";
+    authors[6] = "Hillsong";
+    
+    //calculate a random index
+    index = Math.floor(Math.random() * quotes.length);
+    
+    //display the quotation
+    
+    document.write("<div class=\"quoteBlock\"><div class=\"quote\">" + "\"" + quotes[index] + "\"</div>" + "\n");
+    document.write("<div class=\"source\">" + "&mdash;" + authors[index] + "</div></div>" + "\n");
+    
+    
+    //done
+    </SCRIPT></div>
 <a href="#"><div class="expand">More</div></a>
 <!--[if gte IE 8]>
 <script src="IEOnly.js"></SCRIPT>

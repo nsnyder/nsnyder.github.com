@@ -49,6 +49,8 @@ body {
 	-webkit-border-radius: 5px;
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
 	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
 	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 	font-size: 25px;
@@ -347,8 +349,44 @@ background-color: #FF4400;
 border : 1px solid #FF4400;
 
 }
+.crossContainer {
+    width: 30%;
+    padding: 1.5%;
+    }
+.cross {
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+    width: 100%;
+    height: 40%;
+    }
+    
+.quoteBlock {
+    width: 60%;
+    float: left;
+    padding: 1.5%;
+    }
+
 .column {
 	float: left;
 	padding: 1.5%;
 	width: 30%;
+}
+.links {
+    overflow: hidden;
+}
+
+.quote {
+   text-align: left;
+   color: #eee;
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 100;
+   font-size: 40px;
+}
+.source {
+     text-align: right;
+    color: #eee;
+     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+     font-weight: 100;
+     font-size: 25px;
 }
