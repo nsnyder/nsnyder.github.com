@@ -2,7 +2,6 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <title>Nathan Snyder</title>
 
@@ -37,10 +36,18 @@
 </head>
 
 <body>
-<div id="header">
-    <h1 id="name">
-        <a class="PageTitle" href="http://snydern.com/">Nathan Snyder</a>
-    </h1>
+<div class="sidebar">
+<a class="PageTitle" href="http://snydern.com/">
+<h1 class="first">Nathan</h1><h1 class="last">Snyder</h1>
+
+</a>
+<div class="links"><div class="column">
+    <a class="Google extLink" href="https://plus.google.com/107534435464915234780/posts">Google</a>
+    <a class="Facebook extLink" href="https://www.facebook.com/snyderxc">Facebook</a>
+    <a class="Twitter extLink" href="https://www.twitter.com/snyderxc">Twitter</a>
+    <a class="Blogger extLink" href="http://blog.snydern.com">Blog</a>
+    <a class="Memolane extLink" href="http://memolane.com/nathansnyder">Memolane</a>
+    <a class="Gmail extLink" href="mailto:nathan@snydern.com">Email</a>
 </div>
 <div id="MainContent">
 
@@ -143,19 +150,64 @@
         quotes[7] = "God's love always seeks to save the lost.";
         authors[7] = "Unknown";
         
-        //calculate a random index
-        index = Math.floor(Math.random() * quotes.length);
-        
-        //display the quotation
-        
-        document.write("<div class=\"quoteBlock\"><div class=\"quote\">" + "\"" + quotes[index] + "\"</div>" + "\n");
-        document.write("<div class=\"source\">" + "&mdash;" + authors[index] + "</div></div>" + "\n");
-        
-        
-        //done
-        </script>
-	</div>
-    <div id="footer" class="CenteringContainer"><img class="ProfileImage" src="https://lh5.googleusercontent.com/--mJBNr-7Uos/AAAAAAAAAAI/AAAAAAAAdyI/roDtzSoIM04/photo.jpg?sz=200" />
-    <div class="CenteredElement">Designed by Nathan Snyder &copy;2013<br>Bio written with help
-    from <a class="credits" href="http://coherentfaithapologetics.weebly.com/scott-m-alford.html">Scott Alford</a></div></div>
+       $('.content').toggleClass('open closed');
+       //$('.sidebar').toggleClass('open closed');
+       //$('.column').toggleClass('hidden shown');
+	   
+    });
+</script>
+
+</div>
+
+<div class="content closed">
+
+<div class="InnerContent">
+<img class="ProfileImage" src="https://lh5.googleusercontent.com/--mJBNr-7Uos/AAAAAAAAAAI/AAAAAAAAdyI/roDtzSoIM04/photo.jpg?sz=200" />
+
+
+<h2>Bio:</h2>
+<p>From a young age, Nathan Abel Snyder has been both academically and
+athletically inclined. He has alway enjoy devolping and tinkering with
+techonolgies of various kinds and complexities. Nathan has memorized his
+own version of <u>Technology for Dummies</u> imprinted on his brain. Throughout
+highschool and continuing into college, Nathan has pursued his passion for
+running both in cross country and track and field. He enjoys the challenge and
+adventure of living life off the beaten path.<br><br>Nathan is currently 
+attending Grove City College and studying computer science. He will graduate in
+2015.</p>
+
+<h2>R&#233;sum&#233;:</h2>
+<ul><h3>Programming Languages:</h3>
+    <ul>Visual Basic</ul>
+    <ul>C++</ul>
+    <ul>HTML</ul>
+    <ul>CSS</ul>
+</ul>
+<ul><h3>Employment:</h3>
+    <ul><span id="employer"><a href="http://newspaceglobal.com/">NewSpace Global</a></span> <span id="position">Web Design Intern</span></ul>
+	<ul><span id="employer"><a href="http://sololabs.com/">SOLO Labs</a></span> <span id="position">Intern</span></ul>
+    <ul><span id="employer">Computer Repair Business</span> <span id="position">Self Run</span></ul>
+</ul>
+<ul><h3>Community:</h3>
+    <ul>NYC Missions Trip <span id="position" style="color: rgb(255,255,255)"><a href="http://gospel.spreadtruth.com/">Spreadtruth Missions</a></span></ul>
+    <ul>New Life Youth Group Student Leadership</ul>
+    <ul>Victory Valley Camp Volunteer</ul>
+    <ul>Missions Trip to Minnesota Indian Reservation</ul>
+    <ul>Vacation Bible School Volunteer</ul>
+    <ul>Church Video System Operator</ul>
+    <ul>Relay for Life Participant</ul>
+</ul>
+<ul><h3>Activities (High School):</h3>
+    <ul>Cross Country - Captain (Senior Year) <span id="position">4 years</span></ul>
+    <ul>Track - Captain (Senior Year) <span id="position">4 years</span></ul>
+    <ul>National Honor Society <span id="position">1 year</span></ul>
+    <ul>Best of Berks Reading Eagle Nominee in Computer Science</ul>
+</ul>
+<ul><h3>Activities (College):</h3>
+    <ul>Cross Country <span id="position">2 years</span></ul>
+</ul>
+</div>
+<div id="footer">Designed by Nathan Snyder &copy;2013<br>Bio written with help
+from <a class="credits" href="http://coherentfaithapologetics.weebly.com/scott-m-alford.html">Scott Alford</a></div>
+</div>
 </body></html>
