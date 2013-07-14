@@ -86,8 +86,7 @@ ul {
     vertical-align: top;
 }
 .quoteBlock {
-    color: #aaa;
-    font-weight: bold;
+    font-style: italic;
 }
 .quoteBlock .quote {
     font-size: 2em;
