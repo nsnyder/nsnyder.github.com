@@ -42,13 +42,13 @@ h1 a {
     float: right;
     font-size: 1em;
     margin-left: .1em;
-    max-width: 35%;
+    max-width: 50%;
     text-align: right;
 }
 .description, .employer {
     float: left;
     margin-right: .1em;
-    max-width: 65%;
+    max-width: 70%;
 }
 #SecondaryContent {
     display: none;
