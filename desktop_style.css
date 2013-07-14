@@ -1,5 +1,6 @@
 body {
-    background-color: #ddd;
+    background-color: #ccc;
+    color: #333;
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     font-weight: 300;
     margin: 0;
@@ -25,24 +26,25 @@ a {
     text-decoration: none;
 }
 h1 a {
-    color: #777;
     display: inline-block;
     padding: 0.25em 0.75em;
     text-decoration: none;
 }
 
-#MainContent .InnerContainer {
+.InnerContainer {
     padding: 1em 2em;
+    overflow: auto;
 }
 .cropped {
     max-width: 800px;
+    display: inline-block;
 }
 
 .position {
     float: right;
     font-size: 1em;
     margin-left: .1em;
-    max-width: 50%;
+    max-width: 45%;
     text-align: right;
 }
 .description, .employer {
@@ -50,10 +52,12 @@ h1 a {
     margin-right: .1em;
     max-width: 70%;
 }
-#SecondaryContent {
-    display: none;
+.ContactLink {
+    float: right;
 }
-
+.ContactMethod {
+    float: left;
+}
 ul {
     margin: .5em 0;
     overflow: auto;
@@ -63,7 +67,6 @@ ul {
     clear: both;
     max-width: 100%;
     overflow: hidden;
-    padding: 1em;
 }
 .ProfileImage {
     float: left;
@@ -77,81 +80,78 @@ ul {
     display: table-cell;
     vertical-align: middle;
 }
-.ListContainer {
+.Card {
     background-color: #fff;
     box-shadow: 0 .5em 1em #888;
-    float: left;
+    vertical-align: top;
+}
+.quoteBlock {
+    color: #aaa;
+    font-weight: bold;
+}
+.quoteBlock .quote {
+    font-size: 2em;
+    padding-left: .75em;
+}
+.quoteBlock .source {
+    font-size: 1.25em;
+    margin-top: .5em;
+    text-align: right;
+}
+.ListContainer {
+    display: inline-block;
     margin: 1em;
     max-width: 325px;
     min-width: 250px;
     padding: 0 1em 1em 1em;
     width: 30%;
 }
+.extLink .LeadLetter {
+    background: #333;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    display: table-cell;
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+.extLink .InnerText {
+    display: table-cell;
+    font-size: 1.5em;
+    padding: .25em 1em;
+    text-align: center;
+    vertical-align: middle;
+}
 .extLink {
-    background-color: #eee;
-    color: #333333;
+    background: #fff;
     display: block;
     float: left;
-    font-family: 'Roboto', Helvetica, Arial, sans-serif;
-    font-size: 22px;
-    line-height: 30px;
-    margin-bottom: 10px;
-    max-width: 15em;
-    text-align: center;
-    text-decoration: none;
-    transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    -ms-transition: all .5s ease-in-out;
-    width: 100%;
+    margin: 0.5em 1em;
+    min-height: 1em;
+    min-width: 250px;
+    max-width: 300px;
 }
-
-.Google:hover {
-    background-color: #F2B50F;
+.Google .LeadLetter {
+    background-image: url('noindex/pace-icons/google+.png');
 }
-.Blogger:hover { 
-    background-color: #FF6600;
+.Blogger .LeadLetter { 
+    background-image: url('noindex/pace-icons/rss.png');
 }
-.Twitter:hover {
-    background-color: #33CCFF;
+.Twitter .LeadLetter {
+    background-image: url('noindex/pace-icons/twitter.png');
 }
-.Facebook:hover {
-    background-color: #3B5998;
+.Facebook .LeadLetter {
+    background-image: url('noindex/pace-icons/facebook.png');
 }
-.Gmail:hover {
-    background-color: #F60000;
+.Gmail .LeadLetter {
+    
 }
-.Memolane:hover {
-    background-color: #CCCCCC;
+.LastFM .LeadLetter {
+    background-image: url('noindex/pace-icons/last-fm.png');
 }
-.LastFM:hover {
-    background-color: #F60000;
-}
-.Digg:hover {
-    background-color: #14589E;
-}
-.Fiverr:hover {
-    background-color: #CCCCCC;
-}
-.YouTube:hover {
-    background-color: #CC0000;
-}
-.FriendFeed:hover {
-    background-color: #0077FF;
-}
-.Quora:hover {
-    background-color: #990011;
-}
-.Pandora:hover {
-    background-color: #333366;
-}
-.Flickr:hover {
-    background-color: #FF0077;
-}
-.Yelp:hover {
-    background-color: #FF0022;
-}
-.StumbleUpon:hover {
-    background-color: #FF4400;
+.YouTube .LeadLetter {
+    background-image: url('noindex/pace-icons/youtube.png');
 }

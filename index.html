@@ -17,8 +17,8 @@
 <!--[if lte IE 7]>
 <link href='IE7.css' rel='stylesheet' type='text/css' />
 <![endif]-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="javascript.js"></script>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -44,9 +44,9 @@
 </div>
 <div id="MainContent">
 
-    <div class="InnerContainer cropped">        
-        <h2>Bio:</h2>
-        <p>
+    <div class="InnerContainer">        
+        <h2>Bio</h2>
+        <p class="cropped">
         From a young age, Nathan Abel Snyder has been both academically and
         athletically inclined. He has alway enjoy devolping and tinkering with
         techonolgies of various kinds and complexities. Nathan has memorized his
@@ -56,71 +56,12 @@
         adventure of living life off the beaten path.<br><br>Nathan is currently 
         attending Grove City College and studying computer science. He will graduate in
         2015.</p>
-    </div>
-    <div class="InnerContainer">
-        <h2>R&#233;sum&#233;:</h2>
-        <div class="js-masonry">
-            <div class="ListContainer">
-                <ul><h3>Programming Languages:</h3>
-                    <ul>Visual Basic</ul>
-                    <ul>C++</ul>
-                    <ul>HTML</ul>
-                    <ul>CSS</ul>
-                </ul>
-            </div>
-            <div class="ListContainer">
-                <ul><h3>Employment:</h3>
-                    <ul><span id="employer"><a href="http://newspaceglobal.com/">NewSpace Global</a></span> <span class="position">Web Design Intern</span></ul>
-                    <ul><span id="employer"><a href="http://sololabs.com/">SOLO Labs</a></span> <span class="position">Intern</span></ul>
-                    <ul><span id="employer">Computer Repair Business</span> <span class="position">Self Run</span></ul>
-                </ul>
-            </div>
-            <div class="ListContainer">
-                <ul><h3>Community:</h3>
-                    <ul><span class="description">NYC Missions Trip</span><span class="position" style="color: rgb(255,255,255)"><a href="http://gospel.spreadtruth.com/">Spreadtruth Missions</a></span></ul>
-                    <ul><span class="description">New Life Youth Group Student Leadership</span></ul>
-                    <ul><span class="description">Victory Valley Camp Volunteer</span></ul>
-                    <ul><span class="description">Missions Trip to Minnesota Indian Reservation</span></ul>
-                    <ul><span class="description">Vacation Bible School Volunteer</span></ul>
-                    <ul><span class="description">Church Video System Operator</span></ul>
-                    <ul><span class="description">Relay for Life Participant</span></ul>
-                </ul>
-            </div>
-            <div class="ListContainer">
-                <ul><h3>Activities (High School):</h3>
-                    <ul><span class="description">Cross Country - Captain (Senior Year)</span><span class="position">4 years</span></ul>
-                    <ul><span class="description">Track - Captain (Senior Year)</span><span class="position">4 years</span></ul>
-                    <ul><span class="description">National Honor Society</span><span class="position">1 year</span></ul>
-                    <ul><span class="description">Best of Berks Reading Eagle Nominee in Computer Science</span></ul>
-                </ul>
-            </div>
-            <div class="ListContainer">
-                <ul><h3>Activities (College):</h3>
-                    <ul><span class="description">Cross Country</span><span class="position">2 years</span></ul>
-                    <ul><span class="description">Journal of Law and Public Policy Webmaster</span><span class="position">2 years</span></ul>
-                </ul>
-            </div>
+        <div class="ListContainer Card">
+            <ul><h3>Contact Nathan</h3>
+                <ul><span class="ContactMethod">Email</span><span class="ContactLink"><a href="mailto:nathan@snydern.com">nathan@snydern.com</a></span></ul>
+                <ul><span class="ContactMethod">Twitter</span><span class="ContactLink"><a href="http://twitter.com/share?text=%40snyderxc">@snyderxc</a></span></ul>
+            </ul>
         </div>
-    </div>
-</div>
-<div id="SecondaryContent">
-    <div id="LinkContainer">
-        <a class="Google extLink" href="https://plus.google.com/107534435464915234780/posts">Google</a>
-        <a class="Facebook extLink" href="https://www.facebook.com/snyderxc">Facebook</a>
-        <a class="Twitter extLink" href="https://www.twitter.com/snyderxc">Twitter</a>
-        <a class="Blogger extLink" href="http://blog.snydern.com">Blog</a>
-        <a class="Memolane extLink" href="http://memolane.com/nathansnyder">Memolane</a>
-        <a class="Gmail extLink" href="mailto:nathan@snydern.com">Email</a>
-        <a class="LastFM extLink" href="http://www.last.fm/user/snyderxc">Last.fm</a>
-        <a class="Digg extLink" href="http://digg.com/snyderxc">Digg</a>
-        <a class="Fiverr extLink" href="http://fiverr.com/snyderxc">Fiverr</a>
-        <a class="YouTube extLink" href="http://www.youtube.com/nathanasnyder">YouTube</a>
-        <a class="FriendFeed extLink" href="http://friendfeed.com/snyderxc">FriendFeed</a>
-        <a class="Quora extLink" href="http://www.quora.com/Nathan-Snyder">Quora</a>
-        <a class="Pandora extLink" href="http://www.pandora.com/profile/snyderxc">Pandora</a>
-        <a class="Flickr extLink" href="http://www.flickr.com/photos/nathansnyder">Flickr</a>
-        <a class="Yelp extLink" href="http://www.yelp.com/user_details?userid=zGK5p4GtcqTExVsaQQi9yQ">Yelp</a>
-        <a class="StumbleUpon extLink" href="http://www.stumbleupon.com/stumbler/snyderxc">StumbleUpon</a>
     </div>
     <script language="JavaScript">
         //store the quotations in arrays
@@ -148,14 +89,71 @@
         
         //display the quotation
         
-        document.write("<div class=\"quoteBlock\"><div class=\"quote\">" + "\"" + quotes[index] + "\"</div>" + "\n");
-        document.write("<div class=\"source\">" + "&mdash;" + authors[index] + "</div></div>" + "\n");
+        document.write("<div class=\"quoteBlock InnerContainer cropped\"><div class=\"quote\"><p>" + "\"" + quotes[index] + "\"</p></div>" + "\n");
+        document.write("<div class=\"source\"><p>" + "&mdash;" + authors[index] + "</p></div></div>" + "\n");
         
         
         //done
-        </script>
-	</div>
-    <div id="footer" class="CenteringContainer"><img class="ProfileImage" src="https://lh5.googleusercontent.com/--mJBNr-7Uos/AAAAAAAAAAI/AAAAAAAAdyI/roDtzSoIM04/photo.jpg?sz=200" />
+    </script>
+    <div class="InnerContainer">
+        <h2>R&#233;sum&#233;:</h2>
+        <div class="js-masonry">
+            <div class="ListContainer Card">
+                <ul><h3>Programming Languages</h3>
+                    <ul>Visual Basic</ul>
+                    <ul>C++</ul>
+                    <ul>HTML</ul>
+                    <ul>CSS</ul>
+                </ul>
+            </div>
+            <div class="ListContainer Card">
+                <ul><h3>Employment</h3>
+                    <ul><span id="employer"><a href="http://newspaceglobal.com/">NewSpace Global</a></span> <span class="position">Web Design Intern</span></ul>
+                    <ul><span id="employer"><a href="http://sololabs.com/">SOLO Labs</a></span> <span class="position">Intern</span></ul>
+                    <ul><span id="employer">Computer Repair Business</span> <span class="position">Self Run</span></ul>
+                </ul>
+            </div>
+            <div class="ListContainer Card">
+                <ul><h3>Community</h3>
+                    <ul><span class="description">NYC Missions Trip</span><span class="position" style="color: rgb(255,255,255)"><a href="http://gospel.spreadtruth.com/">Spreadtruth Missions</a></span></ul>
+                    <ul><span class="description">New Life Youth Group Student Leadership</span></ul>
+                    <ul><span class="description">Victory Valley Camp Volunteer</span></ul>
+                    <ul><span class="description">Missions Trip to Minnesota Indian Reservation</span></ul>
+                    <ul><span class="description">Vacation Bible School Volunteer</span></ul>
+                    <ul><span class="description">Church Video System Operator</span></ul>
+                    <ul><span class="description">Relay for Life Participant</span></ul>
+                </ul>
+            </div>
+            <div class="ListContainer Card">
+                <ul><h3>Activities (High School)</h3>
+                    <ul><span class="description">Cross Country - Captain (Senior Year)</span><span class="position">4 years</span></ul>
+                    <ul><span class="description">Track - Captain (Senior Year)</span><span class="position">4 years</span></ul>
+                    <ul><span class="description">National Honor Society</span><span class="position">1 year</span></ul>
+                    <ul><span class="description">Best of Berks Reading Eagle Nominee in Computer Science</span></ul>
+                </ul>
+            </div>
+            <div class="ListContainer Card">
+                <ul><h3>Activities (College)</h3>
+                    <ul><span class="description">Cross Country</span><span class="position">2 years</span></ul>
+                    <ul><span class="description">Journal of Law and Public Policy Webmaster</span><span class="position">2 years</span></ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="SecondaryContent">
+    <div class="InnerContainer" id="LinkContainer">
+    <h2>Follow Nathan</h2>
+        <a class="Google Card extLink" rel="me" href="https://plus.google.com/107534435464915234780/posts"><span class="LeadLetter"></span><span class="InnerText">Google</span></a>
+        <a class="Facebook Card extLink" rel="me" href="https://www.facebook.com/snyderxc"><span class="LeadLetter"></span><span class="InnerText">Facebook</span></a>
+        <a class="Twitter Card extLink" rel="me" href="https://www.twitter.com/snyderxc"><span class="LeadLetter"></span><span class="InnerText">Twitter</span></a>
+        <a class="Blogger Card extLink" rel="me" href="http://blog.snydern.com"><span class="LeadLetter"></span><span class="InnerText">Blog</span></a>
+        <a class="LastFM Card extLink" rel="me" href="http://www.last.fm/user/snyderxc"><span class="LeadLetter"></span><span class="InnerText">Last.fm</span></a>
+        <a class="YouTube Card extLink" rel="me" href="http://www.youtube.com/nathanasnyder"><span class="LeadLetter"></span><span class="InnerText">YouTube</span></a>
+    </div>
+    </div>
+    <div id="footer" class="InnerContainer CenteringContainer"><img class="ProfileImage" src="https://lh5.googleusercontent.com/--mJBNr-7Uos/AAAAAAAAAAI/AAAAAAAAdyI/roDtzSoIM04/photo.jpg?sz=200" />
     <div class="CenteredElement">Designed by Nathan Snyder &copy;2013<br>Bio written with help
     from <a class="credits" href="http://coherentfaithapologetics.weebly.com/scott-m-alford.html">Scott Alford</a></div></div>
+    <!-- Powered by Jquery, Masonry (http://masonry.desandro.com/), and The Pace Social Icon Set (http://www.designdeck.co.uk/a/1252) -->
 </body></html>
