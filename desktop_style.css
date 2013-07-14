@@ -1,0 +1,157 @@
+body {
+    background-color: #ddd;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+h1 {
+    font-size: 5em;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+h2, h3, h4 {
+    font-weight: 400;
+    margin: .5em 0;
+    padding: 0;
+}
+
+.InnerContainer p {
+    font-size: 1.25em;
+    margin: 0 1em;
+}
+a {
+    color: #6699ff;
+    text-decoration: none;
+}
+h1 a {
+    color: #777;
+    display: inline-block;
+    padding: 0.25em 0.75em;
+    text-decoration: none;
+}
+
+#MainContent .InnerContainer {
+    padding: 1em 2em;
+}
+.cropped {
+    max-width: 800px;
+}
+
+.position {
+    float: right;
+    font-size: 1em;
+    margin-left: .1em;
+    max-width: 35%;
+    text-align: right;
+}
+.description, .employer {
+    float: left;
+    margin-right: .1em;
+    max-width: 65%;
+}
+#SecondaryContent {
+    display: none;
+}
+
+ul {
+    margin: .5em 0;
+    overflow: auto;
+    padding: 0;
+}
+#footer {
+    clear: both;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 1em;
+}
+.ProfileImage {
+    float: left;
+    margin-right: 1em;
+    width: 5em;
+}
+.CenteringContainer {
+    display: table;
+}
+.CenteredElement {
+    display: table-cell;
+    vertical-align: middle;
+}
+.ListContainer {
+    background-color: #fff;
+    box-shadow: 0 .5em 1em #888;
+    float: left;
+    margin: 1em;
+    max-width: 325px;
+    min-width: 250px;
+    padding: 0 1em 1em 1em;
+    width: 30%;
+}
+.extLink {
+    background-color: #eee;
+    color: #333333;
+    display: block;
+    float: left;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    max-width: 15em;
+    text-align: center;
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    width: 100%;
+}
+
+.Google:hover {
+    background-color: #F2B50F;
+}
+.Blogger:hover { 
+    background-color: #FF6600;
+}
+.Twitter:hover {
+    background-color: #33CCFF;
+}
+.Facebook:hover {
+    background-color: #3B5998;
+}
+.Gmail:hover {
+    background-color: #F60000;
+}
+.Memolane:hover {
+    background-color: #CCCCCC;
+}
+.LastFM:hover {
+    background-color: #F60000;
+}
+.Digg:hover {
+    background-color: #14589E;
+}
+.Fiverr:hover {
+    background-color: #CCCCCC;
+}
+.YouTube:hover {
+    background-color: #CC0000;
+}
+.FriendFeed:hover {
+    background-color: #0077FF;
+}
+.Quora:hover {
+    background-color: #990011;
+}
+.Pandora:hover {
+    background-color: #333366;
+}
+.Flickr:hover {
+    background-color: #FF0077;
+}
+.Yelp:hover {
+    background-color: #FF0022;
+}
+.StumbleUpon:hover {
+    background-color: #FF4400;
+}
