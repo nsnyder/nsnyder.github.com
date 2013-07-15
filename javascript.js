@@ -6,6 +6,10 @@ $(window).load(function() {
         var msnry = new Masonry( container, {
             itemSelector: '.MasonryElem'
         });
+        container = document.querySelector('#LinkContainer .MasonryIfAvail');
+        var msnry2 = new Masonry( container, {
+            itemSelector: '.MasonryElem'
+        });
     }
 });
 $(window).resize(function () {
