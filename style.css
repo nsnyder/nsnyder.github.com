@@ -5,6 +5,9 @@ body {
     font-weight: 300;
     margin: 0;
 }
+h1, h2, h3, h4, p, span, ul {
+    text-align: left;
+}
 h1 {
     font-size: 5em;
     font-weight: 300;
@@ -25,16 +28,6 @@ a {
     color: #6699ff;
     text-decoration: none;
 }
-h1 a {
-    display: inline-block;
-    padding: 0.25em 0.75em;
-    text-decoration: none;
-}
-
-.InnerContainer {
-    padding: 1em 2em;
-    overflow: auto;
-}
 .cropped {
     max-width: 800px;
     display: inline-block;
@@ -51,6 +44,7 @@ h1 a {
     float: left;
     margin-right: .1em;
     max-width: 70%;
+    text-align: left;
 }
 .ContactLink {
     float: right;
@@ -88,22 +82,73 @@ ul {
 .quoteBlock {
     font-style: italic;
 }
-.quoteBlock .quote {
-    font-size: 2em;
-    padding-left: .75em;
-}
-.quoteBlock .source {
+.quoteBlock .source p {
     font-size: 1.25em;
     margin-top: .5em;
     text-align: right;
 }
-.ListContainer {
-    display: inline-block;
-    margin: 1em;
-    max-width: 325px;
-    min-width: 250px;
-    padding: 0 1em 1em 1em;
-    width: 30%;
+@media (min-width: 600px) {
+    h1 a {
+        display: inline-block;
+        padding: 0.25em 0.75em;
+        text-decoration: none;
+    }
+    .ListContainer {
+        display: inline-block;
+        margin: 1em;
+        max-width: 325px;
+        min-width: 250px;
+        padding: 0 1em 1em 1em;
+        width: 30%;
+    }
+    .InnerContainer {
+        padding: 1em 2em;
+        overflow: auto;
+    }
+    .quoteBlock .quote {
+        font-size: 2em;
+        padding-left: .75em;
+    }
+    .extLink {
+        background: #fff;
+        display: block;
+        float: left;
+        margin: 0.5em 1em;
+        min-height: 1em;
+        min-width: 250px;
+        max-width: 300px;
+    }
+}
+@media (max-width: 600px) {
+    h1 a {
+        display: inline-block;
+        padding: 0.25em;
+        text-decoration: none;
+    }
+    .ListContainer {
+        display: inline-block;
+        margin: 1em 0;
+        padding: 0 1em 1em 1em;
+        width: 85%;
+    }
+    .InnerContainer {
+        padding: 1em .5em;
+        overflow: auto;
+        max-width: 100%;
+        text-align: center;
+    }
+    .quoteBlock .quote {
+        font-size: 1.25em;
+        padding-left: 0;
+    }
+    .extLink {
+        background: #fff;
+        display: block;
+        float: left;
+        margin: 0.25em 0;
+        min-height: 1em;
+        width: 100%;
+    }
 }
 .extLink .LeadLetter {
     background: #333;
@@ -124,15 +169,6 @@ ul {
     text-align: center;
     vertical-align: middle;
 }
-.extLink {
-    background: #fff;
-    display: block;
-    float: left;
-    margin: 0.5em 1em;
-    min-height: 1em;
-    min-width: 250px;
-    max-width: 300px;
-}
 .Google .LeadLetter {
     background-image: url('noindex/pace-icons/google+.png');
 }
@@ -144,9 +180,6 @@ ul {
 }
 .Facebook .LeadLetter {
     background-image: url('noindex/pace-icons/facebook.png');
-}
-.Gmail .LeadLetter {
-    
 }
 .LastFM .LeadLetter {
     background-image: url('noindex/pace-icons/last-fm.png');

@@ -13,10 +13,7 @@
 <link rel="shortcut icon" href="http://faviconist.com/icons/f383c5a9abaeb9de7ce6032f04bcb2e8/favicon.ico" />
 <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,300italic' rel='stylesheet' type='text/css'>
 
-<link href='desktop_style.css' rel='stylesheet' type='text/css' />
-<!--[if lte IE 7]>
-<link href='IE7.css' rel='stylesheet' type='text/css' />
-<![endif]-->
+<link href='style.css' rel='stylesheet' type='text/css' />
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="javascript.js"></script>
 <script type="text/javascript">
@@ -97,8 +94,8 @@
     </script>
     <div class="InnerContainer">
         <h2>R&#233;sum&#233;</h2>
-        <div class="js-masonry">
-            <div class="ListContainer Card">
+        <div class="MasonryIfAvail">
+            <div class="ListContainer Card MasonryElem">
                 <ul><h3>Programming Languages</h3>
                     <ul>Visual Basic</ul>
                     <ul>C++</ul>
@@ -106,14 +103,14 @@
                     <ul>CSS</ul>
                 </ul>
             </div>
-            <div class="ListContainer Card">
+            <div class="ListContainer Card MasonryElem">
                 <ul><h3>Employment</h3>
-                    <ul><span id="employer"><a href="http://newspaceglobal.com/">NewSpace Global</a></span> <span class="position">Web Design Intern</span></ul>
-                    <ul><span id="employer"><a href="http://sololabs.com/">SOLO Labs</a></span> <span class="position">Intern</span></ul>
-                    <ul><span id="employer">Computer Repair Business</span> <span class="position">Self Run</span></ul>
+                    <ul><span class="employer"><a href="http://newspaceglobal.com/">NewSpace Global</a></span> <span class="position">Web Design Intern</span></ul>
+                    <ul><span class="employer"><a href="http://sololabs.com/">SOLO Labs</a></span> <span class="position">Intern</span></ul>
+                    <ul><span class="employer">Computer Repair Business</span> <span class="position">Self Run</span></ul>
                 </ul>
             </div>
-            <div class="ListContainer Card">
+            <div class="ListContainer Card MasonryElem">
                 <ul><h3>Community</h3>
                     <ul><span class="description">NYC Missions Trip</span><span class="position" style="color: rgb(255,255,255)"><a href="http://gospel.spreadtruth.com/">Spreadtruth Missions</a></span></ul>
                     <ul><span class="description">New Life Youth Group Student Leadership</span></ul>
@@ -124,7 +121,7 @@
                     <ul><span class="description">Relay for Life Participant</span></ul>
                 </ul>
             </div>
-            <div class="ListContainer Card">
+            <div class="ListContainer Card MasonryElem">
                 <ul><h3>Activities (High School)</h3>
                     <ul><span class="description">Cross Country - Captain (Senior Year)</span><span class="position">4 years</span></ul>
                     <ul><span class="description">Track - Captain (Senior Year)</span><span class="position">4 years</span></ul>
@@ -132,7 +129,7 @@
                     <ul><span class="description">Best of Berks Reading Eagle Nominee in Computer Science</span></ul>
                 </ul>
             </div>
-            <div class="ListContainer Card">
+            <div class="ListContainer Card MasonryElem">
                 <ul><h3>Activities (College)</h3>
                     <ul><span class="description">Cross Country</span><span class="position">2 years</span></ul>
                     <ul><span class="description">Journal of Law and Public Policy Webmaster</span><span class="position">2 years</span></ul>
@@ -144,18 +141,18 @@
 <div id="SecondaryContent">
     <div class="InnerContainer" id="LinkContainer">
     <h2>Follow Nathan</h2>
-        <div class="js-masonry">
-            <a class="Google Card extLink" rel="me" href="https://plus.google.com/107534435464915234780/posts"><span class="LeadLetter"></span><span class="InnerText">Google</span></a>
-            <a class="Facebook Card extLink" rel="me" href="https://www.facebook.com/snyderxc"><span class="LeadLetter"></span><span class="InnerText">Facebook</span></a>
-            <a class="Twitter Card extLink" rel="me" href="https://www.twitter.com/snyderxc"><span class="LeadLetter"></span><span class="InnerText">Twitter</span></a>
-            <a class="Blogger Card extLink" rel="me" href="http://blog.snydern.com"><span class="LeadLetter"></span><span class="InnerText">Blog</span></a>
-            <a class="LastFM Card extLink" rel="me" href="http://www.last.fm/user/snyderxc"><span class="LeadLetter"></span><span class="InnerText">Last.fm</span></a>
-            <a class="YouTube Card extLink" rel="me" href="http://www.youtube.com/nathanasnyder"><span class="LeadLetter"></span><span class="InnerText">YouTube</span></a>
+        <div class="MasonryIfAvail">
+            <a class="Google Card extLink MasonryElem" rel="me" href="https://plus.google.com/107534435464915234780/posts"><span class="LeadLetter"></span><span class="InnerText">Google</span></a>
+            <a class="Facebook Card extLink MasonryElem" rel="me" href="https://www.facebook.com/snyderxc"><span class="LeadLetter"></span><span class="InnerText">Facebook</span></a>
+            <a class="Twitter Card extLink MasonryElem" rel="me" href="https://www.twitter.com/snyderxc"><span class="LeadLetter"></span><span class="InnerText">Twitter</span></a>
+            <a class="Blogger Card extLink MasonryElem" rel="me" href="http://blog.snydern.com"><span class="LeadLetter"></span><span class="InnerText">Blog</span></a>
+            <a class="LastFM Card extLink MasonryElem" rel="me" href="http://www.last.fm/user/snyderxc"><span class="LeadLetter"></span><span class="InnerText">Last.fm</span></a>
+            <a class="YouTube Card extLink MasonryElem" rel="me" href="http://www.youtube.com/nathanasnyder"><span class="LeadLetter"></span><span class="InnerText">YouTube</span></a>
         </div>
     </div>
 </div>
-<div id="footer" class="InnerContainer CenteringContainer"><img class="ProfileImage" src="https://lh5.googleusercontent.com/--mJBNr-7Uos/AAAAAAAAAAI/AAAAAAAAdyI/roDtzSoIM04/photo.jpg?sz=200" />
-<div class="CenteredElement">Designed by Nathan Snyder &copy;2013<br>Bio written with help
-from <a class="credits" href="http://coherentfaithapologetics.weebly.com/scott-m-alford.html">Scott Alford</a></div></div>
+<div id="footer" class="InnerContainer CenteringContainer"><div class="CenteredElement"><img class="ProfileImage" src="https://lh5.googleusercontent.com/--mJBNr-7Uos/AAAAAAAAAAI/AAAAAAAAdyI/roDtzSoIM04/photo.jpg?sz=200" /></div>
+<div class="CenteredElement"><p>Designed by Nathan Snyder &copy;2013<br>Bio written with help
+from <a class="credits" href="http://coherentfaithapologetics.weebly.com/scott-m-alford.html">Scott Alford</a></p></div></div>
 <!-- Powered by Jquery, Masonry (http://masonry.desandro.com/), and The Pace Social Icon Set (http://www.designdeck.co.uk/a/1252) -->
 </body></html>
