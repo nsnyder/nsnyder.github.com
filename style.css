@@ -171,7 +171,7 @@ ul {
 }
 .singleLine {
     display: block;
-    overflow: hidden;
+    overflow: auto;
 }
 .updateText {
     display: inline-block;
