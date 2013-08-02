@@ -20,13 +20,13 @@ $(window).load(function() {
       processMusic(data);
     });
     twitterFetcher.fetch('363096063986503681', 'latestTweet', 1, true, false, true, function(data){return data;}, false, writeTweet);
-    var left = 0;
-    $(".updateText").each(function( index ) {
-      if($(this).position().left > left) {
-          left = $(this).position().left;
+    var width = 0;
+    $(".updateTitle").each(function( index ) {
+      if($(this).width() > width) {
+          width = $(this).width();
       }
     });
-    $(".updateText").css('left', left+"px");
+    $(".updateTitle").css('width', width+"px");
 });
 
 /*********************************************************************
