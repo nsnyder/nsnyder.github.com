@@ -171,11 +171,11 @@ ul {
 }
 .singleLine {
     display: block;
+    overflow: hidden;
 }
 .updateText {
     display: inline-block;
     margin: 0 10px;
-    overflow: hidden;
     position: absolute;
 }
 .updateTitle {
