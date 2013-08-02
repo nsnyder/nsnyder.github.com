@@ -169,8 +169,22 @@ ul {
     text-align: center;
     vertical-align: middle;
 }
+.singleLine {
+    display: block;
+}
+.updateText {
+    display: inline-block;
+    margin: 0 10px;
+    position: absolute;
+}
+.updateTitle {
+    display: inline-block;
+}
 .Google .LeadLetter {
     background-image: url('noindex/pace-icons/google+.png');
+}
+.LinkedIn .LeadLetter {
+    background-image: url('noindex/pace-icons/linkedin.png');
 }
 .Blogger .LeadLetter { 
     background-image: url('noindex/pace-icons/rss.png');
