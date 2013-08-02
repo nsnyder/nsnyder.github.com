@@ -26,7 +26,14 @@ h2, h3, h4 {
 }
 a {
     color: #6699ff;
+    hyphens: auto;
     text-decoration: none;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    /* Non standard for webkit */
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
 }
 .cropped {
     max-width: 800px;
