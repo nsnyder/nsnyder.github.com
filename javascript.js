@@ -27,6 +27,16 @@ $(window).load(function() {
       }
     });
     $(".updateTitle").css('width', width+"px");
+    $(".scroll").click(function(event){
+        event.preventDefault();
+        var aTag = $("#"+((this.href).split("#"))[1]);
+        console.log(aTag);
+        if($(window).width() > 600) {
+            $('html,body').animate({scrollTop: aTag.offset().top-$('#pageNav').height()},'slow');
+        } else {
+            $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+        }
+    })
 });
 
 /*********************************************************************

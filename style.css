@@ -35,11 +35,32 @@ a {
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
 }
+#pageNav {
+    background: #5997C0;
+    font-size: 1.25em;
+    width: 100%;
+    z-index: 2;
+}
+#pageNav a {
+    display:inline-block;
+}
+#pageNav a span {
+    border-left: solid 1px #fff;
+    color: #fff;
+    display: inline-block;
+    margin: .25em 1px .25em -1px;
+    padding: .1em 20px .1em 21px;
+}
+#pageNav .navTitle {
+    /* border-left: none; */
+}
 .cropped {
     max-width: 800px;
     display: inline-block;
 }
-
+#header {
+    margin-top: 1.95em;
+}
 .position {
     float: right;
     font-size: 1em;
@@ -100,6 +121,18 @@ ul {
         padding: 0.25em 0.75em;
         text-decoration: none;
     }
+    #pageNav {
+        position: fixed;
+        top: 0;
+    }
+    #pageNav .navItem {
+        background: linear-gradient(0deg, #91B1C7, #91B1C7) no-repeat 0 -2em;
+        transition: .1s;
+        -webkit-transition: .1s;
+    }
+    #pageNav .navItem:hover {
+        background-position: 0 0;
+    }
     .ListContainer {
         display: inline-block;
         margin: 1em;
@@ -124,6 +157,21 @@ ul {
         min-height: 1em;
         min-width: 250px;
         max-width: 300px;
+    }
+    .singleLine {
+        display: block;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    .updateText {
+        display: block;
+        overflow: hidden;
+        padding: 0 10px;
+    }
+    .updateTitle {
+        display: block;
+        float: left;
+        vertical-align: top;
     }
 }
 @media (max-width: 600px) {
@@ -156,6 +204,19 @@ ul {
         min-height: 1em;
         width: 100%;
     }
+    .singleLine {
+        display: block;
+        margin-bottom: 10px;
+        overflow: auto;
+    }
+    .updateText {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    .updateTitle {
+        display: inline-block;
+        vertical-align: top;
+    }
 }
 .extLink .LeadLetter {
     background: #333;
@@ -175,17 +236,6 @@ ul {
     padding: .25em 1em;
     text-align: center;
     vertical-align: middle;
-}
-.singleLine {
-    display: block;
-    overflow: auto;
-}
-.updateText {
-    display: inline-block;
-    margin: 0 10px;
-}
-.updateTitle {
-    display: inline-block;
 }
 .Google .LeadLetter {
     background-image: url('noindex/pace-icons/google+.png');
