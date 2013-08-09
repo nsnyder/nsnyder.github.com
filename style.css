@@ -4,8 +4,6 @@ body {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     font-weight: 300;
     margin: 0;
-}
-h1, h2, h3, h4, p, span, ul {
     text-align: left;
 }
 h1 {
@@ -29,11 +27,11 @@ a {
     hyphens: auto;
     text-decoration: none;
     -ms-word-break: break-all;
+    -epub-word-break: break-all;
     word-break: break-all;
-    /* Non standard for webkit */
-    word-break: break-word;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
+    -epub-hyphens: auto;
 }
 #pageNav {
     background: #5997C0;
@@ -126,12 +124,16 @@ ul {
         position: fixed;
         top: 0;
     }
-    #pageNav .navItem {
-        background: linear-gradient(0deg, #91B1C7, #91B1C7) no-repeat 0 -2em;
+    .navItem {
+        background: linear-gradient(0deg, #91B1C7, #91B1C7);
+        background-repeat:  no-repeat;
+        background-position: 0 -2em;
         transition: .1s;
         -webkit-transition: .1s;
+        -moz-transition: .1s;
+        -o-transition: .1s;
     }
-    #pageNav .navItem:hover {
+    .navItem:hover, .active {
         background-position: 0 0;
     }
     .ListContainer {
@@ -139,8 +141,10 @@ ul {
         margin: 1em;
         max-width: 325px;
         min-width: 250px;
-        padding: 0 1em 1em 1em;
         width: 30%;
+    }
+    .ListContainer>ul {
+        padding: 0 1em 1em 1em;
     }
     .InnerContainer {
         padding: 1em 2em;
@@ -172,26 +176,26 @@ ul {
     .updateTitle {
         display: block;
         float: left;
-        vertical-align: top;
     }
 }
 @media (max-width: 600px) {
     h1 a {
-        display: inline-block;
+        display: block;
         padding: 0.25em;
         text-decoration: none;
     }
-    .ListContainer {
-        display: inline-block;
-        margin: 1em 0;
+    .ListContainer>ul {
         padding: 0 1em 1em 1em;
+    }
+    .ListContainer {
+        display: block;
+        margin: 1em auto;
         width: 85%;
     }
     .InnerContainer {
         padding: 1em .5em;
         overflow: auto;
         max-width: 100%;
-        text-align: center;
     }
     .quoteBlock .quote {
         font-size: 1.25em;
@@ -223,10 +227,7 @@ ul {
     background: #333;
     background-repeat: no-repeat;
     background-position: center center;
-    color: white;
     display: table-cell;
-    font-family: 'Cinzel', serif;
-    font-size: 2em;
     height: 100%;
     text-align: center;
     vertical-align: middle;

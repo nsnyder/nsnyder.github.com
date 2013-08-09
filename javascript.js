@@ -1,4 +1,9 @@
 $(window).load(function() {
+    $('.bookmark').each(function(index) { 
+        var text = this.innerText;
+        var ref = "#"+$(this).attr("id");
+        $('#pageNav').append('<a class="navItem scroll" href="' + ref + '"><span>' + text + '</span></a>');
+    });
     var cw = $('.extLink').css('height');
     $('.LeadLetter').css({'width':cw});
     if($(window).width() > 600) {
@@ -36,7 +41,23 @@ $(window).load(function() {
         } else {
             $('html,body').animate({scrollTop: aTag.offset().top},'slow');
         }
-    })
+    })   
+    $(window).scroll(function() { //when window is scrolled
+        $('.bookmark').each(function(index) {
+            var offset = $(this).offset().top - $(window).scrollTop(); //get the offset top of the element
+            if(offset < 100) {
+                $(".navItem[href='#" + $(this).attr('id') + "']").addClass('active');
+                $(".navItem[href='#" + $(this).attr('id') + "']").prev().removeClass('active');
+            } else {
+                $(".navItem[href='#" + $(this).attr('id') + "']").removeClass('active');
+            }
+        });
+        if($(window).scrollTop() + $(window).height() == $(document).height()) {
+            var last = $('.bookmark').last();
+            $(".navItem[href='#" + $(last).attr('id') + "']").addClass('active');
+            $(".navItem[href='#" + $(last).attr('id') + "']").prev().removeClass('active');
+        }
+    });
 });
 
 /*********************************************************************
