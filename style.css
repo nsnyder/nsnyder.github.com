@@ -128,10 +128,10 @@ ul {
         background: linear-gradient(0deg, #91B1C7, #91B1C7);
         background-repeat:  no-repeat;
         background-position: 0 -2em;
-        transition: .1s;
-        -webkit-transition: .1s;
-        -moz-transition: .1s;
-        -o-transition: .1s;
+        transition: .2s;
+        -webkit-transition: .2s;
+        -moz-transition: .2s;
+        -o-transition: .2s;
     }
     .navItem:hover, .active {
         background-position: 0 0;
