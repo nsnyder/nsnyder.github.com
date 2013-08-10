@@ -57,9 +57,6 @@ a {
     max-width: 800px;
     display: inline-block;
 }
-#header {
-    margin-top: 1.95em;
-}
 .position {
     float: right;
     font-size: 1em;
@@ -123,6 +120,9 @@ ul {
     #pageNav {
         position: fixed;
         top: 0;
+    }
+    #header {
+        margin-top: 3.5em;
     }
     .navItem {
         background: linear-gradient(0deg, #91B1C7, #91B1C7);

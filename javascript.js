@@ -4,6 +4,7 @@ $(window).load(function() {
         var ref = "#"+$(this).attr("id");
         $('#pageNav').append('<a class="navItem scroll" href="' + ref + '"><span>' + text + '</span></a>');
     });
+    jQuery("#name").fitText(1.0, { minFontSize: '40px', maxFontSize: '80px' })
     var cw = $('.extLink').css('height');
     $('.LeadLetter').css({'width':cw});
     if($(window).width() > 600) {
