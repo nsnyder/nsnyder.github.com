@@ -266,23 +266,23 @@ ul {
     vertical-align: middle;
 }
 .Google .LeadLetter {
-    background-image: url('noindex/pace-icons/google+.png');
+    background-image: url('noindex/picons/social-040_google_plus.png');
 }
 .LinkedIn .LeadLetter {
-    background-image: url('noindex/pace-icons/linkedin.png');
+    background-image: url('noindex/picons/social-011_linkedin.png');
 }
 .Blogger .LeadLetter { 
-    background-image: url('noindex/pace-icons/rss.png');
+    background-image: url('noindex/picons/social-020_rss.png');
 }
 .Twitter .LeadLetter {
-    background-image: url('noindex/pace-icons/twitter.png');
+    background-image: url('noindex/picons/social-003_twitter.png');
 }
 .Facebook .LeadLetter {
-    background-image: url('noindex/pace-icons/facebook.png');
+    background-image: url('noindex/picons/social-006_facebook.png');
 }
 .LastFM .LeadLetter {
-    background-image: url('noindex/pace-icons/last-fm.png');
+    background-image: url('noindex/picons/social-012_last_fm.png');
 }
 .YouTube .LeadLetter {
-    background-image: url('noindex/pace-icons/youtube.png');
+    background-image: url('noindex/picons/social-018_youtube.png');
 }
