@@ -253,6 +253,7 @@ ul {
     background: #333;
     background-repeat: no-repeat;
     background-position: center center;
+    background-size:auto 80%;
     display: table-cell;
     height: 100%;
     text-align: center;
