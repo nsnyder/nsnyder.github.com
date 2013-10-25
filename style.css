@@ -62,13 +62,13 @@ a {
     float: right;
     font-size: 1em;
     margin-left: .1em;
-    max-width: 45%;
+    max-width: 33%;
     text-align: right;
 }
 .description, .employer {
     float: left;
     margin-right: .1em;
-    max-width: 70%;
+    max-width: 63%;
     text-align: left;
 }
 .ContactLink {
