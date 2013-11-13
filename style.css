@@ -104,7 +104,6 @@ ul {
 }
 .Card {
     background-color: #fff;
-    box-shadow: 0 .5em 1em #444;
     vertical-align: top;
 }
 .quoteBlock {
@@ -115,9 +114,31 @@ ul {
     margin-top: .5em;
     text-align: right;
 }
-@media (min-width: 1000px) {
-    #sidephoto {
+@media (min-width: 1500px) {
+     #sidephoto {
         background:url('D2013-KJM-0703-243_flip_smallish.jpg');
+        background-size: 100%;
+        position: fixed;
+        height: 100%;
+        width: 40%;
+        top: 2em;
+        right: 0;
+        z-index: -1;
+    }
+    
+    #sideblur {
+        background-color: rgba(255, 255, 255, 0);
+        background-image: linear-gradient(to right, rgba(230,230,230, 1) 0%, rgba(230,230,230, 0) 300px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (min-width: 1000px) and (max-width: 1499px) {
+    #sidephoto {
+        background:url('D2013-KJM-0703-243_flip_small.jpg');
         background-size: 100%;
         position: fixed;
         height: 100%;
@@ -203,6 +224,9 @@ ul {
         display: block;
         float: left;
     }
+	.Card {
+		box-shadow: 0 .5em 1em #444;
+	}
 }
 @media (max-width: 600px) {
     h1 a {

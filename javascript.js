@@ -55,8 +55,8 @@ $(window).load(function() {
         });
         if($(window).scrollTop() + $(window).height() == $(document).height()) {
             var last = $('.bookmark').last();
+            $(".navItem.active").removeClass('active');
             $(".navItem[href='#" + $(last).attr('id') + "']").addClass('active');
-            $(".navItem[href='#" + $(last).attr('id') + "']").prev().removeClass('active');
         }
     });
 });
