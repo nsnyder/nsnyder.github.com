@@ -53,6 +53,7 @@ a {
 #pageNav .navTitle span {
     font-size: 1.2em;
     margin: 0 1px 0 -1px;
+	text-transform: uppercase;
 }
 .cropped {
     max-width: 800px;
