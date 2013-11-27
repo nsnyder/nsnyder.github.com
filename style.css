@@ -105,6 +105,7 @@ ul {
 }
 .Card {
     background-color: #fff;
+    border-radius: 3px;
     vertical-align: top;
 }
 .quoteBlock {
