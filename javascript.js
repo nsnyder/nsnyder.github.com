@@ -17,7 +17,7 @@ $(window).load(function() {
             itemSelector: '.MasonryElem'
         });
     }
-    var posts = "http://blog.snydern.com/feeds/posts/default?alt=json-in-script";
+    var posts = "http://blog.snydern.com/feeds/posts/default?alt=json-in-script&max-results=1";
     $.getJSON( posts + '&callback=?', function(data) {
       processPosts(data);
     });
