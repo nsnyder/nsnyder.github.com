@@ -1,7 +1,7 @@
 $(window).load(function() {
     $('.bookmark').each(function(index) { 
         var text = this.innerText;
-		if(text===undefined) { text = this.text; }
+		if(text===undefined) { text = this.textContent; }
         var ref = "#"+$(this).attr("id");
         $('#pageNav').append('<a class="navItem scroll" href="' + ref + '"><span>' + text + '</span></a>');
     });
