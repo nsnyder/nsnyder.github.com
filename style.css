@@ -5,6 +5,11 @@ body {
     font-weight: 300;
     margin: 0;
     text-align: left;
+	transition: 1s;
+}
+body.prerender {
+	opacity: 0;
+	margin-left: -50px;
 }
 h1 {
     font-size: 5em;

@@ -1,6 +1,7 @@
 $(window).load(function() {
     $('.bookmark').each(function(index) { 
         var text = this.innerText;
+		if(text===undefined) { text = this.text; }
         var ref = "#"+$(this).attr("id");
         $('#pageNav').append('<a class="navItem scroll" href="' + ref + '"><span>' + text + '</span></a>');
     });
@@ -60,7 +61,9 @@ $(window).load(function() {
         }
     });
 });
-
+$(document).ready(function(){
+  $('body').removeClass('prerender');
+});
 /*********************************************************************
 *  #### Twitter Post Fetcher v10.0 ####
 *  Coded by Jason Mayes 2013. A present to all the developers out there.
