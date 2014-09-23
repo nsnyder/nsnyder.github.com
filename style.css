@@ -247,7 +247,7 @@ ul {
     .ListContainer {
         display: block;
         margin: 1em auto;
-        width: 85%;
+        width: 100%;
     }
     .InnerContainer {
         padding: 1em .5em;
