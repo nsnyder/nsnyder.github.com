@@ -112,6 +112,7 @@ ul {
     background-color: #fff;
     border-radius: 3px;
     vertical-align: top;
+	box-shadow: 0 .5em 1em #444;
 }
 .quoteBlock {
     font-style: italic;
@@ -231,9 +232,6 @@ ul {
         display: block;
         float: left;
     }
-	.Card {
-		box-shadow: 0 .5em 1em #444;
-	}
 }
 @media (max-width: 600px) {
     h1 a {
