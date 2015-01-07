@@ -1,5 +1,6 @@
 $(window).load(function() {
-    $('.bookmark').each(function(index) { 
+    document.getElementById('navToggle').addEventListener('click', expand);
+    $('.bookmark').each(function(index) {
         var text = this.innerText;
 		if(text===undefined) { text = this.textContent; }
         var ref = "#"+$(this).attr("id");
@@ -35,15 +36,18 @@ $(window).load(function() {
     });
     $(".updateTitle").css('width', width+"px");
     $(".scroll").click(function(event){
+        if(window.innerWidth<=600 && $('#navToggle.expanded')[0]!==undefined) {
+          expand();
+        }
         event.preventDefault();
         var aTag = $("#"+((this.href).split("#"))[1]);
         console.log(aTag);
         if($(window).width() > 600) {
             $('html,body').animate({scrollTop: aTag.offset().top-$('#pageNav').height()},'slow');
         } else {
-            $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+            $('#content').animate({scrollTop: aTag.offset().top-50},'slow');
         }
-    })   
+    })
     $(window).scroll(function() { //when window is scrolled
         $('.bookmark').each(function(index) {
             var offset = $(this).offset().top - $(window).scrollTop(); //get the offset top of the element
@@ -69,7 +73,7 @@ $(document).ready(function(){
 *  Coded by Jason Mayes 2013. A present to all the developers out there.
 *  www.jasonmayes.com
 *  Please keep this disclaimer with my code if you use it. Thanks. :-)
-*  Got feedback or questions, ask here: 
+*  Got feedback or questions, ask here:
 *  http://www.jasonmayes.com/projects/twitterApi/
 *  Updates will be posted to this site.
 *********************************************************************/
@@ -82,6 +86,7 @@ f[a].setAttribute("aria-label",b);if(e[a].innerText)if(v)f[a].innerText=b;else{v
 h[a]+'" class="twitter_fav_icon">Favorite</a></p>');c.push(b);a++}if(null==w){e=c.length;g=0;f=document.getElementById(y);for(h="<ul>";g<e;)h+="<li>"+c[g]+"</li>",g++;f.innerHTML=h+"</ul>"}else w(c);t=!1;0<k.length&&(twitterFetcher.fetch(k[0].id,k[0].domId,k[0].maxTweets,k[0].enableLinks,k[0].showUser,k[0].showTime,k[0].dateFunction,k[0].showRt,k[0].customCallback,k[0].showInteraction),k.splice(0,1))}}}();
 
 $(window).resize(function () {
+  moveAnchor();
     var cw = $('.extLink').css('height');
     $('.LeadLetter').css({'width':cw});
     if($(window).width() > 600) {
@@ -103,11 +108,36 @@ function processMusic(playlist) {
     if(track.length==2) {
         $('#lastFMPlayingStatus').text('Now Playing:');
         $('#lastFMLastPlayed').html('<a href="' + track[0].url + '">' + track[0].name + '</a> &mdash; ' + track[0].artist['#text']);
-    } else {    
+    } else {
         $('#lastFMLastPlayed').html('<a href="">' + track.name + '</a> &mdash; <a href="">' + track.artist['#text'] + '</a>');
     }
 }
 function writeTweet(data) {
     var html = $.parseHTML(data[0]);
     $('#latestTweet').html(html[0].innerHTML);
+}
+function expand() { // expand the nav
+  var width = $('#pageNav').width();
+  $('.expandable').toggleClass("expanded");
+  if($('#content').css('left') == "0px") {
+    $('#content').css('left',width+"px");
+  } else {
+    $('#content').css('left',"0px");
+  }
+  moveAnchor();
+}
+
+function moveAnchor() {
+  if(window.innerWidth>600) return;
+  if($('#navToggle.expanded')[0]===undefined) {
+    $('#navToggle').css('left',"0px");
+    return;
+  }
+  var width = $('#pageNav').width();
+  var toggleWidth = $('#navToggle').width();
+  if(window.innerWidth-width>toggleWidth) {
+    $('#navToggle').css('left',($('#content').position().left)+"px");
+  } else {
+    $('#navToggle').css('left',(window.innerWidth-$('#navToggle').width())+"px");
+  }
 }

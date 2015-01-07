@@ -35,152 +35,155 @@
 </head>
 
 <body class="prerender">
-<div id="sidephoto"></div>
+  <a id="navToggle" class="expandable" href="#"><span></span></a>
 <div id="pageNav">
-    <a class="navTitle" href="http://snydern.com/"><span>Nathan Snyder</span></a>
+  <a class="navTitle" href="http://snydern.com/"><span>Nathan Snyder</span></a>
 </div>
-<div id="header">
+<div id="content" class="expandable">
+  <div id="sidephoto"></div>
+  <div id="header">
     <h1 id="name">
-        <a class="PageTitle" href="http://snydern.com/">Nathan Snyder</a>
+      <a class="PageTitle" href="http://snydern.com/">Nathan Snyder</a>
     </h1>
-</div>
-<div id="MainContent">
+  </div>
+  <div id="MainContent">
 
-    <div class="InnerContainer">        
-        <h2 id="bio" class="bookmark">Bio</h2>
-        <p class="cropped">
-        From a young age, Nathan Abel Snyder has been both academically and
-        athletically inclined. He has always enjoyed developing and tinkering with
-        technologies of various kinds and complexities. He is always seeking to 
-        challenge himself and learn more about different emerging technologies. 
-        Throughout highschool and continuing into college, Nathan has pursued 
-        his passion for running both in cross country and track and field. He 
-        enjoys the challenge and adventure of living life off the beaten path.
-        <br><br>Nathan is currently working as a computer programmer at SOLO Labs 
-		in Kutztown, Pennsylvania. He will return to Grove City College in the fall, 
-		where he will spend his senior year studying computer science and will graduate 
-		in 2015.</p>
-        <div class="ListContainer Card">
-            <ul><h3>Contact Nathan</h3>
-                <ul><span class="ContactMethod">Email</span><span class="ContactLink"><a href="mailto:nathan@snydern.com">nathan@snydern.com</a></span></ul>
-                <ul><span class="ContactMethod">LinkedIn</span><span class="ContactLink"><a href="http://www.linkedin.com/in/nasnyder">nasnyder</a></span></ul>
-                <ul><span class="ContactMethod">Twitter</span><span class="ContactLink"><a href="http://twitter.com/share?text=%40snyderxc%20&url=">@snyderxc</a></span></ul>
-            </ul>
-        </div>
-    </div>
-    <div class="InnerContainer cropped">        
-        <h2 id="now" class="bookmark">Right Now</h2>
-        <p>
-            <span class="singleLine"><span class="updateTitle">Studying at:</span><span id="currentJob" class="updateText">Grove City College  — Computer Science</span></span>
-            <span class="singleLine"><span class="updateTitle">Latest Blog Post:</span><span id="latestPostTitle" class="updateText"></span></span>
-            <span class="singleLine"><span class="updateTitle" id="lastFMPlayingStatus">Last Played:</span><span id="lastFMLastPlayed" class="updateText"></span></span>
-            <span class="singleLine"><span class="updateTitle">Most Recent Tweet:</span><span id="latestTweet" class="updateText"></span></span>
-        </p>
-    </div>
-    <script language="JavaScript">
-        //store the quotations in arrays
-        quotes = new Array(7);
-        authors = new Array(7);
-        quotes[0] = "And if our God is for us, then who can ever stop us?";
-        authors[0] = "Romans 8:31";
-        quotes[1] = "Your attitude should be the same as that of Christ Jesus ... taking the very nature of a servant.";
-        authors[1] = "Philippians 2:5-7";
-        quotes[2] = "I&#39;ll stand ... In awe of the One who gave it all";
-        authors[2] = "Hillsong";
-        quotes[3] = "To give anything less than your best is to sacrifice the gift.";
-        authors[3] = "Steve Prefontaine";
-        quotes[4] = "Greater things have yet to come, and greater things are still to be done in this city.";
-        authors[4] = "Chris Tomlin";
-        quotes[5] = "So then faith comes by hearing, and hearing by the word of God.";
-        authors[5] = "Romans 10:17";
-        quotes[6] = "Oh praise the one who paid my debt and raised this life up from the dead.";
-        authors[6] = "Hillsong";
-        quotes[7] = "God's love always seeks to save the lost.";
-        authors[7] = "Unknown";
-        
-        //calculate a random index
-        index = Math.floor(Math.random() * quotes.length);
-        
-        //display the quotation
-        
-        document.write("<div class=\"quoteBlock InnerContainer cropped\"><div class=\"quote\"><p>" + "\"" + quotes[index] + "\"</p></div>" + "\n");
-        document.write("<div class=\"source\"><p>" + "&mdash;" + authors[index] + "</p></div></div>" + "\n");
-        
-        
-        //done
-    </script>
-    <div class="InnerContainer">
-        <h2 id="resume" class="bookmark">R&#233;sum&#233;</h2>
-		<p><a target="_blank" href="documents/Resume.pdf"><span id="downloadResume">Download as PDF</span></a></p>
-        <div class="MasonryIfAvail">
-            <div class="ListContainer Card MasonryElem">
-                <ul><h3>Programming Languages</h3>
-                    <ul>C++</ul>
-                    <ul>HTML</ul>
-                    <ul>CSS</ul>
-                    <ul>Java</ul>
-                    <ul>VB.Net</ul>
-                </ul>
-            </div>
-            <div class="ListContainer Card MasonryElem">
-                <ul><h3>Employment</h3>
-                    <ul><span class="employer"><a href="http://sololabs.com/">SOLO Labs</a></span> <span class="position">Intern</span></ul>
-                    <ul><span class="employer"><a href="http://newspaceglobal.com/">NewSpace Global</a></span> <span class="position">Web Design Intern</span></ul>
-                    <ul><span class="employer">Computer Repair Business</span> <span class="position">Self Run</span></ul>
-                </ul>
-            </div>
-            <div class="ListContainer Card MasonryElem">
-                <ul><h3>Experience</h3>
-                    <ul>Designed and developed a system to populate a database from XML files</ul>
-                    <ul>Independently designed a web interface using HTML and Perl</ul>
-                    <ul>Employed problem solving skills to utilize limited screen real estate</ul>
-                    <ul>Worked as part of a team to design and implement updates to the company website</ul>
-                    <ul>Worked to refine and redesign an HTML email template for monthly announcements</ul>
-                </ul>
-            </div>
-            <div class="ListContainer Card MasonryElem">
-                <ul><h3>Community</h3>
-                    <ul><span class="description">NYC Missions Trip</span><span class="position"><a href="http://gospel.spreadtruth.com/">Spreadtruth Missions</a></span></ul>
-                    <ul><span class="description">Youth Group Student Leadership</span><span class="position"><a href="http://www.newlifebfc.org/">New Life Church</a></span></ul>
-                    <ul><span class="description">Summer Camp Volunteer</span><span class="position"><a href="http://www.victoryvalleycamp.org/">Victory Valley</a></span></ul>
-                    <ul><span class="description">Missions Trip to Minnesota Indian Reservation</span></ul>
-                    <ul><span class="description">Vacation Bible School Volunteer</span></ul>
-                    <ul><span class="description">Church Video System Operator</span></ul>
-                    <ul><span class="description">Relay for Life Participant</span></ul>
-                </ul>
-            </div>
-            <div class="ListContainer Card MasonryElem">
-                <ul><h3>Activities (High School)</h3>
-                    <ul><span class="description">Cross Country - Captain (Senior Year)</span><span class="position">4 years</span></ul>
-                    <ul><span class="description">Track - Captain (Senior Year)</span><span class="position">4 years</span></ul>
-                    <ul><span class="description">National Honor Society</span><span class="position">1 year</span></ul>
-                    <ul><span class="description">Best of Berks Reading Eagle Nominee in Computer Science</span></ul>
-                </ul>
-            </div>
-            <div class="ListContainer Card MasonryElem">
-                <ul><h3>Activities (College)</h3>
-                    <ul><span class="description">Cross Country</span><span class="position">3 years</span></ul>
-                    <ul><span class="description">Journal of Law and Public Policy Webmaster</span><span class="position">2 years</span></ul>
-                </ul>
-            </div>
-        </div>
-    </div>
+      <div class="InnerContainer">
+          <h2 id="bio" class="bookmark">Bio</h2>
+          <p class="cropped">
+          From a young age, Nathan Abel Snyder has been both academically and
+          athletically inclined. He has always enjoyed developing and tinkering with
+          technologies of various kinds and complexities. He is always seeking to
+          challenge himself and learn more about different emerging technologies.
+          Throughout highschool and continuing into college, Nathan has pursued
+          his passion for running both in cross country and track and field. He
+          enjoys the challenge and adventure of living life off the beaten path.
+          <br><br>Nathan is currently working as a computer programmer at SOLO Labs
+  		in Kutztown, Pennsylvania. He will return to Grove City College in the fall,
+  		where he will spend his senior year studying computer science and will graduate
+  		in 2015.</p>
+          <div class="ListContainer Card">
+              <ul><h3>Contact Nathan</h3>
+                  <ul><span class="ContactMethod">Email</span><span class="ContactLink"><a href="mailto:nathan@snydern.com">nathan@snydern.com</a></span></ul>
+                  <ul><span class="ContactMethod">LinkedIn</span><span class="ContactLink"><a href="http://www.linkedin.com/in/nasnyder">nasnyder</a></span></ul>
+                  <ul><span class="ContactMethod">Twitter</span><span class="ContactLink"><a href="http://twitter.com/share?text=%40snyderxc%20&url=">@snyderxc</a></span></ul>
+              </ul>
+          </div>
+      </div>
+      <div class="InnerContainer cropped">
+          <h2 id="now" class="bookmark">Right Now</h2>
+          <p>
+              <span class="singleLine"><span class="updateTitle">Studying at:</span><span id="currentJob" class="updateText">Grove City College  — Computer Science</span></span>
+              <span class="singleLine"><span class="updateTitle">Latest Blog Post:</span><span id="latestPostTitle" class="updateText"></span></span>
+              <span class="singleLine"><span class="updateTitle" id="lastFMPlayingStatus">Last Played:</span><span id="lastFMLastPlayed" class="updateText"></span></span>
+              <span class="singleLine"><span class="updateTitle">Most Recent Tweet:</span><span id="latestTweet" class="updateText"></span></span>
+          </p>
+      </div>
+      <script language="JavaScript">
+          //store the quotations in arrays
+          quotes = new Array(7);
+          authors = new Array(7);
+          quotes[0] = "And if our God is for us, then who can ever stop us?";
+          authors[0] = "Romans 8:31";
+          quotes[1] = "Your attitude should be the same as that of Christ Jesus ... taking the very nature of a servant.";
+          authors[1] = "Philippians 2:5-7";
+          quotes[2] = "I&#39;ll stand ... In awe of the One who gave it all";
+          authors[2] = "Hillsong";
+          quotes[3] = "To give anything less than your best is to sacrifice the gift.";
+          authors[3] = "Steve Prefontaine";
+          quotes[4] = "Greater things have yet to come, and greater things are still to be done in this city.";
+          authors[4] = "Chris Tomlin";
+          quotes[5] = "So then faith comes by hearing, and hearing by the word of God.";
+          authors[5] = "Romans 10:17";
+          quotes[6] = "Oh praise the one who paid my debt and raised this life up from the dead.";
+          authors[6] = "Hillsong";
+          quotes[7] = "God's love always seeks to save the lost.";
+          authors[7] = "Unknown";
+
+          //calculate a random index
+          index = Math.floor(Math.random() * quotes.length);
+
+          //display the quotation
+
+          document.write("<div class=\"quoteBlock InnerContainer cropped\"><div class=\"quote\"><p>" + "\"" + quotes[index] + "\"</p></div>" + "\n");
+          document.write("<div class=\"source\"><p>" + "&mdash;" + authors[index] + "</p></div></div>" + "\n");
+
+
+          //done
+      </script>
+      <div class="InnerContainer">
+          <h2 id="resume" class="bookmark">R&#233;sum&#233;</h2>
+  		<p><a target="_blank" href="documents/Resume.pdf"><span id="downloadResume">Download as PDF</span></a></p>
+          <div class="MasonryIfAvail">
+              <div class="ListContainer Card MasonryElem">
+                  <ul><h3>Programming Languages</h3>
+                      <ul>C++</ul>
+                      <ul>HTML</ul>
+                      <ul>CSS</ul>
+                      <ul>Java</ul>
+                      <ul>VB.Net</ul>
+                  </ul>
+              </div>
+              <div class="ListContainer Card MasonryElem">
+                  <ul><h3>Employment</h3>
+                      <ul><span class="employer"><a href="http://sololabs.com/">SOLO Labs</a></span> <span class="position">Intern</span></ul>
+                      <ul><span class="employer"><a href="http://newspaceglobal.com/">NewSpace Global</a></span> <span class="position">Web Design Intern</span></ul>
+                      <ul><span class="employer">Computer Repair Business</span> <span class="position">Self Run</span></ul>
+                  </ul>
+              </div>
+              <div class="ListContainer Card MasonryElem">
+                  <ul><h3>Experience</h3>
+                      <ul>Designed and developed a system to populate a database from XML files</ul>
+                      <ul>Independently designed a web interface using HTML and Perl</ul>
+                      <ul>Employed problem solving skills to utilize limited screen real estate</ul>
+                      <ul>Worked as part of a team to design and implement updates to the company website</ul>
+                      <ul>Worked to refine and redesign an HTML email template for monthly announcements</ul>
+                  </ul>
+              </div>
+              <div class="ListContainer Card MasonryElem">
+                  <ul><h3>Community</h3>
+                      <ul><span class="description">NYC Missions Trip</span><span class="position"><a href="http://gospel.spreadtruth.com/">Spreadtruth Missions</a></span></ul>
+                      <ul><span class="description">Youth Group Student Leadership</span><span class="position"><a href="http://www.newlifebfc.org/">New Life Church</a></span></ul>
+                      <ul><span class="description">Summer Camp Volunteer</span><span class="position"><a href="http://www.victoryvalleycamp.org/">Victory Valley</a></span></ul>
+                      <ul><span class="description">Missions Trip to Minnesota Indian Reservation</span></ul>
+                      <ul><span class="description">Vacation Bible School Volunteer</span></ul>
+                      <ul><span class="description">Church Video System Operator</span></ul>
+                      <ul><span class="description">Relay for Life Participant</span></ul>
+                  </ul>
+              </div>
+              <div class="ListContainer Card MasonryElem">
+                  <ul><h3>Activities (High School)</h3>
+                      <ul><span class="description">Cross Country - Captain (Senior Year)</span><span class="position">4 years</span></ul>
+                      <ul><span class="description">Track - Captain (Senior Year)</span><span class="position">4 years</span></ul>
+                      <ul><span class="description">National Honor Society</span><span class="position">1 year</span></ul>
+                      <ul><span class="description">Best of Berks Reading Eagle Nominee in Computer Science</span></ul>
+                  </ul>
+              </div>
+              <div class="ListContainer Card MasonryElem">
+                  <ul><h3>Activities (College)</h3>
+                      <ul><span class="description">Cross Country</span><span class="position">3 years</span></ul>
+                      <ul><span class="description">Journal of Law and Public Policy Webmaster</span><span class="position">2 years</span></ul>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div id="SecondaryContent">
+      <div class="InnerContainer" id="LinkContainer">
+      <h2 id="follow" class="bookmark">Follow Nathan</h2>
+          <div class="MasonryIfAvail">
+              <a class="LinkedIn Card extLink MasonryElem" rel="me" href="http://www.linkedin.com/in/nasnyder"><span class="LeadLetter"></span><span class="InnerText">LinkedIn</span></a>
+              <a class="Google Card extLink MasonryElem" rel="me" href="https://plus.google.com/+NathanSnyderXC"><span class="LeadLetter"></span><span class="InnerText">Google</span></a>
+              <a class="Facebook Card extLink MasonryElem" rel="me" href="https://www.facebook.com/snyderxc"><span class="LeadLetter"></span><span class="InnerText">Facebook</span></a>
+              <a class="Twitter Card extLink MasonryElem" rel="me" href="https://www.twitter.com/snyderxc"><span class="LeadLetter"></span><span class="InnerText">Twitter</span></a>
+              <a class="Blogger Card extLink MasonryElem" rel="me" href="http://blog.snydern.com"><span class="LeadLetter"></span><span class="InnerText">Blog</span></a>
+              <a class="LastFM Card extLink MasonryElem" rel="me" href="http://www.last.fm/user/snyderxc"><span class="LeadLetter"></span><span class="InnerText">Last.fm</span></a>
+              <a class="YouTube Card extLink MasonryElem" rel="me" href="http://www.youtube.com/nathanasnyder"><span class="LeadLetter"></span><span class="InnerText">YouTube</span></a>
+          </div>
+      </div>
+  </div>
+  <div id="footer" class="InnerContainer CenteringContainer"><div class="CenteredElement"><img class="ProfileImage" src="https://lh3.googleusercontent.com/-4JYw8Giev7g/AAAAAAAAAAI/AAAAAAAAFTk/QEoPcMw_NOM/s120-c/photo.jpg" /></div>
+  <div class="CenteredElement"><p>Designed by Nathan Snyder &copy;2014</p></div></div>
 </div>
-<div id="SecondaryContent">
-    <div class="InnerContainer" id="LinkContainer">
-    <h2 id="follow" class="bookmark">Follow Nathan</h2>
-        <div class="MasonryIfAvail">
-            <a class="LinkedIn Card extLink MasonryElem" rel="me" href="http://www.linkedin.com/in/nasnyder"><span class="LeadLetter"></span><span class="InnerText">LinkedIn</span></a>
-            <a class="Google Card extLink MasonryElem" rel="me" href="https://plus.google.com/+NathanSnyderXC"><span class="LeadLetter"></span><span class="InnerText">Google</span></a>
-            <a class="Facebook Card extLink MasonryElem" rel="me" href="https://www.facebook.com/snyderxc"><span class="LeadLetter"></span><span class="InnerText">Facebook</span></a>
-            <a class="Twitter Card extLink MasonryElem" rel="me" href="https://www.twitter.com/snyderxc"><span class="LeadLetter"></span><span class="InnerText">Twitter</span></a>
-            <a class="Blogger Card extLink MasonryElem" rel="me" href="http://blog.snydern.com"><span class="LeadLetter"></span><span class="InnerText">Blog</span></a>
-            <a class="LastFM Card extLink MasonryElem" rel="me" href="http://www.last.fm/user/snyderxc"><span class="LeadLetter"></span><span class="InnerText">Last.fm</span></a>
-            <a class="YouTube Card extLink MasonryElem" rel="me" href="http://www.youtube.com/nathanasnyder"><span class="LeadLetter"></span><span class="InnerText">YouTube</span></a>
-        </div>
-    </div>
-</div>
-<div id="footer" class="InnerContainer CenteringContainer"><div class="CenteredElement"><img class="ProfileImage" src="https://lh3.googleusercontent.com/-4JYw8Giev7g/AAAAAAAAAAI/AAAAAAAAFTk/QEoPcMw_NOM/s120-c/photo.jpg" /></div>
-<div class="CenteredElement"><p>Designed by Nathan Snyder &copy;2014</p></div></div>
 <!-- Powered by Jquery, Masonry (http://masonry.desandro.com/), and The Picons Social Icon Set (http://picons.me) -->
 </body></html>

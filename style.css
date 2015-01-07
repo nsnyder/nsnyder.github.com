@@ -42,7 +42,6 @@ a {
 #pageNav {
     background: #5997C0;
     font-size: 1.25em;
-    width: 100%;
     z-index: 2;
 }
 #pageNav a {
@@ -149,12 +148,16 @@ ul {
     }
 }
 @media (min-width: 600px) {
+    #navToggle {
+      display: none;
+    }
     h1 a {
         display: inline-block;
         padding: 0.25em 0.75em;
         text-decoration: none;
     }
     #pageNav {
+        width: 100%;
         position: fixed;
         top: 0;
     }
@@ -216,9 +219,78 @@ ul {
     }
 }
 @media (max-width: 600px) {
+  #navToggle span, #navToggle span:before, #navToggle span:after {
+    transition: all 500ms ease-in-out;
+    border-radius: 1px;
+    height: 5px;
+    width: 34px;
+    background: black;
+    position: absolute;
+    display: block;
+    content: '';
+    top: 20px;
+    left: 8px;
+  }
+  #navToggle span:before {
+    top: -10px;
+    left: 0px;
+  }
+  #navToggle span:after {
+    top: 10px;
+    left: 0px;
+  }
+  #navToggle.expanded span {
+    background-color: transparent;
+  }
+  #navToggle.expanded span:before {
+    transform: rotate(45deg);
+  }
+  #navToggle.expanded span:after {
+    transform: rotate(-45deg);
+  }
+  #navToggle.expanded span:before, #navToggle.expanded span:after {
+    top: 0;
+  }
+    #navToggle {
+      transition: all 500ms ease-in-out;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      background-color: #e6e6e6;
+      height: 50px;
+      width:50px;
+    }
+    #pageNav {
+      min-width: 400px;
+      max-width: 100%;
+      z-index: -1;
+      position: fixed;
+      height: 100%;
+    }
+    #pageNav a {
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid rgba(255,255,255, .25);
+    }
+    #content {
+      transition: all 500ms ease-in-out;
+      background: #e6e6e6;
+      position: fixed;
+      left: 0px;
+      top: 0;
+      max-height: 100%;
+      overflow-y: auto;
+      width: 100%;
+    }
+    #content.expanded {
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
     h1 a {
         display: block;
         padding: 0.25em;
+        margin-left: 1em;
         text-decoration: none;
     }
     .ListContainer>ul {
@@ -283,7 +355,7 @@ ul {
 .LinkedIn .LeadLetter {
     background-image: url('noindex/picons/social-011_linkedin.png');
 }
-.Blogger .LeadLetter { 
+.Blogger .LeadLetter {
     background-image: url('noindex/picons/social-020_rss.png');
 }
 .Twitter .LeadLetter {
