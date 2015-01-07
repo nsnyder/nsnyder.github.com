@@ -118,7 +118,7 @@ function writeTweet(data) {
 }
 function expand(e) { // expand the nav
   //document.getElementById('navToggle').removeEventListener('click', expand);
-  e.preventDefault();
+  if(e!=undefined) { e.preventDefault(); }
   var width = $('#pageNav').width();
   $('.expandable').toggleClass("expanded");
   if($('#pageNav').css('left') == "0px") {
