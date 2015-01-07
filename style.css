@@ -243,16 +243,20 @@ ul {
     left: 0px;
   }
   #navToggle.expanded span {
-    background-color: transparent;
+    /*background-color: transparent;*/
+
   }
   #navToggle.expanded span:before {
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
+    top: -6px;
   }
   #navToggle.expanded span:after {
-    transform: rotate(-45deg);
+    transform: rotate(45deg);
+    top: 6px;
   }
   #navToggle.expanded span:before, #navToggle.expanded span:after {
-    top: 0;
+    left: -4px;
+    width: 20px;
   }
     #navToggle {
       transition: all 500ms ease-in-out;
