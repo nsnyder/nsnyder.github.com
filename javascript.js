@@ -120,10 +120,10 @@ function expand() { // expand the nav
   document.getElementById('navToggle').removeEventListener('click', expand);
   var width = $('#pageNav').width();
   $('.expandable').toggleClass("expanded");
-  if($('#content').css('left') == "0px") {
-    $('#content').css('left',width+"px");
+  if($('#pageNav').css('left') == "0px") {
+    $('#pageNav').css('left',"-"+width+"px");
   } else {
-    $('#content').css('left',"0px");
+    $('#pageNav').css('left',"0px");
   }
   moveAnchor();
   document.getElementById('navToggle').addEventListener('click', expand);

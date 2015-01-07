@@ -17,6 +17,9 @@ h1 {
     padding: 0;
     margin: 0;
 }
+#dim {
+  display: none;
+}
 h2, h3, h4 {
     font-weight: 400;
     margin: .5em 0;
@@ -262,11 +265,31 @@ ul {
       width:50px;
     }
     #pageNav {
+      transition: all 500ms ease-in-out;
       min-width: 300px;
       max-width: 100%;
-      z-index: -1;
+      z-index: 2;
       position: fixed;
       height: 100%;
+      left: -100%;
+    }
+    #dim {
+      transition: background-color 500ms ease-in-out 0ms,
+                  left 0ms linear 500ms;
+      background-color: transparent;
+      position:fixed;
+      z-index: 1;
+      left: -100%;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    #dim.expanded {
+      transition: background-color 500ms ease-in-out 0ms,
+                  left 0ms linear 0ms;
+      left: 0px;
+      background-color: rgba(0,0,0,0.5);
     }
     #pageNav a {
       display: block;
@@ -276,11 +299,8 @@ ul {
     #content {
       transition: all 500ms ease-in-out;
       background: #e6e6e6;
-      position: fixed;
       left: 0px;
       top: 0;
-      max-height: 100%;
-      overflow-y: auto;
       width: 100%;
     }
     #content.expanded {
