@@ -262,7 +262,7 @@ ul {
       width:50px;
     }
     #pageNav {
-      min-width: 400px;
+      min-width: 300px;
       max-width: 100%;
       z-index: -1;
       position: fixed;
