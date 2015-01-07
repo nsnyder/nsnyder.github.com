@@ -117,6 +117,7 @@ function writeTweet(data) {
     $('#latestTweet').html(html[0].innerHTML);
 }
 function expand() { // expand the nav
+  document.getElementById('navToggle').removeEventListener('click', expand);
   var width = $('#pageNav').width();
   $('.expandable').toggleClass("expanded");
   if($('#content').css('left') == "0px") {
@@ -125,6 +126,7 @@ function expand() { // expand the nav
     $('#content').css('left',"0px");
   }
   moveAnchor();
+  document.getElementById('navToggle').addEventListener('click', expand);
 }
 
 function moveAnchor() {
@@ -136,7 +138,7 @@ function moveAnchor() {
   var width = $('#pageNav').width();
   var toggleWidth = $('#navToggle').width();
   if(window.innerWidth-width>toggleWidth) {
-    $('#navToggle').css('left',($('#content').position().left)+"px");
+    $('#navToggle').css('left',$('#pageNav').width()+"px");
   } else {
     $('#navToggle').css('left',(window.innerWidth-$('#navToggle').width())+"px");
   }
