@@ -90,7 +90,7 @@ $(window).resize(function () {
     var cw = $('.extLink').css('height');
     $('.LeadLetter').css({'width':cw});
     if($(window).width() > 600) {
-		$('#pageNav').css('top', 'auto').css('left', 'auto');
+		$('#pageNav').css('top', '0').css('left', 'auto');
         var container = document.querySelector('.MasonryIfAvail');
         var msnry = new Masonry( container, {
             itemSelector: '.MasonryElem'
