@@ -361,6 +361,7 @@ ul {
     background-repeat: no-repeat;
     background-position: center center;
     background-size:auto 70%;
+	border-radius: 3px 0 0 3px;
     display: table-cell;
     height: 100%;
     text-align: center;
