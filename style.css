@@ -16,6 +16,7 @@ h1 {
 #dim {
   display: none;
 }
+
 h2, h3, h4 {
     font-weight: 400;
     margin: .5em 0;
@@ -24,7 +25,7 @@ h2, h3, h4 {
 
 .InnerContainer p {
     font-size: 1.25em;
-    margin: 0 1em;
+    margin: .5em 1em;
 }
 a {
     color: #6699ff;
@@ -36,6 +37,10 @@ a {
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -epub-hyphens: auto;
+}
+
+ul.clean {
+    list-style-type: none;
 }
 
 #pageNav {
@@ -53,6 +58,31 @@ a {
     margin: .25em 1px .25em -1px;
     padding: .1em 20px .1em 21px;
 }
+
+.ListContainer .padding {
+    padding: 0.5em 1em 1em 1em;
+}
+
+.infoTable {
+    display: table;
+    width: 100%;
+}
+
+.infoColumn {
+    display: table-cell;
+    height: 100%;
+    padding-bottom: .5em;
+}
+
+.infoRow .solo {
+    /* doesn't do anything for now */
+}
+
+.infoRow {
+    display: table-row;
+    padding-bottom: .5em;
+}
+
 #pageNav .navTitle span {
     font-size: 1.2em;
     margin: 0 1px 0 -1px;
@@ -182,9 +212,9 @@ ul {
         min-width: 250px;
         width: 30%;
     }
-    .ListContainer>ul {
+    /*.ListContainer>ul {
         padding: 0 1em 1em 1em;
-    }
+    }*/
     .InnerContainer {
         padding: 1em 2em;
         overflow: auto;
@@ -313,14 +343,13 @@ ul {
         margin-left: 1em;
         text-decoration: none;
     }
-    .ListContainer>ul {
-        padding: 0 1em 1em 1em;
-    }
+
     .ListContainer {
         display: block;
         margin: 1em auto;
         width: 100%;
     }
+
     .InnerContainer {
         padding: 1em .5em;
         overflow: auto;
