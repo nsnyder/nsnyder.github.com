@@ -32,8 +32,7 @@ a {
     hyphens: auto;
     text-decoration: none;
     -ms-word-break: break-all;
-    -epub-word-break: break-all;
-    word-break: break-word;
+    word-break: break-all;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -epub-hyphens: auto;
@@ -160,12 +159,12 @@ ul {
         top: 2em;
         right: 0;
         z-index: -1;
-		background-repeat-y: no-repeat;
+		background-repeat: no-repeat;
     }
 }
 @media (min-width: 1000px) and (max-width: 1499px) {
     #sidephoto {
-        background-image: linear-gradient(to right, rgba(230,230,230, 1) 0%, rgba(230,230,230, 0) 300px), url('D2013-KJM-0703-243_flip_small.jpg');
+        background: linear-gradient(to right, rgba(230,230,230, 1) 0%, rgba(230,230,230, 0) 300px), url('D2013-KJM-0703-243_flip_small.jpg');
         background-size: 100%;
         position: fixed;
         height: 100%;
@@ -173,7 +172,7 @@ ul {
         top: 2em;
         right: 0;
         z-index: -1;
-		background-repeat-y: no-repeat;
+		background-repeat: no-repeat;
     }
 }
 @media (min-width: 600px) {
@@ -194,9 +193,7 @@ ul {
         margin-top: 3.5em;
     }
     .navItem {
-        background: linear-gradient(0deg, #91B1C7, #91B1C7);
-        background-repeat:  no-repeat;
-        background-position: 0 -2em;
+        background: linear-gradient(0deg, #91B1C7, #91B1C7) 0 -2em no-repeat;
         transition: .2s;
         -webkit-transition: .2s;
         -moz-transition: .2s;
@@ -262,11 +259,11 @@ ul {
   }
   #navToggle span:before {
     top: -10px;
-    left: 0px;
+    left: 0;
   }
   #navToggle span:after {
     top: 10px;
-    left: 0px;
+    left: 0;
   }
   #navToggle.expanded span {
     /*background-color: transparent;*/
@@ -318,7 +315,7 @@ ul {
     #dim.expanded {
       transition: background-color 500ms ease-in-out 0ms,
                   left 0ms linear 0ms;
-      left: 0px;
+      left: 0;
       background-color: rgba(0,0,0,0.5);
     }
     #pageNav a {
@@ -329,7 +326,7 @@ ul {
     #content {
       transition: all 500ms ease-in-out;
       background: #e6e6e6;
-      left: 0px;
+      left: 0;
       top: 0;
       width: 100%;
     }
@@ -382,9 +379,7 @@ ul {
     }
 }
 .extLink .LeadLetter {
-    background: #333;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: #333 center center no-repeat;
     background-size:auto 70%;
 	border-radius: 3px 0 0 3px;
     display: table-cell;
