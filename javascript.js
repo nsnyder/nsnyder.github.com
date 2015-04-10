@@ -35,7 +35,7 @@ $(window).load(function() {
           width = $(this).width();
       }
     });
-    titles.css('width', width+"px");
+    titles.css('width', (width+2)+"px");
     $(".scroll").click(function(event){
         if(window.innerWidth<=600 && $('#navToggle.expanded')[0]!==undefined) {
           expand();
@@ -122,7 +122,7 @@ function expand(e) { // expand the nav
   var width = $('#pageNav').width();
   $('.expandable').toggleClass("expanded");
   if($('#pageNav').css('left') == "0px") {
-    $('#pageNav').css('left',"-"+width+2+"px");
+    $('#pageNav').css('left',"-"+width+"px");
   } else {
     $('#pageNav').css('left',"0px");
   }
