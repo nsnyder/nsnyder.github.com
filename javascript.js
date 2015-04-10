@@ -48,7 +48,7 @@ $(window).load(function() {
         } else {
             $('html,body').animate({scrollTop: aTag.offset().top-50},'slow');
         }
-    })
+    });
     $(window).scroll(function() { //when window is scrolled
         $('.bookmark').each(function(index) {
             var offset = $(this).offset().top - $(window).scrollTop(); //get the offset top of the element
@@ -91,11 +91,11 @@ $(window).resize(function () {
     if($(window).width() > 600) {
 		$('#pageNav').removeAttr('style');
         var container = document.querySelector('.MasonryIfAvail');
-        var msnry = new Masonry( container, {
+        new Masonry( container, {
             itemSelector: '.MasonryElem'
         });
         container = document.querySelector('#LinkContainer .MasonryIfAvail');
-        var msnry2 = new Masonry( container, {
+        new Masonry( container, {
             itemSelector: '.MasonryElem'
         });
     }
@@ -122,7 +122,7 @@ function expand(e) { // expand the nav
   var width = $('#pageNav').width();
   $('.expandable').toggleClass("expanded");
   if($('#pageNav').css('left') == "0px") {
-    $('#pageNav').css('left',"-"+width+"px");
+    $('#pageNav').css('left',"-"+width+2+"px");
   } else {
     $('#pageNav').css('left',"0px");
   }
