@@ -28,7 +28,7 @@ h2, h3, h4 {
     margin: .5em 1em;
 }
 a {
-    color: #6699ff;
+    color: #F44336;
     hyphens: auto;
     text-decoration: none;
     /*
@@ -45,7 +45,7 @@ ul.clean {
 }
 
 #pageNav {
-    background: #5997C0;
+    background: #D32F2F;
     font-size: 1.25em;
     z-index: 2;
 }
@@ -201,7 +201,7 @@ ul {
         margin-top: 3.5em;
     }
     .navItem {
-        background: linear-gradient(0deg, #91B1C7, #91B1C7) 0 -2em no-repeat;
+        background: linear-gradient(0deg, #B71C1C, #B71C1C) 0 -2em no-repeat;
         transition: .2s;
         -webkit-transition: .2s;
         -moz-transition: .2s;
