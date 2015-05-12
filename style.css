@@ -23,6 +23,9 @@ h2, h3, h4 {
     padding: 0;
 }
 
+.highlight {
+    /* font-weight: 400; */
+}
 .InnerContainer p {
     font-size: 1.25em;
     margin: .5em 1em;
