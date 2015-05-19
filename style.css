@@ -431,12 +431,12 @@ ul {
     min-height: 100px;
 }
 .gccLogo {
-    background: url('http://upload.wikimedia.org/wikipedia/en/6/6b/Grove_City_College_seal.png') no-repeat center right;
+    background: url('resources/Grove_City_College_seal.png') no-repeat center right;
     /* background: url('https://media.licdn.com/mpr/mpr/shrink_200_200/p/4/005/028/3da/1a7529e.png') no-repeat center right; */
     background-size: auto 90%;
 }
 
 .dbLogo {
-    background: url('https://pbs.twimg.com/profile_images/1909057797/DBLogo-Large.jpg') no-repeat center right;
+    background: url('resources/DBLogo.jpg') no-repeat center right;
     background-size: auto 80%;
 }
