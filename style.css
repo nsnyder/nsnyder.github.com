@@ -9,7 +9,7 @@ body {
 }
 h1 {
     font-size: 5em;
-    font-weight: 300;
+    font-weight: 600;
     padding: 0;
     margin: 0;
 }
@@ -27,8 +27,9 @@ h2, h3, h4 {
     /* font-weight: 400; */
 }
 .InnerContainer p {
-    font-size: 1.25em;
-    margin: .5em 1em;
+    font-size: 1.05em;
+    line-height: 1.35;
+    margin: 0.5em 1em;
 }
 a {
     color: #F44336;
@@ -97,7 +98,7 @@ ul.clean {
 	text-transform: uppercase;
 }
 .cropped {
-    max-width: 800px;
+    max-width: 600px;
     display: inline-block;
 }
 .position {
@@ -148,7 +149,7 @@ ul {
     background-color: #fff;
     border-radius: 3px;
     vertical-align: top;
-	box-shadow: 0 .5em 1em #444;
+	box-shadow: 0 .5em 1em rgba(20, 20, 20, 0.4);
 }
 .quoteBlock {
     font-style: italic;
