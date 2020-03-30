@@ -17,5 +17,5 @@ export default {
 
 <style>
   @import './styles/main.css';
-
+  @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 </style>

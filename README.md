@@ -10,6 +10,8 @@ run:
 ```
 mkdir .util
 npx tailwind build src/styles/main.css -o .util/output.css
+# For convenience, the above has been aliased to:
+npm run autocomplete
 ```
 
 PHPStorm should pickup the file and autocomplete classes for you.
