@@ -1,5 +1,20 @@
 # nsnyder.github.com
 
+[Nathan Snyder's website](www.snydern.com) is built using:
+- Vue
+- TailwindCSS
+
+To make life easier in PHPStorm and other IntelliJ IDEs,
+run:
+
+```
+mkdir .util
+npx tailwind build src/styles/main.css -o .util/output.css
+```
+
+PHPStorm should pickup the file and autocomplete classes for you.
+(Even if you're running an old version like me 😅)
+
 ## Project setup
 ```
 npm install
@@ -20,5 +35,3 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

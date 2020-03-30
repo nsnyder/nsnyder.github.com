@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="bg-red-500">
+  <div id="app">
     <Header />
   </div>
 </template>
