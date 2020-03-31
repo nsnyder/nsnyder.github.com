@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "autocomplete": "npx tailwind build src/styles/main.css -o .util/output.css",
-    "gh-pages-deploy": "node scripts/github-deploy.js"
+    "github-deploy": "node scripts/github-deploy.js"
   },
   "dependencies": {
     "@vue/cli-plugin-babel": "^4.2.3",
