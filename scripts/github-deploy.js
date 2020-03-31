@@ -11,6 +11,9 @@ const targetBranch = 'master';
     await execa("git", ["checkout", "--orphan", targetBranch]);
     console.log("Building...");
     await execa("npm", ["run", "build"]);
+    if (fs.existsSync(".www-resources")) {
+      await execa("cp", ["-r", ".www-resources/*", "dist"]);
+    }
     // Understand if it's dist or build folder
     const folderName = fs.existsSync("dist") ? "dist" : "build";
     await execa("git", ["--work-tree", folderName, "add", "--all"]);
