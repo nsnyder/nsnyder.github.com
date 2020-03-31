@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-purple-blue min-h-screen flex flex-col p-5 items-center align-middle justify-center">
+  <div class="bg-fixed bg-gradient-purple-blue min-h-screen flex flex-col p-5 items-center align-middle justify-center">
     <div class="font-display text-5xl md:text-6xl my-5">
       Nathan Snyder
     </div>

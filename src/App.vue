@@ -1,18 +1,21 @@
 <template>
-  <div id="app">
+  <div id="app" class="font-mono">
+    <Navigation />
     <Header />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
+  import Header from './components/Header.vue';
+  import Navigation from './components/Navigation.vue';
 
-export default {
-  name: 'App',
-  components: {
-    Header
-  }
-}
+  export default {
+    name: 'App',
+    components: {
+      Header,
+      Navigation
+    }
+  };
 </script>
 
 <style>

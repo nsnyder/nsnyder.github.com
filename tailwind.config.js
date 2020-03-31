@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   theme: {
     extend: {},
@@ -6,10 +8,13 @@ module.exports = {
       'purple-blue': ['-45deg', theme('colors.purple.500'), theme('colors.blue.500')]
     }),
     fontFamily: {
+      ...defaultTheme.fontFamily,
       display: ['Satisfy', 'cursive']
     }
   },
-  variants: {},
+  variants: {
+    padding: ['hover']
+  },
   plugins: [
     require('./plugins/gradient')
   ]
