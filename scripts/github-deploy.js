@@ -15,7 +15,7 @@ const targetBranch = 'master';
     const folderName = fs.existsSync("dist") ? "dist" : "build";
     await execa("git", ["--work-tree", folderName, "add", "--all"]);
     await execa("git", ["--work-tree", folderName, "commit", "-m", targetBranch]);
-    console.log("Pushing to gh-pages...");
+    console.log(`Pushing to ${ targetBranch }...`);
     await execa("git", ["push", "origin", `HEAD:${ targetBranch }`, "--force"]);
     await execa("rm", ["-r", folderName]);
     await execa("git", ["checkout", "-f", sourceBranch]);
