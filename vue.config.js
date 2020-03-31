@@ -2,5 +2,5 @@ module.exports = {
     css: {
         requireModuleExtension: false
     },
-    publicPath: '/'
+    publicPath: '/nsnyder.github.com/'
 };
