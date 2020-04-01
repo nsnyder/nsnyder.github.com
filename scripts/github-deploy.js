@@ -12,7 +12,7 @@ const targetBranch = 'master';
     console.log("Building...");
     await execa("npm", ["run", "build"]);
     if (fs.existsSync(".www-resources")) {
-      await execa("cp", ["-r", ".www-resources", "dist"]);
+      await execa("cp", ["-a", ".www-resources/.", "dist"]);
     }
     // Understand if it's dist or build folder
     const folderName = fs.existsSync("dist") ? "dist" : "build";
