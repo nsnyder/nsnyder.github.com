@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="font-mono">
+  <div id="app" class="font-sans">
     <Navigation />
     <Header />
   </div>
