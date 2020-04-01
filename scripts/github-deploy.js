@@ -12,8 +12,7 @@ const targetBranch = 'master';
     console.log("Building...");
     await execa("npm", ["run", "build"]);
 
-    // Keep the README.md and anything else that we want aside from the built code.
-    await execa("cp", ["README.md", "dist"]);
+    // Keep anything that we want aside from the built code.
     if (fs.existsSync(".www-resources")) {
       await execa("cp", ["-a", ".www-resources/.", "dist"]);
     }
