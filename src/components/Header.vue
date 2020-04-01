@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="absolute w-full bg-gray-800 text-center text-gray-200 p-2">
-      This site is a work in progress. But the "Contact Me!" link works 😉
+      This site is a work in progress, but the "Contact Me!" link works 😉
     </div>
     <div class="bg-fixed bg-gradient-purple-blue min-h-screen flex flex-col p-5 items-center align-middle justify-center">
       <div class="font-display text-5xl md:text-6xl my-5">
