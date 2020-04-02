@@ -22,3 +22,9 @@ jobs:
         run: |
           git config user.name "nsnyder" && git config user.email "nathan@snydern.com"
           npm run github-deploy
+      - name: "Let's my IFTTT know this"
+        uses: cixo/ifttt-trigger@v0.3
+        with:
+          key: "${{ secrets.IFTTT_KEY }}"
+          event: "snydern_com_deployed"
+          value1: "https://www.snydern.com"
