@@ -1,4 +1,4 @@
-# nsnyder.github.com
+# www.snydern.com
 
 [Nathan Snyder's website](www.snydern.com) is built using:
 - Vue
