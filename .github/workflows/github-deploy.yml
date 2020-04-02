@@ -26,5 +26,5 @@ jobs:
         uses: cixo/ifttt-trigger@v0.3
         with:
           key: "${{ secrets.IFTTT_KEY }}"
-          event: "snydern_com_deployed"
+          event: "site_deployed"
           value1: "https://www.snydern.com"
