@@ -16,41 +16,47 @@
         Contact Me!
       </a>
     </div>
-    <div class="p-4 text-white text-left w-full ">
+    <div class="p-2 text-white text-left w-full flex">
       <a v-for="(link, index) in socialLinks"
          :key="index"
          v-bind="link.attrs || {}"
-         class="px-1 py-2 mx-2"
+         class="p-1 mx-1"
       >
-        <span class="border-b-4 border-white">{{ link.title }}</span>
+        <SvgIcon class="text-white w-6 h-6" :name="link.icon" />
       </a>
     </div>
   </div>
 </template>
 
 <script>
+  import SvgIcon from './partials/SvgIcon.vue';
+
   export default {
     name: 'Header',
+
+    components: {
+      SvgIcon
+    },
 
     data() {
       return {
         socialLinks: [
           {
-            title: 'Github',
+            icon: 'Github',
             attrs: {
               href: 'https://github.com/nsnyder',
               title: 'My Github profile'
             }
           },
           {
-            title: 'Twitter',
+            icon: 'Twitter',
             attrs: {
               href: 'https://twitter.com/NathanFromPA',
               title: 'My Twitter timeline'
             }
           },
           {
-            title: 'LinkedIn',
+            icon: 'LinkedIn',
             attrs: {
               href: 'https://www.linkedin.com/in/nasnyder/',
               title: 'My LinkedIn profile'

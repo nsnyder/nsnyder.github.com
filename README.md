@@ -3,6 +3,7 @@
 [Nathan Snyder's website](www.snydern.com) is built using:
 - Vue
 - TailwindCSS
+- [Simple Icons](https://simpleicons.org)
 
 To make life easier in PHPStorm and other IntelliJ IDEs,
 run:
