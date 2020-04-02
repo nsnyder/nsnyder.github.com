@@ -24,11 +24,11 @@ jobs:
           npm run github-deploy
       - name: get commit message
         run: |
-           echo ::set-env name=commitmsg::$(git log --format=%B -n 1 ${{ github.event.after }})
+           echo ::set-env name=commitmsg::$(git log --format=%B -n 1 ${{ GITHUB_SHA }})
       - name: "Tell IFTTT when the site is deployed"
         uses: cixo/ifttt-trigger@v0.3
         with:
           key: "${{ secrets.IFTTT_KEY }}"
           event: "site_deployed"
           value1: "https://www.snydern.com"
-          value2: $commitmsg
+          value2: "${{ env.commitmsg }}"
