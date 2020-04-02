@@ -22,7 +22,7 @@ jobs:
         run: |
           git config user.name "nsnyder" && git config user.email "nathan@snydern.com"
           npm run github-deploy
-      - name: get commit message
+      - name: Get commit message
         run: |
            echo ::set-env name=commitmsg::$(git log --format=%B -n 1 ${{ env.GITHUB_SHA }})
       - name: "Tell IFTTT when the site is deployed"
