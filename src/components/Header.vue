@@ -4,9 +4,9 @@
       This site is a work in progress, but the "Contact Me!" link works 😉
     </div>
     <div class="w-full text-center p-2">
-      <div class="font-display text-5xl md:text-6xl my-5">
+      <h1 class="font-display text-5xl md:text-6xl my-5">
         Nathan Snyder
-      </div>
+      </h1>
       <div class="my-5 mb-8 max-w-xl mx-auto">
         Hi! I'm a developer at The Restaurant Store. I love tackling complex projects,
         learning new things, and building tools that help people get things done
