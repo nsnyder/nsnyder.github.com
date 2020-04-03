@@ -20,6 +20,7 @@
       <a v-for="(link, index) in socialLinks"
          :key="index"
          v-bind="link.attrs || {}"
+         target="_blank"
          class="p-1 mx-1"
       >
         <SvgIcon class="text-white w-6 h-6" :name="link.icon" />
