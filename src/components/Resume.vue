@@ -1,20 +1,7 @@
 <template>
-  <div class="bg-fixed bg-gradient-purple-blue flex items-center justify-between min-h-screen flex-col"
-    :class="{ 'flex-before': !showWipBanner }"
-  >
-    <div
-      v-if="showWipBanner"
-      class="w-full bg-gray-800 text-center text-gray-200 flex items-center justify-between align-middle flex-before"
-    >
-      <div class="flex-1"></div>
-      <div>
-        This site is a work in progress, but the "Contact Me!" link works 😉
-      </div>
-      <div class="flex-1 text-right">
-        <a href="#" class="inline-block p-4 md:py-2 mx-2" @click="showWipBanner = false">
-          &times;
-        </a>
-      </div>
+  <div class="bg-fixed bg-gradient-purple-blue flex items-center justify-between min-h-screen flex-col">
+    <div class="w-full bg-gray-800 text-center text-gray-200 p-2 self-start">
+      This site is a work in progress, but the "Contact Me!" link works 😉
     </div>
     <div class="w-full text-center p-2">
       <h1 class="font-display text-5xl md:text-6xl my-5">
@@ -25,9 +12,7 @@
         learning new things, and building tools that help people get things done
         quickly and effectively.
       </div>
-      <a href="mailto:nathan@snydern.com"
-         class="btn-md my-5 text-white font-bold border-white hover:bg-white hover:text-purple-500 transition-all duration-300"
-      >
+      <a href="mailto:nathan@snydern.com" class="my-5 border-2 px-4 py-2 text-white font-bold border-white rounded-full inline-block">
         Contact Me!
       </a>
     </div>
@@ -45,7 +30,7 @@
 </template>
 
 <script>
-  import SvgIcon from '~/components/partials/SvgIcon.vue';
+  import SvgIcon from './partials/SvgIcon.vue';
 
   export default {
     name: 'Header',
@@ -56,7 +41,6 @@
 
     data() {
       return {
-        showWipBanner: true,
         socialLinks: [
           {
             icon: 'Github',

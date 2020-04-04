@@ -13,7 +13,7 @@ module.exports = {
     }
   },
   variants: {
-    padding: ['hover']
+    padding: ['responsive']
   },
   plugins: [
     require('./plugins/gradient')

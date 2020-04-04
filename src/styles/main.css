@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn-md {
+    @apply border-2 px-4 py-2 rounded-full inline-block;
+}
+
+.flex-after:after {
+    content: ''
+}
+.flex-before:before {
+    content: ''
+}

@@ -1,6 +1,5 @@
 <template>
   <div id="app" class="font-sans">
-    <Navigation />
     <Header />
   </div>
 </template>
@@ -8,12 +7,14 @@
 <script>
   import Header from './components/Header.vue';
   import Navigation from './components/Navigation.vue';
+  import Resume from '~/components/Resume.vue';
 
   export default {
     name: 'App',
     components: {
       Header,
-      Navigation
+      Navigation, // eslint-disable-line vue/no-unused-components
+      Resume // eslint-disable-line vue/no-unused-components
     }
   };
 </script>
