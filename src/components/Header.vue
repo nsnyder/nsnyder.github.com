@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-fixed bg-gradient-purple-blue flex items-center align-middle justify-between min-h-screen flex-col">
+  <div class="bg-fixed bg-gradient-purple-blue flex items-center justify-between min-h-screen flex-col">
     <div class="w-full bg-gray-800 text-center text-gray-200 p-2 self-start">
       This site is a work in progress, but the "Contact Me!" link works 😉
     </div>
