@@ -10,12 +10,16 @@ module.exports = {
     fontFamily: {
       ...defaultTheme.fontFamily,
       display: ['Satisfy', 'cursive']
-    }
+    },
+    stripes: theme => ({
+      'construction': [theme('colors.orange.700'), theme('colors.gray.900')]
+    })
   },
   variants: {
     padding: ['responsive']
   },
   plugins: [
-    require('./plugins/gradient')
+    require('./plugins/gradient'),
+    require('./plugins/stripes')
   ]
 };

@@ -1,5 +1,5 @@
 <template>
-  <svg v-bind="$attrs" class="fill-current" :viewBox="iconData.viewBox" v-html="iconHtml" xmlns="http://www.w3.org/2000/svg"></svg>
+  <svg class="fill-current" :viewBox="iconData.viewBox" v-html="iconHtml" xmlns="http://www.w3.org/2000/svg"></svg>
 </template>
 
 <script>
@@ -9,6 +9,10 @@
     props: {
       name: {
         required: true,
+        type: String
+      },
+      title: {
+        required: false,
         type: String
       }
     },
@@ -41,7 +45,7 @@
         throw "Invalid icon specified.";
       },
       iconHtml: function() {
-        return `<title>${this.iconData.title || ''}</title>${this.iconData.contents}`;
+        return `<title>${this.title || this.iconData.title || ''}</title>${this.iconData.contents}`;
       }
     }
   }
