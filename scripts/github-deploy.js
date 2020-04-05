@@ -16,7 +16,7 @@ const targetBranch = 'master';
     if (fs.existsSync(".www-resources")) {
       await execa("cp", ["-a", ".www-resources/.", "dist"]);
     }
-    // Understand if it's dist or build folder
+    // Understand if it's dist or build folder.
     const folderName = fs.existsSync("dist") ? "dist" : "build";
     await execa("git", ["--work-tree", folderName, "add", "--all"]);
     await execa("git", ["--work-tree", folderName, "commit", "-m", targetBranch]);
