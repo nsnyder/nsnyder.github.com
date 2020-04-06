@@ -28,7 +28,7 @@ npm install
 npm run serve
 ```
 
-You may also choose to run `vue ui` or `npm run vue-ui` to have a use a nicer interface.
+You may also choose to run `vue ui` or `npm run vue-ui` to have a nicer interface.
 
 ### Compiles and minifies for production
 ```
