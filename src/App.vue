@@ -1,6 +1,7 @@
 <template>
   <div id="app" class="font-sans">
     <Header />
+    <Resume />
   </div>
 </template>
 
@@ -14,7 +15,7 @@
     components: {
       Header,
       Navigation, // eslint-disable-line vue/no-unused-components
-      Resume // eslint-disable-line vue/no-unused-components
+      Resume
     }
   };
 </script>
