@@ -5,7 +5,7 @@
       <h2 class="py-2 text-xl font-bold">Experience</h2>
       <div class="grid grid-cols-1 gap-2 md:grid-cols-3" ref="experience-grid">
         <div v-for="(entry, index) in experienceEntries"
-          class="h-32 p-2 duration-1000 transform bg-gray-300 border-l-8 rounded"
+          class="h-32 p-2 duration-1000 transform border-l-8 rounded bg-gradient-shades-of-gray"
           :key="index"
           :class="Object.assign({
             'opacity-0': (index > visibleElementsCount - 1),
@@ -51,19 +51,24 @@
     mounted() {
       const grid = this.$refs['experience-grid'];
 
+      // Make all the elements visible on 100ms delay.
       const handleVisibility = () => {
         this.visibleElementsCount++;
         if (this.visibleElementsCount < this.experienceEntries.length) {
           setTimeout(handleVisibility, 100);
         }
       };
+
+      // When the grid comes into view (25% of it), make all the elements visible.
       const observer = new IntersectionObserver(([entry]) => {
         if (!entry.isIntersecting) {
           return;
         }
         handleVisibility();
+
+        // Disconnect the observer since we've done all we need to do.
         observer.disconnect();
-      }, { threshold: 1.0 });
+      }, { threshold: 0.25 });
       observer.observe(grid);
     }
   }
