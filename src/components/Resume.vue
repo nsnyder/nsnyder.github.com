@@ -5,11 +5,10 @@
       <h2 class="py-2 text-xl font-bold">Experience</h2>
       <div class="grid grid-cols-1 gap-2 md:grid-cols-3" ref="experience-grid">
         <div v-for="(entry, index) in experienceEntries"
-          class="h-32 p-2 duration-1000 transform border-l-8 rounded bg-gradient-shades-of-gray"
+          class="h-32 p-2 duration-500 transform border-l-8 rounded bg-gradient-shades-of-gray"
           :key="index"
           :class="Object.assign({
-            'opacity-0': (index > visibleElementsCount - 1),
-            'opacity-100': !(index > visibleElementsCount - 1)
+            'opacity-0 -translate-x-4': (index > visibleElementsCount - 1)
           }, entry.classes || {})"
         >
           <div class="px-2 text-lg font-bold text-gray-800">{{ entry.title }}</div>
@@ -32,15 +31,15 @@
       return {
         experienceEntries: [
           {
-            classes: createClassObjectFromArray(['border-green-700']),
+            // classes: createClassObjectFromArray(['border-green-700']),
             title: 'The Restaurant Store',
           },
           {
-            classes: createClassObjectFromArray(['border-red-700']),
+            // classes: createClassObjectFromArray(['border-red-700']),
             title: 'Solo Labs',
           },
           {
-            classes: createClassObjectFromArray(['border-red-700']),
+            // classes: createClassObjectFromArray(['border-red-700']),
             title: 'Grove City College',
           }
         ],
@@ -55,7 +54,7 @@
       const handleVisibility = () => {
         this.visibleElementsCount++;
         if (this.visibleElementsCount < this.experienceEntries.length) {
-          setTimeout(handleVisibility, 100);
+          setTimeout(handleVisibility, 200);
         }
       };
 
