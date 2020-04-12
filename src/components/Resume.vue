@@ -5,13 +5,17 @@
       <h2 class="py-2 text-xl font-bold">Experience</h2>
       <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3" ref="experience-grid">
         <div v-for="(entry, index) in experienceEntries"
-          class="h-32 p-2 duration-500 transform rounded bg-gradient-shades-of-gray"
+          class="p-2 px-4 duration-500 transform rounded shadow-sm bg-gradient-shades-of-gray"
           :key="index"
           :class="Object.assign({
             'opacity-0 -translate-x-4': (index > visibleElementsCount - 1)
           }, entry.classes || {})"
         >
-          <div class="px-2 text-lg font-bold text-gray-800">{{ entry.title }}</div>
+          <div class="mb-2">
+            <h3 class="text-lg font-bold text-gray-800">{{ entry.title }}</h3>
+            <h4 class="text-sm italic text-gray-700">{{ entry.subtitle }}</h4>
+          </div>
+          <p v-html="entry.description"></p>
         </div>
       </div>
     </div>
@@ -19,11 +23,14 @@
 </template>
 
 <script>
+  import observerMixin from '~/mixins/observer';
+
   export default {
     name: 'Resume',
 
+    mixins: [observerMixin],
+
     data() {
-      // eslint-disable-next-line no-unused-vars
       const createClassObjectFromArray = (array) => array.reduce((previous, entry) => 
         Object.assign(previous, { [entry]: true  }),
         {}
@@ -33,43 +40,71 @@
         experienceEntries: [
           {
             classes: createClassObjectFromArray(['logo-mark trs-background']),
+            subtitle: 'Software Engineer 2 — 2015 to present',
             title: 'The Restaurant Store',
+            description: [
+              'Through my time at The Restaurant Store, I\'ve experienced both personal and',
+              'professional growth. The company has allowed me to work hand-in-hand with',
+              'software developers of all experience levels. This has given me the chance',
+              'to hone my skills and help teach others as well, while showing me how much',
+              'room I have to learn. I\'ve been able to take significant roles in projects',
+              'that advance the company, with a desire to make anything we do simpler,',
+              'more intuitive, and more reliable for those who interact with our software',
+              'on a daily basis.' 
+            ].join(' ')
           },
           {
             classes: createClassObjectFromArray(['logo-mark solo-background']),
+            subtitle: 'Programming Intern — 2012 to 2015 (seasonal)',
             title: 'Solo Labs',
+            description: [
+              'Working at Solo Labs between college semesters, I was responsible for a variety',
+              'of tasks. I had the opportunity to exhibit my self-motivation while both',
+              'maintaining and updating company software, as well as the experience of',
+              'helping end users to be better familiarized with the software that Solo',
+              'Labs used in their day-to-day business. My programming work also afforded',
+              'me a chance to teach myself about technologies that I was unfamiliar with.'
+            ].join(' ')
           },
           {
             classes: createClassObjectFromArray(['logo-mark gcc-background']),
+            subtitle: 'Computer Science — 2011 to 2015',
             title: 'Grove City College',
+            description: [
+              'At Grove City College, I studied algorithms, calculus, and 3D graphics, among',
+              'a variety of other subjects. Between my academics, running cross country, swing',
+              'dancing, and my friend group, I learned time management, accountability, and',
+              'the value of hard work. I left college a well rounded person, ready for',
+              'the responsibilities of post-college life. Grove City imparted me with the',
+              'desire to take pride in all that I do, as well as the humility to learn',
+              'from others as I tackle new challenges.'
+            ].join(' ')
           }
         ],
         visibleElementsCount: 0
       };
     },
 
-    mounted() {
-      const grid = this.$refs['experience-grid'];
-
-      // Make all the elements visible on 100ms delay.
-      const handleVisibility = () => {
+    methods: {
+      handleVisibility() {
         this.visibleElementsCount++;
-        if (this.visibleElementsCount < this.experienceEntries.length) {
-          setTimeout(handleVisibility, 200);
-        }
-      };
+          if (this.visibleElementsCount < this.experienceEntries.length) {
+            setTimeout(this.handleVisibility, 200);
+          }
+      }
+    },
 
-      // When the grid comes into view (25% of it), make all the elements visible.
-      const observer = new IntersectionObserver(([entry]) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
-        handleVisibility();
+    mounted() {
+      const observed = this.observeOnce(
+        this.$refs['experience-grid'],
+        this.handleVisibility,
+        { threshold: 0.25 }
+      );
 
-        // Disconnect the observer since we've done all we need to do.
-        observer.disconnect();
-      }, { threshold: 0.25 });
-      observer.observe(grid);
+      // If we couldn't start our observer, show all entries immediately.
+      if (!observed) {
+        this.visibleElementsCount = this.experienceEntries.length;
+      }
     }
   }
 </script>
@@ -96,6 +131,6 @@
     --background-image: url('/img/solo-logo.svg');
   }
   .trs-background::after {
-    --background-image: url('/img/trs-logo-large-cropped.png');
+    --background-image: url('/img/trs-logo.png');
   }
 </style>

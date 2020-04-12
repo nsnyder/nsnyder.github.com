@@ -25,7 +25,7 @@
         learning new things, and building tools that help people get things done
         quickly and effectively.
       </div>
-      <a href="mailto:nathan@snydern.com"
+      <a :href="'mailto:' + this.email"
          class="my-5 font-bold text-white transition-all duration-300 border-white btn-md hover:bg-white hover:text-blue-600"
       >
         Contact Me!
@@ -70,16 +70,6 @@
             }
           },
           {
-            icon: 'Twitter',
-            attrs: {
-              href: 'https://twitter.com/NathanFromPA',
-              title: 'My Twitter timeline'
-            },
-            svgAttrs: {
-              title: 'My Twitter timeline'
-            }
-          },
-          {
             icon: 'LinkedIn',
             attrs: {
               href: 'https://www.linkedin.com/in/nasnyder/',
@@ -88,9 +78,25 @@
             svgAttrs: {
               title: 'My LinkedIn profile'
             }
+          },
+          {
+            icon: 'Twitter',
+            attrs: {
+              href: 'https://twitter.com/' + this.$root.constants.twitterUsername,
+              title: 'My Twitter timeline'
+            },
+            svgAttrs: {
+              title: 'My Twitter timeline'
+            }
           }
         ]
       };
+    },
+
+    computed: {
+      email() {
+        return this.$root.constants.emailAddress;
+      }
     },
 
     methods: {
