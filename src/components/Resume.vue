@@ -5,17 +5,18 @@
       <h2 class="py-2 text-xl font-bold">Experience</h2>
       <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3" ref="experience-grid">
         <div v-for="(entry, index) in experienceEntries"
-          class="p-2 px-4 duration-500 transform rounded shadow-sm bg-gradient-shades-of-gray"
+          class="p-2 px-4 duration-500 rounded shadow-sm bg-gradient-shades-of-gray"
           :key="index"
-          :class="Object.assign({
-            'opacity-0 -translate-x-4': (index > visibleElementsCount - 1)
-          }, entry.classes || {})"
+          :class="entry.classes || {}"
         >
           <div class="mb-2">
             <h3 class="text-lg font-bold text-gray-800">{{ entry.title }}</h3>
             <h4 class="text-sm italic text-gray-700">{{ entry.subtitle }}</h4>
           </div>
-          <p v-html="entry.description"></p>
+          <p v-html="entry.description"
+            class="duration-1000 transform"
+            :class="{ 'opacity-0 -translate-x-4': (index > visibleElementsCount - 1) }"
+          ></p>
         </div>
       </div>
     </div>
@@ -24,6 +25,7 @@
 
 <script>
   import observerMixin from '~/mixins/observer';
+  const visibilityTimeMs = 500;
 
   export default {
     name: 'Resume',
@@ -86,10 +88,13 @@
 
     methods: {
       handleVisibility() {
+        setTimeout(this.incrementVisibility, visibilityTimeMs);
+      },
+      incrementVisibility() {
         this.visibleElementsCount++;
-          if (this.visibleElementsCount < this.experienceEntries.length) {
-            setTimeout(this.handleVisibility, 200);
-          }
+        if (this.visibleElementsCount < this.experienceEntries.length) {
+          setTimeout(this.handleVisibility, visibilityTimeMs);
+        }
       }
     },
 
@@ -109,6 +114,13 @@
 </script>
 
 <style scoped>
+  /*
+    Add relative positioning so that the absolute pseudo element sticks to it.
+    We also want to establish a new stacking context, so add a z-index.
+  */
+  .logo-mark {
+    @apply relative z-0;
+  }
   .logo-mark::after {
     content: "";
     background-size: auto 5em;
