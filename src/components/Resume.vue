@@ -42,43 +42,43 @@
             classes: createClassObjectFromArray(['logo-mark trs-background']),
             subtitle: 'Software Engineer 2 — 2015 to present',
             title: 'The Restaurant Store',
-            description: [
-              'Through my time at The Restaurant Store, I\'ve experienced both personal and',
-              'professional growth. The company has allowed me to work hand-in-hand with',
-              'software developers of all experience levels. This has given me the chance',
-              'to hone my skills and help teach others as well, while showing me how much',
-              'room I have to learn. I\'ve been able to take significant roles in projects',
-              'that advance the company, with a desire to make anything we do simpler,',
-              'more intuitive, and more reliable for those who interact with our software',
-              'on a daily basis.' 
-            ].join(' ')
+            description: `
+              Through my time at The Restaurant Store, I've experienced both personal and
+              professional growth. The company has allowed me to work hand-in-hand with
+              software developers of all experience levels. This has given me the chance
+              to hone my skills and help teach others as well, while showing me how much
+              room I have to learn. I've been able to take significant roles in projects
+              that advance the company, with a desire to make anything we do simpler,
+              more intuitive, and more reliable for those who interact with our software
+              on a daily basis.
+            `
           },
           {
             classes: createClassObjectFromArray(['logo-mark solo-background']),
             subtitle: 'Programming Intern — 2012 to 2015 (seasonal)',
             title: 'Solo Labs',
-            description: [
-              'Working at Solo Labs between college semesters, I was responsible for a variety',
-              'of tasks. I had the opportunity to exhibit my self-motivation while both',
-              'maintaining and updating company software, as well as the experience of',
-              'helping end users to be better familiarized with the software that Solo',
-              'Labs used in their day-to-day business. My programming work also afforded',
-              'me a chance to teach myself about technologies that I was unfamiliar with.'
-            ].join(' ')
+            description: `
+              Working at Solo Labs between college semesters, I was responsible for a variety
+              of tasks. I had the opportunity to exhibit my self-motivation while both
+              maintaining and updating company software, as well as the experience of
+              helping end users to be better familiarized with the software that Solo
+              Labs used in their day-to-day business. My programming work also afforded
+              me a chance to teach myself about technologies that I was unfamiliar with.
+            `
           },
           {
             classes: createClassObjectFromArray(['logo-mark gcc-background']),
             subtitle: 'Computer Science — 2011 to 2015',
             title: 'Grove City College',
-            description: [
-              'At Grove City College, I studied algorithms, calculus, and 3D graphics, among',
-              'a variety of other subjects. Between my academics, running cross country, swing',
-              'dancing, and my friend group, I learned time management, accountability, and',
-              'the value of hard work. I left college a well rounded person, ready for',
-              'the responsibilities of post-college life. Grove City imparted me with the',
-              'desire to take pride in all that I do, as well as the humility to learn',
-              'from others as I tackle new challenges.'
-            ].join(' ')
+            description: `
+              At Grove City College, I studied algorithms, calculus, and 3D graphics, among
+              a variety of other subjects. Between my academics, running cross country, swing
+              dancing, and my friend group, I learned time management, accountability, and
+              the value of hard work. I left college a well rounded person, ready for
+              the responsibilities of post-college life. Grove City imparted me with the
+              desire to take pride in all that I do, as well as the humility to learn
+              from others as I tackle new challenges.
+            `
           }
         ],
         visibleElementsCount: 0
