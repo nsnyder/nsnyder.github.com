@@ -59,12 +59,10 @@
             subtitle: 'Programming Intern — 2012 to 2015 (seasonal)',
             title: 'Solo Labs',
             description: `
-              Working at Solo Labs between college semesters, I was responsible for a variety
-              of tasks. I had the opportunity to exhibit my self-motivation while both
-              maintaining and updating company software, as well as the experience of
-              helping end users to be better familiarized with the software that Solo
-              Labs used in their day-to-day business. My programming work also afforded
-              me a chance to teach myself about technologies that I was unfamiliar with.
+              I had multiple summer and winter internships with Solo Labs in college.
+              At Solo Labs I was responsible for maintaining and updating company software 
+              and assisting end-users as they familiarized themselves with the software used in 
+              day-to-day company operations.
             `
           },
           {
@@ -72,13 +70,12 @@
             subtitle: 'Computer Science — 2011 to 2015',
             title: 'Grove City College',
             description: `
-              At Grove City College, I studied algorithms, calculus, and 3D graphics, among
-              a variety of other subjects. Between my academics, running cross country, swing
-              dancing, and my friend group, I learned time management, accountability, and
-              the value of hard work. I left college a well rounded person, ready for
-              the responsibilities of post-college life. Grove City imparted me with the
-              desire to take pride in all that I do, as well as the humility to learn
-              from others as I tackle new challenges.
+              At Grove City College, I studied algorithms, calculus, and 3D graphics, along with
+              a variety of other subjects. Between my academics, running and captaining the cross country,
+              and serving as treasurer of the swing dance club, I learned time management, accountability,
+              and the value of hard work. I left college a well rounded person, ready for the responsibilities
+              of post-college life. Grove City imparted to me the desire to take pride in all that I do and
+              the humility to learn from others as I tackle new challenges.
             `
           }
         ],
