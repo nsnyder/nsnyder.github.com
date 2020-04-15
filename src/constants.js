@@ -5,6 +5,7 @@ const twitterUsername = 'NathanFromPA';
 const blogUrl = 'https://blog.snydern.com';
 const githubProfile = 'https://github.com/nsnyder';
 const githubSource = 'https://github.com/nsnyder/nsnyder.github.com';
+const instagramProfile = 'https://www.instagram.com/NathanFromPA';
 const linkedInProfile = 'https://www.linkedin.com/in/nasnyder/'
 const twitterProfile = `https://twitter.com/${twitterUsername}`;
 
@@ -15,6 +16,7 @@ export default {
     blogUrl,
     githubSource,
     githubProfile,
+    instagramProfile,
     linkedInProfile,
     twitterProfile
   }
