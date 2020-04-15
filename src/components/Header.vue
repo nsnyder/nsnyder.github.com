@@ -16,29 +16,29 @@
         </a>
       </div>
     </div>
-    <div class="w-full p-2 text-center">
+    <header class="w-full p-2 text-center">
       <h1 class="my-5 text-5xl font-display md:text-6xl">
         Nathan Snyder
       </h1>
-      <div class="max-w-xl mx-auto my-5 mb-8">
-        Hi! I'm a developer at The Restaurant Store. I love tackling complex projects,
+      <div class="max-w-xl mx-auto my-5 mb-8 md:text-xl">
+        Hi! I'm a software engineer at The Restaurant Store. I love tackling complex projects,
         learning new things, and building tools that help people get things done
         quickly and effectively.
       </div>
-      <a href="mailto:nathan@snydern.com"
+      <a :href="'mailto:' + this.email"
          class="my-5 font-bold text-white transition-all duration-300 border-white btn-md hover:bg-white hover:text-blue-600"
       >
         Contact Me!
       </a>
-    </div>
+    </header>
     <div class="flex w-full p-2 text-left text-white">
       <a v-for="(link, index) in socialLinks"
          :key="index"
-         v-bind="link.attrs || {}"
+         v-bind="link.attributes || {}"
          target="_blank"
          class="p-1 mx-1 duration-100 transform hover:-translate-y-1"
       >
-        <SvgIcon class="w-6 h-6 text-white" v-bind="link.svgAttrs || {}" :name="link.icon" />
+        <SvgIcon class="w-6 h-6 text-white" v-bind="link.svgAttributes || {}" :name="link.icon" />
       </a>
     </div>
   </div>
@@ -56,41 +56,49 @@
     },
 
     data() {
+      const { urls } = this.$root.constants;
+
       return {
         showWipBanner: true,
         socialLinks: [
           {
             icon: 'Github',
-            attrs: {
-              href: 'https://github.com/nsnyder',
+            attributes: {
+              href: urls.githubProfile,
               title: 'My Github profile'
             },
-            svgAttrs: {
+            svgAttributes: {
               title: 'My Github profile'
-            }
-          },
-          {
-            icon: 'Twitter',
-            attrs: {
-              href: 'https://twitter.com/NathanFromPA',
-              title: 'My Twitter timeline'
-            },
-            svgAttrs: {
-              title: 'My Twitter timeline'
             }
           },
           {
             icon: 'LinkedIn',
-            attrs: {
-              href: 'https://www.linkedin.com/in/nasnyder/',
+            attributes: {
+              href: urls.linkedInProfile,
               title: 'My LinkedIn profile'
             },
-            svgAttrs: {
+            svgAttributes: {
               title: 'My LinkedIn profile'
+            }
+          },
+          {
+            icon: 'Twitter',
+            attributes: {
+              href: urls.twitterProfile,
+              title: 'My Twitter timeline'
+            },
+            svgAttributes: {
+              title: 'My Twitter timeline'
             }
           }
         ]
       };
+    },
+
+    computed: {
+      email() {
+        return this.$root.constants.emailAddress;
+      }
     },
 
     methods: {

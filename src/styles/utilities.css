@@ -1,5 +1,18 @@
 .btn-md {
-  @apply inline-block px-4 py-2 border-2 rounded-full;
+  @apply inline-block px-4 py-2 no-underline border-2 rounded-full;
+}
+
+.transform-3d {
+    @apply transform;
+    --transform-rotate-y: 0;
+    --transform-rotate-y: 0;
+    /* TODO: Add rotate-z if we need it */
+    -webkit-transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotateY(var(--transform-rotate-y)) rotateZ(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+    transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotateY(var(--transform-rotate-y)) rotateZ(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+}
+
+.-rotate-y-45 {
+    --transform-rotate-y: -80deg;
 }
 
 .flex-after:after {
