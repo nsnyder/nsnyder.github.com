@@ -16,11 +16,11 @@
         </a>
       </div>
     </div>
-    <div class="w-full p-2 text-center">
+    <header class="w-full p-2 text-center">
       <h1 class="my-5 text-5xl font-display md:text-6xl">
         Nathan Snyder
       </h1>
-      <div class="max-w-xl mx-auto my-5 mb-8 text-xl">
+      <div class="max-w-xl mx-auto my-5 mb-8 md:text-xl">
         Hi! I'm a software engineer at The Restaurant Store. I love tackling complex projects,
         learning new things, and building tools that help people get things done
         quickly and effectively.
@@ -30,7 +30,7 @@
       >
         Contact Me!
       </a>
-    </div>
+    </header>
     <div class="flex w-full p-2 text-left text-white">
       <a v-for="(link, index) in socialLinks"
          :key="index"

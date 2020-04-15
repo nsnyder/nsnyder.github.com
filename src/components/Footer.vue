@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 text-gray-100 bg-gray-700 lg:py-12">
+  <footer class="p-6 text-gray-100 bg-gray-700 lg:py-12">
     <div class="max-w-6xl px-2 mx-auto sm:flex">
       <!-- TODO: Pick a great font for headings. -->
       <div class="max-w-md py-2">
@@ -24,7 +24,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>

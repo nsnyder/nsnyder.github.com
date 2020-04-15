@@ -48,8 +48,8 @@
               I have enjoyed both personal and professional growth during my time at The Restaurant Store.
               This position has allowed me to work hand-in-hand with software developers at all experience
               levels, giving me the chance to hone my skills and help teach others as well. I have taken
-              on significant roles in overhauling our full website, our point of sale and mailing list.
-              systems. With a desire to make anything we do simpler, more intuitive, and more reliable
+              on significant roles in overhauling our full website, our point of sale and mailing list
+              systems. With a desire to make everything we do simpler, more intuitive, and more reliable
               for those who interact with our software on a daily basis, my coworkers and I have
               advanced our company's goals through our software engineering. 
             `
