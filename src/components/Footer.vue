@@ -1,5 +1,5 @@
 <template>
-  <footer class="p-6 text-gray-100 bg-gray-700 lg:py-12">
+  <footer class="p-6 bg-gray-700 lg:py-12">
     <div class="max-w-6xl px-2 mx-auto sm:flex">
       <!-- TODO: Pick a great font for headings. -->
       <div class="max-w-md py-2">
@@ -8,7 +8,7 @@
           <li v-for="(link, index) in socialLinks" :key="index">
             <a v-text="link.text"
               v-bind="link.attributes"
-              class="inline-block my-1 text-gray-100"
+              class="inline-block my-1"
             />
           </li>
         </ul>
@@ -19,8 +19,8 @@
           This site was built by Nathan Snyder. Any and all logos are property of their
           respective owners, and do not indicate an endorsement of this site
           by those owners. Source and license for this site is available on
-          <a class="text-gray-100" :href="urls.githubSource" target="_blank">Github</a>.
-          Find a bug? <a class="text-gray-100" :href="'mailto:' + emailAddress">Let me know.</a>
+          <a :href="urls.githubSource" target="_blank">Github</a>.
+          Find a bug? <a :href="'mailto:' + emailAddress">Let me know.</a>
         </div>
       </div>
     </div>
@@ -80,3 +80,10 @@
     }
   }
 </script>
+
+<style scoped>
+  /* Set the default footer text color */
+  * {
+    @apply text-gray-200;
+  }
+</style>
