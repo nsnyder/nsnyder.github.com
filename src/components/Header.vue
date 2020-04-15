@@ -11,7 +11,7 @@
         This site is a work in progress, but the "Contact Me!" link works 😉
       </div>
       <div class="flex-1 text-right">
-        <a href="#" class="inline-block p-4 mx-2 md:py-2" @click="hideWipBanner">
+        <a href="#" class="inline-block p-4 mx-2 text-gray-200 no-underline md:py-2" @click="hideWipBanner">
           &times;
         </a>
       </div>
