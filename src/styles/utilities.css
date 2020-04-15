@@ -1,5 +1,5 @@
 .btn-md {
-  @apply inline-block px-4 py-2 border-2 rounded-full;
+  @apply inline-block px-4 py-2 no-underline border-2 rounded-full;
 }
 
 .transform-3d {

@@ -1,0 +1,82 @@
+<template>
+  <div class="p-6 text-gray-100 bg-gray-700 lg:py-12">
+    <div class="max-w-6xl px-2 mx-auto sm:flex">
+      <!-- TODO: Pick a great font for headings. -->
+      <div class="max-w-md py-2">
+        <h4 class="mb-2 text-lg font-bold">Follow Me</h4>
+        <ul class="grid grid-flow-col grid-rows-5 col-gap-8">
+          <li v-for="(link, index) in socialLinks" :key="index">
+            <a v-text="link.text"
+              v-bind="link.attributes"
+              class="inline-block my-1 text-gray-100"
+            />
+          </li>
+        </ul>
+      </div>
+      <div class="flex-grow-0 max-w-md py-2 md:max-w-xl sm:px-8">
+        <h4 class="mb-2 text-lg font-bold">About this site</h4>
+        <div>
+          This site was built by Nathan Snyder. Any and all logos are property of their
+          respective owners, and do not indicate an endorsement of this site
+          by those owners. Source and license for this site is available on
+          <a class="text-gray-100" :href="urls.githubSource" target="_blank">Github</a>.
+          Find a bug? <a class="text-gray-100" :href="'mailto:' + emailAddress">Let me know.</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'Footer',
+
+    data() {
+      const { urls } = this.$root.constants;
+
+      return {
+        socialLinks: [
+          {
+            text: 'Github',
+            attributes: {
+              href: urls.githubProfile
+            }
+          },
+          {
+            text: 'LinkedIn',
+            attributes: {
+              href: urls.linkedInProfile
+            }
+          },
+          {
+            text: 'Twitter',
+            attributes: {
+              href: urls.twitterProfile
+            }
+          },
+          {
+            text: 'Blog',
+            attributes: {
+              href: urls.blogUrl
+            }
+          },
+          {
+            text: 'Instagram',
+            attributes: {
+              href: urls.instagramProfile
+            }
+          }
+        ]
+      };
+    },
+
+    computed: {
+      emailAddress() {
+        return this.$root.constants.emailAddress;
+      },
+      urls() {
+        return this.$root.constants.urls;
+      }
+    }
+  }
+</script>
