@@ -71,7 +71,7 @@
             title: 'Grove City College',
             description: `
               At Grove City College, I studied algorithms, calculus, and 3D graphics, along with
-              a variety of other subjects. Between my academics, running and captaining the cross country,
+              a variety of other subjects. Between my academics, running and captaining the cross country team,
               and serving as treasurer of the swing dance club, I learned time management, accountability,
               and the value of hard work. I left college a well rounded person, ready for the responsibilities
               of post-college life. Grove City imparted to me the desire to take pride in all that I do and
