@@ -1,23 +1,18 @@
-const emailAddress = 'nathan@snydern.com';
-const twitterUsername = 'NathanFromPA';
+export const emailAddress = 'nathan@snydern.com';
+export const twitterUsername = 'NathanFromPA';
 
 // Urls that may appear around the site.
-const blogUrl = 'https://blog.snydern.com';
-const githubProfile = 'https://github.com/nsnyder';
-const githubSource = 'https://github.com/nsnyder/nsnyder.github.com';
-const instagramProfile = 'https://www.instagram.com/NathanFromPA';
-const linkedInProfile = 'https://www.linkedin.com/in/nasnyder/'
-const twitterProfile = `https://twitter.com/${twitterUsername}`;
+export const urls = {
+  blogUrl: 'https://blog.snydern.com',
+  githubProfile: 'https://github.com/nsnyder',
+  githubSource: 'https://github.com/nsnyder/nsnyder.github.com',
+  instagramProfile: 'https://www.instagram.com/NathanFromPA',
+  linkedInProfile: 'https://www.linkedin.com/in/nasnyder/',
+  twitterProfile: `https://twitter.com/${twitterUsername}`
+};
 
 export default {
   emailAddress,
   twitterUsername,
-  urls: {
-    blogUrl,
-    githubSource,
-    githubProfile,
-    instagramProfile,
-    linkedInProfile,
-    twitterProfile
-  }
+  urls
 };
