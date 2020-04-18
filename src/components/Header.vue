@@ -47,7 +47,7 @@
 <script>
   import SvgIcon from '~/components/partials/SvgIcon';
   import { urls, emailAddress } from '~/constants';
-  import { computed, defineComponent, onMounted, ref } from '@vue/composition-api';
+  import { defineComponent, onMounted, ref } from '@vue/composition-api';
 
   export default defineComponent({
     name: 'Header',
@@ -67,8 +67,7 @@
         showWipBanner.value = !(sessionStorage.getItem(wipBannerSessionName))
       };
 
-      // Make this computed so it's readonly.
-      const socialLinks = computed(() => [
+      const socialLinks = [
         {
           icon: 'Github',
           attributes: {
@@ -99,7 +98,7 @@
             title: 'My Twitter timeline'
           }
         }
-      ]);
+      ];
 
       onMounted(() => initializeWipBannerState());
 

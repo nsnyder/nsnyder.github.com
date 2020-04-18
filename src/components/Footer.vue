@@ -28,57 +28,54 @@
 </template>
 
 <script>
-  export default {
+  import { defineComponent } from '@vue/composition-api';
+  import { emailAddress, urls } from '~/constants';
+
+  export default defineComponent({
+
     name: 'Footer',
 
-    data() {
-      const { urls } = this.$root.constants;
+    setup() {
+      const socialLinks = [
+        {
+          text: 'Github',
+          attributes: {
+            href: urls.githubProfile
+          }
+        },
+        {
+          text: 'LinkedIn',
+          attributes: {
+            href: urls.linkedInProfile
+          }
+        },
+        {
+          text: 'Twitter',
+          attributes: {
+            href: urls.twitterProfile
+          }
+        },
+        {
+          text: 'Blog',
+          attributes: {
+            href: urls.blogUrl
+          }
+        },
+        {
+          text: 'Instagram',
+          attributes: {
+            href: urls.instagramProfile
+          }
+        }
+      ];
 
       return {
-        socialLinks: [
-          {
-            text: 'Github',
-            attributes: {
-              href: urls.githubProfile
-            }
-          },
-          {
-            text: 'LinkedIn',
-            attributes: {
-              href: urls.linkedInProfile
-            }
-          },
-          {
-            text: 'Twitter',
-            attributes: {
-              href: urls.twitterProfile
-            }
-          },
-          {
-            text: 'Blog',
-            attributes: {
-              href: urls.blogUrl
-            }
-          },
-          {
-            text: 'Instagram',
-            attributes: {
-              href: urls.instagramProfile
-            }
-          }
-        ]
+        emailAddress,
+        socialLinks,
+        urls
       };
-    },
-
-    computed: {
-      emailAddress() {
-        return this.$root.constants.emailAddress;
-      },
-      urls() {
-        return this.$root.constants.urls;
-      }
     }
-  }
+  })
 </script>
 
 <style scoped>

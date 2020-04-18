@@ -39,7 +39,7 @@
           }
         };
 
-        let normalizedName = props.name.toLocaleLowerCase();
+        const normalizedName = props.name.toLocaleLowerCase();
         if (normalizedName in icons) {
           return icons[normalizedName];
         }
