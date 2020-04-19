@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center justify-between min-h-screen bg-fixed bg-gradient-purple-blue"
+  <div class="flex flex-col items-center justify-between min-h-screen bg-fixed bg-gradient-blue-purple"
     :class="{ 'flex-before': !showWipBanner }"
   >
     <div
