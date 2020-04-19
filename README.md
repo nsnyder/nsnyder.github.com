@@ -1,6 +1,6 @@
 # www.snydern.com
 
-[Nathan Snyder's website](www.snydern.com) is built using:
+[Nathan Snyder's website](https://www.snydern.com) is built using:
 - Vue
 - TailwindCSS
 - [Simple Icons](https://simpleicons.org)

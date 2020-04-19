@@ -24,11 +24,11 @@
 </template>
 
 <script>
-  import { onMounted, ref } from '@vue/composition-api';
+  import { defineComponent, onMounted, ref } from '@vue/composition-api';
   import useObservers from '~/mixins/useObservers.js';
   const visibilityTimeMs = 500;
 
-  export default {
+  export default defineComponent({
     name: 'Resume',
 
     setup() {
@@ -114,7 +114,7 @@
         visibleElementsCount
       };
     }
-  }
+  });
 </script>
 
 <style scoped>

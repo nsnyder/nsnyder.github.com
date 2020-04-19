@@ -54,5 +54,5 @@
         iconHtml
       }
     }
-  })
+  });
 </script>

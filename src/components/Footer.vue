@@ -75,7 +75,7 @@
         urls
       };
     }
-  })
+  });
 </script>
 
 <style scoped>
