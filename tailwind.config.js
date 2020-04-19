@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {},
     gradients: theme => ({
-      'purple-blue': ['-45deg', theme('colors.purple.500'), theme('colors.blue.500')],
-      'shades-of-gray': ['-45deg', theme('colors.gray.200'), theme('colors.gray.300')]
+      'blue-purple': ['135deg', theme('colors.blue.500'), theme('colors.purple.500')],
+      'shades-of-gray': ['135deg', theme('colors.gray.300'), theme('colors.gray.200')]
     }),
     fontFamily: {
       ...defaultTheme.fontFamily,
