@@ -26,7 +26,6 @@
 <script>
   import { defineComponent, onMounted, ref } from '@vue/composition-api';
   import useObservers from '~/mixins/useObservers.js';
-  const visibilityTimeMs = 500;
 
   export default defineComponent({
     name: 'Resume',
@@ -80,6 +79,7 @@
 
       const { observeOnce } = useObservers();
       const experienceGrid = ref(null);
+      const visibilityTimeMs = 500;
       const incrementVisibility = (firstRun) => {
         if (!firstRun) {
           visibleElementsCount.value++;

@@ -9,14 +9,8 @@
     name: 'SvgIcon',
 
     props: {
-      name: {
-        required: true,
-        type: String
-      },
-      title: {
-        required: false,
-        type: String
-      }
+      name: String,
+      title: String
     },
 
     setup(props) {

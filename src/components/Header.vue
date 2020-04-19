@@ -46,7 +46,7 @@
 
 <script>
   import SvgIcon from '~/components/partials/SvgIcon';
-  import { urls, emailAddress } from '~/constants';
+  import { emailAddress, urls } from '~/constants';
   import { defineComponent, onMounted, ref } from '@vue/composition-api';
 
   export default defineComponent({
