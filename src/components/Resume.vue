@@ -40,10 +40,12 @@ export default defineComponent({
   setup() {
     const createClassObjectFromArray: (
       array: Array<string>
-    ) => { [key: string]: boolean } = array =>
+    ) => { [key: string]: true } = array =>
       array.reduce(
-        (previous, entry) =>
-          Object.assign(previous, { [entry as string]: true }),
+        (previous, entry) => Object.assign<{ [key: string]: true }, { [key: string]: true }>(
+          previous,
+          { [entry]: true }
+        ),
         {}
       );
     const experienceEntries = [
@@ -88,9 +90,12 @@ export default defineComponent({
     ];
     const visibleElementsCount = ref(0);
 
+    // Mixin.
     const { observeOnce } = useObservers();
     const experienceGrid = ref<HTMLElement>(null);
     const visibilityTimeMs = 500;
+
+    // Methods.
     const incrementVisibility = (firstRun: boolean) => {
       // On the first run, skip this so that there's a slight delay before
       // the element begins appearing.
@@ -104,7 +109,6 @@ export default defineComponent({
     const startHandlingVisibility = () => {
       incrementVisibility(true);
     };
-    console.log("test reload");
 
     const observeGrid = () => {
       let observed = false;
