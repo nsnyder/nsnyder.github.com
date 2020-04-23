@@ -7,6 +7,7 @@
 </template>
 
 <script>
+  import Vue from "vue";
   import Footer from './components/Footer';
   import Header from './components/Header';
   import Navigation from './components/Navigation';
