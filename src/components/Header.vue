@@ -61,10 +61,10 @@
       const showWipBanner = ref(true);
       const hideWipBanner = () => {
         showWipBanner.value = false;
-        sessionStorage.setItem(wipBannerSessionName, true);
+        sessionStorage.setItem(wipBannerSessionName, 'true');
       };
       const initializeWipBannerState = () => {
-        showWipBanner.value = !(sessionStorage.getItem(wipBannerSessionName))
+        showWipBanner.value = sessionStorage.getItem(wipBannerSessionName) === 'true';
       };
 
       const socialLinks = [
