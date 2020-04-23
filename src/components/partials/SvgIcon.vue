@@ -2,7 +2,7 @@
   <svg class="fill-current" :viewBox="iconData.viewBox" v-html="iconHtml" xmlns="http://www.w3.org/2000/svg"></svg>
 </template>
 
-<script>
+<script lang="ts">
   import { computed, defineComponent } from '@vue/composition-api';
 
   export default defineComponent({

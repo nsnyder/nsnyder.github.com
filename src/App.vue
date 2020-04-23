@@ -12,7 +12,7 @@
   import Navigation from './components/Navigation';
   import Resume from '~/components/Resume';
 
-  export default {
+  export default Vue.extend({
     name: 'App',
     components: {
       Footer,
@@ -20,7 +20,7 @@
       Navigation, // eslint-disable-line vue/no-unused-components
       Resume
     }
-  };
+  });
 </script>
 
 <style>

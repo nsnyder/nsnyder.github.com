@@ -19,7 +19,7 @@ module.exports = {
     padding: ['responsive']
   },
   plugins: [
-    require('./plugins/gradient'),
-    require('./plugins/stripes')
+    require('./tailwind-plugins/gradient'),
+    require('./tailwind-plugins/stripes')
   ]
 };

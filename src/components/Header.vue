@@ -44,8 +44,8 @@
   </div>
 </template>
 
-<script>
-  import SvgIcon from '~/components/partials/SvgIcon';
+<script lang="ts">
+  import SvgIcon from '~/components/partials/SvgIcon.vue';
   import { emailAddress, urls } from '~/constants';
   import { defineComponent, onMounted, ref } from '@vue/composition-api';
 

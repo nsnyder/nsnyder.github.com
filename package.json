@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "vue-ui": "vue ui",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "autocomplete": "npx tailwind build src/styles/main.css -o .util/output.css",
-    "github-deploy": "node scripts/github-deploy.js"
+    "github-deploy": "node scripts/github-deploy.js",
+    "vue-ui": "vue ui"
   },
   "dependencies": {
     "@vue/composition-api": "^0.5.0",
@@ -17,15 +17,20 @@
     "vue": "^2.6.11"
   },
   "devDependencies": {
-    "postcss": "^7.0.27",
     "@fullhuman/postcss-purgecss": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
     "@vue/cli-plugin-babel": "^4.2.3",
     "@vue/cli-plugin-eslint": "^4.2.3",
+    "@vue/cli-plugin-typescript": "^4.3.1",
     "@vue/cli-service": "~4.2.0",
+    "@vue/eslint-config-typescript": "^5.0.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.2.2",
     "execa": "^4.0.0",
+    "postcss": "^7.0.27",
+    "typescript": "~3.8.3",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
@@ -35,10 +40,11 @@
     },
     "extends": [
       "plugin:vue/essential",
-      "eslint:recommended"
+      "eslint:recommended",
+      "@vue/typescript"
     ],
     "parserOptions": {
-      "parser": "babel-eslint"
+      "parser": "@typescript-eslint/parser"
     },
     "rules": {}
   },

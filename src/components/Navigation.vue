@@ -1,13 +1,13 @@
 <template>
-  <div class="fixed text-white hidden lg:flex flex-col align-middle max-w-xs pl-4 my-4 font-mono mt-10">
-    <div class="py-2 px-4">You might have some questions.</div>
-    <a href="#" v-for="(question, index) in headings" :key="index" class="py-1 px-4 my-1 hover:pl-6 transition-all duration-100">
+  <div class="fixed flex-col hidden max-w-xs pl-4 my-4 mt-10 font-mono text-white align-middle lg:flex">
+    <div class="px-4 py-2">You might have some questions.</div>
+    <a href="#" v-for="(question, index) in headings" :key="index" class="px-4 py-1 my-1 transition-all duration-100 hover:pl-6">
       > {{ question }}
     </a>
   </div>
 </template>
 
-<script>
+<script lang="ts">
   export default {
     name: 'Navigation',
     data() {

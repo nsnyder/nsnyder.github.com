@@ -23,7 +23,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
   import { defineComponent, onMounted, ref } from '@vue/composition-api';
   import useObservers from '~/mixins/useObservers.js';
 
