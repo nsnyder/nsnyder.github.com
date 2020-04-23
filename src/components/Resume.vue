@@ -48,7 +48,7 @@ export default defineComponent({
         ),
         {}
       );
-    const experienceEntries = [
+    const experienceEntries = ref([
       {
         classes: createClassObjectFromArray(["logo-mark trs-background"]),
         subtitle: "Software Engineer 2 — 2015 to present",
@@ -87,7 +87,7 @@ export default defineComponent({
             the humility to learn from others as I tackle new challenges.
           `
       }
-    ];
+    ]);
     const visibleElementsCount = ref(0);
 
     // Mixin.
@@ -102,7 +102,7 @@ export default defineComponent({
       if (!firstRun) {
         visibleElementsCount.value++;
       }
-      if (visibleElementsCount.value < experienceEntries.length) {
+      if (visibleElementsCount.value < experienceEntries.value.length) {
         setTimeout(incrementVisibility, visibilityTimeMs, false);
       }
     };
@@ -120,7 +120,7 @@ export default defineComponent({
 
       // If we couldn't start our observer, show all entries immediately.
       if (!observed) {
-        visibleElementsCount.value = experienceEntries.length;
+        visibleElementsCount.value = experienceEntries.value.length;
       }
     };
 
