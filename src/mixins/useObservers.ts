@@ -64,6 +64,6 @@ export default () => {
 
   return {
     observe,
-    observeOnce
+    observeOnce,
   };
 };

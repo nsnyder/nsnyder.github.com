@@ -1,15 +1,15 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        "~": path.resolve(__dirname, 'src/')
-      }
-    }
+        "~": path.resolve(__dirname, "src/"),
+      },
+    },
   },
   css: {
-    requireModuleExtension: false
+    requireModuleExtension: false,
   },
-  publicPath: '/nsnyder.github.com/'
+  publicPath: "/nsnyder.github.com/",
 };
