@@ -29,7 +29,9 @@
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.2.2",
     "execa": "^4.0.0",
+    "lint-staged": "^10.1.7",
     "postcss": "^7.0.27",
+    "prettier": "^2.0.5",
     "typescript": "~3.8.3",
     "vue-template-compiler": "^2.6.11"
   },
@@ -54,6 +56,11 @@
     "last 2 versions"
   ],
   "gitHooks": {
-    "post-checkout": ".githooks/post-checkout.sh"
+    "post-checkout": ".githooks/post-checkout.sh",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
