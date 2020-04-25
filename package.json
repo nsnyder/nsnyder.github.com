@@ -38,6 +38,7 @@
     "lint-staged": "^10.1.7",
     "postcss": "^7.0.27",
     "prettier": "^1.19.1",
+    "stylelint-config-standard": "^20.0.0",
     "typescript": "~3.8.3",
     "vti": "0.0.3",
     "vue-template-compiler": "^2.6.11"

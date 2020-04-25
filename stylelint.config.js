@@ -1,4 +1,5 @@
 module.exports = {
+  extends: ["stylelint-config-standard"],
   rules: {
     "at-rule-no-unknown": [
       true,
@@ -12,7 +13,8 @@ module.exports = {
         ],
       },
     ],
-    "declaration-block-trailing-semicolon": null,
-    "no-descending-specificity": null,
+    "color-no-invalid-hex": true,
+    "declaration-block-trailing-semicolon": "always",
+    "no-descending-specificity": true,
   },
 };

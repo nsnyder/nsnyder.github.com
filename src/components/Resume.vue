@@ -154,6 +154,7 @@
   .logo-mark {
     @apply relative z-0;
   }
+
   .logo-mark::after {
     content: "";
     background-size: auto 5em;
@@ -168,12 +169,15 @@
     background-repeat: no-repeat;
     background-image: var(--background-image);
   }
+
   .gcc-background::after {
     --background-image: url("/img/gcc-logo.png");
   }
+
   .solo-background::after {
     --background-image: url("/img/solo-logo.svg");
   }
+
   .trs-background::after {
     --background-image: url("/img/trs-logo.png");
   }
