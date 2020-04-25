@@ -51,10 +51,15 @@
     "pre-commit": "vti diagnostics && lint-staged"
   },
   "lint-staged": {
-    "*.{js,ts,vue}": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
+    "src/**/*.{js,ts,vue}": [
+      "eslint --cache --fix"
+    ],
+    "src/**/*.{js,css,md}": [
+      "stylelint --fix"
+    ]
   },
   "prettier": {
-    "vueIndentScriptAndStyle": true
+    "vueIndentScriptAndStyle": true,
+    "trailingComma": "es5"
   }
 }

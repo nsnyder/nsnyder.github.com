@@ -46,7 +46,7 @@
     setup() {
       const createClassObjectFromArray: (
         array: Array<string>
-      ) => { [key: string]: true } = (array) =>
+      ) => { [key: string]: true } = array =>
         array.reduce(
           (previous, entry) =>
             Object.assign<{ [key: string]: true }, { [key: string]: true }>(
