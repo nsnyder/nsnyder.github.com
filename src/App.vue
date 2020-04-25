@@ -6,11 +6,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
   import Vue from "vue";
-  import Footer from "./components/Footer";
-  import Header from "./components/Header";
-  import Resume from "~/components/Resume";
+  import Footer from "~/components/Footer.vue";
+  import Header from "~/components/Header.vue";
+  import Resume from "~/components/Resume.vue";
 
   export default Vue.extend({
     name: "App",
