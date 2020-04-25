@@ -2,7 +2,9 @@
   <div>
     <div class="px-2 mx-auto my-12 lg:max-w-6xl">
       <!-- TODO: Pick a great font for headings. -->
-      <h2 class="py-2 text-xl font-bold">Experience</h2>
+      <h2 class="py-2 text-xl font-bold">
+        Experience
+      </h2>
       <div
         ref="experienceGrid"
         class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3"
@@ -14,16 +16,20 @@
           :class="entry.classes || {}"
         >
           <div class="mb-2">
-            <h3 class="text-lg font-bold text-gray-800">{{ entry.title }}</h3>
-            <h4 class="text-sm italic text-gray-700">{{ entry.subtitle }}</h4>
+            <h3 class="text-lg font-bold text-gray-800">
+              {{ entry.title }}
+            </h3>
+            <h4 class="text-sm italic text-gray-700">
+              {{ entry.subtitle }}
+            </h4>
           </div>
           <p
             class="duration-1000 transform"
             :class="{
-              'opacity-0 -translate-x-4': index > visibleElementsCount - 1
+              'opacity-0 -translate-x-4': index > visibleElementsCount - 1,
             }"
             v-text="entry.description"
-          ></p>
+          />
         </div>
       </div>
     </div>

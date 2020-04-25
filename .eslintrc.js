@@ -6,12 +6,19 @@ module.exports = {
   extends: [
     "plugin:vue/base",
     "plugin:vue/essential",
+    "plugin:vue/recommended",
     "eslint:recommended",
     "@vue/typescript",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     // This should disable any rules that conflict with Prettier, so do this last.
     "prettier",
+  ],
+  ignorePatterns: [
+    "vue.config.js",
+    "tailwind.config.js",
+    "babel.config.js",
+    "postcss.config.js",
   ],
   plugins: ["prettier"],
   rules: {
@@ -26,7 +33,9 @@ module.exports = {
   overrides: [
     {
       files: ["**/*.vue", "**/*.ts"],
-      rules: {},
+      rules: {
+        "vue/max-attributes-per-line": "off"
+      },
     },
   ],
 };
