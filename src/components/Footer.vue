@@ -3,24 +3,29 @@
     <div class="max-w-6xl px-2 mx-auto sm:flex">
       <!-- TODO: Pick a great font for headings. -->
       <div class="max-w-md py-2">
-        <h4 class="mb-2 text-lg font-bold">Follow Me</h4>
+        <h4 class="mb-2 text-lg font-bold">
+          Follow Me
+        </h4>
         <ul class="grid grid-flow-col grid-rows-5 col-gap-8">
           <li v-for="(link, index) in socialLinks" :key="index">
-            <a v-text="link.text"
+            <a
               v-bind="link.attributes"
               class="inline-block my-1"
+              v-text="link.text"
             />
           </li>
         </ul>
       </div>
       <div class="flex-grow-0 max-w-md py-2 md:max-w-xl sm:px-8">
-        <h4 class="mb-2 text-lg font-bold">About this site</h4>
+        <h4 class="mb-2 text-lg font-bold">
+          About this site
+        </h4>
         <div>
-          This site was built by Nathan Snyder. Any and all logos are property of their
-          respective owners, and do not indicate an endorsement of this site
-          by those owners. Source and license for this site is available on
-          <a :href="urls.githubSource" target="_blank">Github</a>.
-          Find a bug? <a :href="'mailto:' + emailAddress">Let me know.</a>
+          This site was built by Nathan Snyder. Any and all logos are property
+          of their respective owners, and do not indicate an endorsement of this
+          site by those owners. Source and license for this site is available on
+          <a :href="urls.githubSource" target="_blank">Github</a>. Find a bug?
+          <a :href="'mailto:' + emailAddress">Let me know.</a>
         </div>
       </div>
     </div>
@@ -28,53 +33,52 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from '@vue/composition-api';
-  import { emailAddress, urls } from '~/constants';
+  import { defineComponent } from "@vue/composition-api";
+  import { emailAddress, urls } from "~/constants";
 
   export default defineComponent({
-
-    name: 'Footer',
+    name: "Footer",
 
     setup() {
       const socialLinks = [
         {
-          text: 'Github',
+          text: "Github",
           attributes: {
-            href: urls.githubProfile
-          }
+            href: urls.githubProfile,
+          },
         },
         {
-          text: 'LinkedIn',
+          text: "LinkedIn",
           attributes: {
-            href: urls.linkedInProfile
-          }
+            href: urls.linkedInProfile,
+          },
         },
         {
-          text: 'Twitter',
+          text: "Twitter",
           attributes: {
-            href: urls.twitterProfile
-          }
+            href: urls.twitterProfile,
+          },
         },
         {
-          text: 'Blog',
+          text: "Blog",
           attributes: {
-            href: urls.blogUrl
-          }
+            href: urls.blogUrl,
+          },
         },
         {
-          text: 'Instagram',
+          text: "Instagram",
           attributes: {
-            href: urls.instagramProfile
-          }
-        }
+            href: urls.instagramProfile,
+          },
+        },
       ];
 
       return {
         emailAddress,
         socialLinks,
-        urls
+        urls,
       };
-    }
+    },
   });
 </script>
 

@@ -1,13 +1,16 @@
-import Vue, { VNode } from 'vue'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import Vue, { VNode } from "vue";
 
 declare global {
   namespace JSX {
     // tslint:disable no-empty-interface
-    interface Element extends VNode {}
+    type Element = VNode;
     // tslint:disable no-empty-interface
-    interface ElementClass extends Vue {}
+    type ElementClass = Vue;
     interface IntrinsicElements {
-      [elem: string]: any
+      // This was changed to "unknown" from "any" to solve a "no-explicit-any" rule.
+      // I think this will work, but if not change it back and disable that for this line.
+      [elem: string]: unknown;
     }
   }
 }

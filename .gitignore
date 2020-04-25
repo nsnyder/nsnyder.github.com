@@ -3,7 +3,7 @@ node_modules
 /dist
 .util
 /.history
-stylelint.config.js
+.eslintcache
 
 # local env files
 .env.local
