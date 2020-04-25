@@ -70,11 +70,11 @@
     setup() {
       const wipBannerSessionName = "wipBannerHidden";
       const showWipBanner = ref(true);
-      const hideWipBanner = () => {
+      const hideWipBanner = (): void => {
         showWipBanner.value = false;
         sessionStorage.setItem(wipBannerSessionName, "true");
       };
-      const initializeWipBannerState = () => {
+      const initializeWipBannerState = (): void => {
         showWipBanner.value =
           sessionStorage.getItem(wipBannerSessionName) === "true";
       };

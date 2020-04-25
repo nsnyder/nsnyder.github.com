@@ -1,5 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export default () => {
-  const supportsObservers = () => {
+  const supportsObservers = (): boolean => {
     return (
       "IntersectionObserver" in window &&
       "IntersectionObserverEntry" in window &&
@@ -13,7 +14,7 @@ export default () => {
     onIntersection?: () => void,
     onNoIntersection?: () => void,
     options?: IntersectionObserverInit
-  ) => {
+  ): boolean => {
     try {
       // Let the caller know if the browser supports observers.
       if (!supportsObservers()) {
@@ -58,7 +59,7 @@ export default () => {
     element: Element,
     onIntersection: () => void,
     options?: IntersectionObserverInit
-  ) => {
+  ): boolean => {
     return observe(element, true, onIntersection, undefined, options);
   };
 

@@ -103,7 +103,7 @@
       const visibilityTimeMs = 500;
 
       // Methods.
-      const incrementVisibility = (firstRun: boolean) => {
+      const incrementVisibility = (firstRun: boolean): void => {
         // On the first run, skip this so that there's a slight delay before
         // the element begins appearing.
         if (!firstRun) {
@@ -113,11 +113,11 @@
           setTimeout(incrementVisibility, visibilityTimeMs, false);
         }
       };
-      const startHandlingVisibility = () => {
+      const startHandlingVisibility = (): void => {
         incrementVisibility(true);
       };
 
-      const observeGrid = () => {
+      const observeGrid = (): void => {
         let observed = false;
         if (experienceGrid.value !== null) {
           observed = observeOnce(

@@ -1,4 +1,5 @@
 <template>
+  <!-- eslint-disable vue/no-v-html -->
   <svg
     class="fill-current"
     :viewBox="iconData.viewBox"
@@ -60,7 +61,7 @@
 
       const iconHtml = computed(
         () =>
-          `<title>${props.title || iconData.value.title || ""}</title>${
+          `<title>${props.title || iconData.value.title}</title>${
             iconData.value.contents
           }`
       );
