@@ -17,12 +17,7 @@ module.exports = {
     // This should disable any rules that conflict with Prettier, so do this last.
     "prettier",
   ],
-  ignorePatterns: [
-    "vue.config.js",
-    "tailwind.config.js",
-    "babel.config.js",
-    "postcss.config.js",
-  ],
+  ignorePatterns: [],
   plugins: ["prettier"],
   rules: {
     "prettier/prettier": "error",
