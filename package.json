@@ -48,5 +48,8 @@
   "lint-staged": {
     "*.{js,ts,vue}": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
+  },
+  "prettier": {
+    "vueIndentScriptAndStyle": true
   }
 }

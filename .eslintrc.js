@@ -1,3 +1,6 @@
+/**
+ * @type {import("eslint").Linter.Config}
+ */
 module.exports = {
   root: true,
   env: {
@@ -32,9 +35,13 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["**/*.vue", "**/*.ts"],
+      files: ["**/*.vue", "**/*.ts", "**.*.js"],
       rules: {
-        "vue/max-attributes-per-line": "off"
+        indent: "off",
+        "vue/max-attributes-per-line": "off",
+        "vue-indent-script-and-style": "off",
+        // This is handled better (IMO) in Prettier (config'd in package.json).
+        "vue/script-indent": "off",
       },
     },
   ],

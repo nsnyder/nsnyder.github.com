@@ -3,19 +3,23 @@
     <div class="max-w-6xl px-2 mx-auto sm:flex">
       <!-- TODO: Pick a great font for headings. -->
       <div class="max-w-md py-2">
-        <h4 class="mb-2 text-lg font-bold">Follow Me</h4>
+        <h4 class="mb-2 text-lg font-bold">
+          Follow Me
+        </h4>
         <ul class="grid grid-flow-col grid-rows-5 col-gap-8">
           <li v-for="(link, index) in socialLinks" :key="index">
             <a
-              v-text="link.text"
               v-bind="link.attributes"
               class="inline-block my-1"
+              v-text="link.text"
             />
           </li>
         </ul>
       </div>
       <div class="flex-grow-0 max-w-md py-2 md:max-w-xl sm:px-8">
-        <h4 class="mb-2 text-lg font-bold">About this site</h4>
+        <h4 class="mb-2 text-lg font-bold">
+          About this site
+        </h4>
         <div>
           This site was built by Nathan Snyder. Any and all logos are property
           of their respective owners, and do not indicate an endorsement of this
@@ -29,58 +33,58 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@vue/composition-api";
-import { emailAddress, urls } from "~/constants";
+  import { defineComponent } from "@vue/composition-api";
+  import { emailAddress, urls } from "~/constants";
 
-export default defineComponent({
-  name: "Footer",
+  export default defineComponent({
+    name: "Footer",
 
-  setup() {
-    const socialLinks = [
-      {
-        text: "Github",
-        attributes: {
-          href: urls.githubProfile,
+    setup() {
+      const socialLinks = [
+        {
+          text: "Github",
+          attributes: {
+            href: urls.githubProfile,
+          },
         },
-      },
-      {
-        text: "LinkedIn",
-        attributes: {
-          href: urls.linkedInProfile,
+        {
+          text: "LinkedIn",
+          attributes: {
+            href: urls.linkedInProfile,
+          },
         },
-      },
-      {
-        text: "Twitter",
-        attributes: {
-          href: urls.twitterProfile,
+        {
+          text: "Twitter",
+          attributes: {
+            href: urls.twitterProfile,
+          },
         },
-      },
-      {
-        text: "Blog",
-        attributes: {
-          href: urls.blogUrl,
+        {
+          text: "Blog",
+          attributes: {
+            href: urls.blogUrl,
+          },
         },
-      },
-      {
-        text: "Instagram",
-        attributes: {
-          href: urls.instagramProfile,
+        {
+          text: "Instagram",
+          attributes: {
+            href: urls.instagramProfile,
+          },
         },
-      },
-    ];
+      ];
 
-    return {
-      emailAddress,
-      socialLinks,
-      urls,
-    };
-  },
-});
+      return {
+        emailAddress,
+        socialLinks,
+        urls,
+      };
+    },
+  });
 </script>
 
 <style scoped>
-/* Set the default footer text color */
-* {
-  @apply text-gray-200;
-}
+  /* Set the default footer text color */
+  * {
+    @apply text-gray-200;
+  }
 </style>

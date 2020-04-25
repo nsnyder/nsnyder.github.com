@@ -7,7 +7,7 @@
       v-if="showWipBanner"
       class="flex items-center justify-between w-full text-center text-gray-200 align-middle bg-gray-800 flex-before"
     >
-      <div class="flex-1"></div>
+      <div class="flex-1" />
       <div>
         This site is a work in progress, but the "Contact Me!" link works 😉
       </div>
@@ -56,70 +56,70 @@
 </template>
 
 <script lang="ts">
-import SvgIcon from "~/components/partials/SvgIcon.vue";
-import { emailAddress, urls } from "~/constants";
-import { defineComponent, onMounted, ref } from "@vue/composition-api";
+  import SvgIcon from "~/components/partials/SvgIcon.vue";
+  import { emailAddress, urls } from "~/constants";
+  import { defineComponent, onMounted, ref } from "@vue/composition-api";
 
-export default defineComponent({
-  name: "Header",
+  export default defineComponent({
+    name: "Header",
 
-  components: {
-    SvgIcon,
-  },
+    components: {
+      SvgIcon,
+    },
 
-  setup() {
-    const wipBannerSessionName = "wipBannerHidden";
-    const showWipBanner = ref(true);
-    const hideWipBanner = () => {
-      showWipBanner.value = false;
-      sessionStorage.setItem(wipBannerSessionName, "true");
-    };
-    const initializeWipBannerState = () => {
-      showWipBanner.value =
-        sessionStorage.getItem(wipBannerSessionName) === "true";
-    };
+    setup() {
+      const wipBannerSessionName = "wipBannerHidden";
+      const showWipBanner = ref(true);
+      const hideWipBanner = () => {
+        showWipBanner.value = false;
+        sessionStorage.setItem(wipBannerSessionName, "true");
+      };
+      const initializeWipBannerState = () => {
+        showWipBanner.value =
+          sessionStorage.getItem(wipBannerSessionName) === "true";
+      };
 
-    const socialLinks = [
-      {
-        icon: "Github",
-        attributes: {
-          href: urls.githubProfile,
-          title: "My Github profile",
+      const socialLinks = [
+        {
+          icon: "Github",
+          attributes: {
+            href: urls.githubProfile,
+            title: "My Github profile",
+          },
+          svgAttributes: {
+            title: "My Github profile",
+          },
         },
-        svgAttributes: {
-          title: "My Github profile",
+        {
+          icon: "LinkedIn",
+          attributes: {
+            href: urls.linkedInProfile,
+            title: "My LinkedIn profile",
+          },
+          svgAttributes: {
+            title: "My LinkedIn profile",
+          },
         },
-      },
-      {
-        icon: "LinkedIn",
-        attributes: {
-          href: urls.linkedInProfile,
-          title: "My LinkedIn profile",
+        {
+          icon: "Twitter",
+          attributes: {
+            href: urls.twitterProfile,
+            title: "My Twitter timeline",
+          },
+          svgAttributes: {
+            title: "My Twitter timeline",
+          },
         },
-        svgAttributes: {
-          title: "My LinkedIn profile",
-        },
-      },
-      {
-        icon: "Twitter",
-        attributes: {
-          href: urls.twitterProfile,
-          title: "My Twitter timeline",
-        },
-        svgAttributes: {
-          title: "My Twitter timeline",
-        },
-      },
-    ];
+      ];
 
-    onMounted(() => initializeWipBannerState());
+      onMounted(() => initializeWipBannerState());
 
-    return {
-      showWipBanner,
-      hideWipBanner,
-      emailAddress,
-      socialLinks,
-    };
-  },
-});
+      return {
+        showWipBanner,
+        hideWipBanner,
+        emailAddress,
+        socialLinks,
+      };
+    },
+  });
 </script>
