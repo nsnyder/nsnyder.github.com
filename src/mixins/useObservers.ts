@@ -1,11 +1,20 @@
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export default () => {
-  const supportsObservers = () => {
-    return "IntersectionObserver" in window &&
+  const supportsObservers = (): boolean => {
+    return (
+      "IntersectionObserver" in window &&
       "IntersectionObserverEntry" in window &&
-      "intersectionRatio" in window.IntersectionObserverEntry.prototype;
+      "intersectionRatio" in window.IntersectionObserverEntry.prototype
+    );
   };
-  
-  const observe = (element, onIntersection, onNoIntersection, options, observeOnce) => {
+
+  const observe = (
+    element: Element,
+    observeOnce: boolean,
+    onIntersection?: () => void,
+    onNoIntersection?: () => void,
+    options?: IntersectionObserverInit
+  ): boolean => {
     try {
       // Let the caller know if the browser supports observers.
       if (!supportsObservers()) {
@@ -18,11 +27,15 @@ export default () => {
 
         // We're not going to fire non-intersection events for observe once,
         // because they would be unlikely to ever be fired.
-        if (!entry.isIntersecting && !observeOnce && (typeof onNoIntersection === 'function')) {
+        if (
+          !entry.isIntersecting &&
+          !observeOnce &&
+          typeof onNoIntersection === "function"
+        ) {
           onNoIntersection();
         }
 
-        if (entry.isIntersecting && (typeof onIntersection === 'function')) {
+        if (entry.isIntersecting && typeof onIntersection === "function") {
           onIntersection();
           eventFired = true;
         }
@@ -42,12 +55,16 @@ export default () => {
       return false;
     }
   };
-  const observeOnce = (element, onIntersection, options) => {
-    return observe(element, onIntersection, null, options, true);
+  const observeOnce = (
+    element: Element,
+    onIntersection: () => void,
+    options?: IntersectionObserverInit
+  ): boolean => {
+    return observe(element, true, onIntersection, undefined, options);
   };
 
   return {
     observe,
-    observeOnce
-  }
+    observeOnce,
+  };
 };
