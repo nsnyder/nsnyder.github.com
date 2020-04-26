@@ -3,7 +3,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   theme: {
     extend: {},
-    gradients: (theme) => ({
+    gradients: theme => ({
       "blue-purple": [
         "135deg",
         theme("colors.blue.500"),
@@ -19,7 +19,7 @@ module.exports = {
       ...defaultTheme.fontFamily,
       display: ["Satisfy", "cursive"],
     },
-    stripes: (theme) => ({
+    stripes: theme => ({
       construction: [theme("colors.orange.700"), theme("colors.gray.900")],
     }),
   },

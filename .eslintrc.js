@@ -37,7 +37,17 @@ module.exports = {
         "vue-indent-script-and-style": "off",
         // This is handled better (IMO) in Prettier (config'd in package.json).
         "vue/script-indent": "off",
-      },
+        // Not all dependencies are compatible with modules, so don't require this.
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    },
+    {
+      files: ["*.js"],
+      rules: {
+        "@typescript-eslint/no-var-requires": "off",
+        // These aren't included in the build, so can't have return types.
+        "@typescript-eslint/explicit-function-return-type": "off"
+      }
     },
   ],
 };
