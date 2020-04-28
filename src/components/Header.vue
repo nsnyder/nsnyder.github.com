@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col items-center justify-between min-h-screen bg-fixed bg-gradient-blue-purple"
+    class="flex flex-col items-center justify-between min-h-screen bg-fixed section bg-gradient-blue-purple"
     :class="{ 'flex-before': !showWipBanner }"
   >
     <div
@@ -37,7 +37,7 @@
         Contact Me!
       </a>
     </header>
-    <div class="flex w-full p-2 text-left text-white">
+    <div class="flex w-full text-left text-white">
       <a
         v-for="(link, index) in socialLinks"
         :key="index"

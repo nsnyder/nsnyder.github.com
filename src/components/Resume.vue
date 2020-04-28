@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="px-2 mx-auto my-12 lg:max-w-6xl">
+    <div class="section-constrained">
       <!-- TODO: Pick a great font for headings. -->
-      <h2 class="py-2 text-xl font-bold">
+      <h2 class="pb-2 text-xl font-bold">
         Experience
       </h2>
       <div

@@ -7,4 +7,5 @@ a {
 @tailwind components;
 @tailwind utilities;
 
-@import './utilities.css';
+@import "./utilities.css";
+@import "./typography.css";

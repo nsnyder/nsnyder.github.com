@@ -1,6 +1,6 @@
 <template>
-  <footer class="p-6 bg-gray-700 lg:py-12">
-    <div class="max-w-6xl px-2 mx-auto sm:flex">
+  <footer class="bg-gray-700">
+    <div class="section-constrained sm:flex">
       <!-- TODO: Pick a great font for headings. -->
       <div class="max-w-md py-2">
         <h4 class="mb-2 text-lg font-bold">
@@ -23,7 +23,7 @@
         <div>
           This site was built by Nathan Snyder. Any and all logos are property
           of their respective owners, and do not indicate an endorsement of this
-          site by those owners. Source and license for this site is available on
+          by those owners. Source and license for this site is available on
           <a :href="urls.githubSource" target="_blank">Github</a>. Find a bug?
           <a :href="'mailto:' + emailAddress">Let me know.</a>
         </div>
