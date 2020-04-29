@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-gray-700">
+  <footer class="text-white bg-center bg-repeat fill-current">
     <div class="section-constrained sm:flex">
       <!-- TODO: Pick a great font for headings. -->
       <div class="max-w-md py-2">
@@ -85,6 +85,13 @@
 <style scoped>
   /* Set the default footer text color */
   * {
-    @apply text-gray-200;
+    /* @apply text-gray-200; */
+    @apply text-black;
+  }
+
+  footer {
+    /* stylelint-disable declaration-colon-newline-after */
+    background-image: url("/img/hex-grid-invert.min.svg"),
+      linear-gradient(135deg, #4299e1, #9f7aea);
   }
 </style>

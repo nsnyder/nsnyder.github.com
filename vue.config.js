@@ -7,12 +7,6 @@ module.exports = {
         "~": path.resolve(__dirname, "src/"),
       },
     },
-    optimization: {
-      usedExports: true,
-    },
-  },
-  css: {
-    requireModuleExtension: false,
   },
   publicPath: "/nsnyder.github.com/",
 };
