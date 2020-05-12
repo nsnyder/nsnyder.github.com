@@ -43,6 +43,8 @@
   export default defineComponent({
     name: "Resume",
 
+    props: {},
+
     setup() {
       const createClassObjectFromArray: (
         array: Array<string>
@@ -55,6 +57,7 @@
             ),
           {}
         );
+
       const experienceEntries = ref([
         {
           classes: createClassObjectFromArray(["logo-mark trs-background"]),

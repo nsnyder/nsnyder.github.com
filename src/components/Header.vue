@@ -67,6 +67,8 @@
       SvgIcon,
     },
 
+    props: {},
+
     setup() {
       const wipBannerSessionName = "wipBannerHidden";
       const showWipBanner = ref(true);

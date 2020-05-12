@@ -14,11 +14,14 @@
 
   export default Vue.extend({
     name: "App",
+
     components: {
       Footer,
       Header,
       Resume,
     },
+
+    props: {},
   });
 </script>
 

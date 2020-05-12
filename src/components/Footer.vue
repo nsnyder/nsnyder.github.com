@@ -39,6 +39,8 @@
   export default defineComponent({
     name: "Footer",
 
+    props: {},
+
     setup() {
       const socialLinks = [
         {
