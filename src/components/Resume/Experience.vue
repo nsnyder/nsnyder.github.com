@@ -2,7 +2,7 @@
   <div>
     <div class="section-constrained">
       <!-- TODO: Pick a great font for headings. -->
-      <h2 class="pb-2 text-xl font-bold">
+      <h2 class="pt-0 pb-2 text-xl font-bold">
         Experience
       </h2>
       <div
@@ -41,7 +41,7 @@
   import useObservers from "~/mixins/useObservers";
 
   export default defineComponent({
-    name: "Resume",
+    name: "Experience",
 
     props: {},
 
