@@ -1,6 +1,6 @@
 <template>
-  <footer class="p-6 bg-gray-700 lg:py-12">
-    <div class="max-w-6xl px-2 mx-auto sm:flex">
+  <footer class="bg-gray-700">
+    <div class="section-constrained sm:flex">
       <!-- TODO: Pick a great font for headings. -->
       <div class="max-w-md py-2">
         <h4 class="mb-2 text-lg font-bold">
@@ -38,6 +38,8 @@
 
   export default defineComponent({
     name: "Footer",
+
+    props: {},
 
     setup() {
       const socialLinks = [
