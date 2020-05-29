@@ -23,7 +23,7 @@
         <div>
           This site was built by Nathan Snyder. Any and all logos are property
           of their respective owners, and do not indicate an endorsement of this
-          by those owners. Source and license for this site is available on
+          site by those owners. Source and license for this site is available on
           <a :href="urls.githubSource" target="_blank">Github</a>. Find a bug?
           <a :href="'mailto:' + emailAddress">Let me know.</a>
         </div>
