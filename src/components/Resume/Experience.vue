@@ -1,44 +1,47 @@
 <template>
-  <div>
-    <div class="section-constrained">
-      <!-- TODO: Pick a great font for headings. -->
-      <h2 class="pt-0 pb-2 text-xl font-bold">
-        Experience
-      </h2>
+  <div class="section-constrained">
+    <!-- TODO: Pick a great font for headings. -->
+    <h2 class="pt-0 pb-2 text-xl font-bold">
+      Experience
+    </h2>
+    <div
+      ref="grid"
+      class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3"
+    >
       <div
-        ref="experienceGrid"
-        class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3"
+        v-for="(entry, index) in experienceEntries"
+        :key="index"
+        class="p-2 px-4 rounded shadow-sm bg-gradient-shades-of-gray"
+        :class="entry.classes || {}"
       >
-        <div
-          v-for="(entry, index) in experienceEntries"
-          :key="index"
-          class="p-2 px-4 duration-500 rounded shadow-sm bg-gradient-shades-of-gray"
-          :class="entry.classes || {}"
-        >
-          <div class="mb-2">
-            <h3 class="text-lg font-bold text-gray-800">
-              {{ entry.title }}
-            </h3>
-            <h4 class="text-sm italic text-gray-700">
-              {{ entry.subtitle }}
-            </h4>
-          </div>
-          <p
-            class="duration-1000 transform"
-            :class="{
-              'opacity-0 -translate-x-4': index > visibleElementsCount - 1,
-            }"
-            v-text="entry.description"
-          />
+        <div class="mb-2">
+          <h3 class="text-lg font-bold text-gray-800">
+            {{ entry.title }}
+          </h3>
+          <h4 class="text-sm italic text-gray-700">
+            {{ entry.subtitle }}
+          </h4>
         </div>
+        <p
+          class="duration-1000 transform"
+          :class="{
+            'opacity-0 -translate-x-4': index > visibleElementsCount - 1,
+          }"
+          v-text="entry.description"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-  import { defineComponent, onMounted, ref } from "@vue/composition-api";
-  import useObservers from "~/mixins/useObservers";
+  import {
+    defineComponent,
+    onMounted,
+    ref,
+    computed,
+  } from "@vue/composition-api";
+  import useStaggeredGridReveal from "~/mixins/useStaggeredGridReveal";
 
   export default defineComponent({
     name: "Experience",
@@ -99,50 +102,19 @@
         },
       ]);
       const visibleElementsCount = ref(0);
+      const entriesCount = computed(() => experienceEntries.value.length);
 
       // Mixin.
-      const { observeOnce } = useObservers();
-      const experienceGrid = ref<HTMLElement>(null);
-      const visibilityTimeMs = 500;
+      const grid = ref<HTMLElement>(null);
+      const { observeGrid } = useStaggeredGridReveal();
 
-      // Methods.
-      const incrementVisibility = (firstRun: boolean): void => {
-        // On the first run, skip this so that there's a slight delay before
-        // the element begins appearing.
-        if (!firstRun) {
-          visibleElementsCount.value++;
-        }
-        if (visibleElementsCount.value < experienceEntries.value.length) {
-          setTimeout(incrementVisibility, visibilityTimeMs, false);
-        }
-      };
-      const startHandlingVisibility = (): void => {
-        incrementVisibility(true);
-      };
-
-      const observeGrid = (): void => {
-        let observed = false;
-        if (experienceGrid.value !== null) {
-          observed = observeOnce(
-            experienceGrid.value,
-            startHandlingVisibility,
-            {
-              threshold: 0.1,
-            }
-          );
-        }
-
-        // If we couldn't start our observer, show all entries immediately.
-        if (!observed) {
-          visibleElementsCount.value = experienceEntries.value.length;
-        }
-      };
-
-      onMounted(observeGrid);
+      onMounted(() => {
+        observeGrid(grid, visibleElementsCount, entriesCount);
+      });
 
       return {
         experienceEntries,
-        experienceGrid,
+        grid,
         visibleElementsCount,
       };
     },
