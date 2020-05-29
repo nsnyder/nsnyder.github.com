@@ -19,7 +19,9 @@ export default () => {
   ): void => {
     // If we couldn't find the grid, log an error and show everything.
     if (grid.value === null) {
-      console.error("Could not find a grid element to observe.");
+      console.error(
+        "Could not find a grid element to observe. Is your ref named correctly?"
+      );
       showAll(counter, max);
       return;
     }
