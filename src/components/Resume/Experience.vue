@@ -108,9 +108,7 @@
       const grid = ref<HTMLElement>(null);
       const { observeGrid } = useStaggeredGridReveal();
 
-      onMounted(() => {
-        observeGrid(grid, visibleElementsCount, entriesCount);
-      });
+      onMounted(() => observeGrid(grid, visibleElementsCount, entriesCount));
 
       return {
         experienceEntries,
