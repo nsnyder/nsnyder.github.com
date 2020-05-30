@@ -15,11 +15,9 @@
       <div>
         <a
           :href="'mailto:' + emailAddress"
-          class="inline-block p-2 no-underline duration-100 transform border-2 border-black hover:translate-x-1"
+          class="no-underline duration-100 border-black skew-label short hover:translate-x-1"
         >
-          <span class="text-lg font-bold text-black no-underline">
-            Contact Me
-          </span>
+          Contact Me
         </a>
       </div>
     </div>

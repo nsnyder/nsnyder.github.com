@@ -1,7 +1,7 @@
 <template>
   <footer class="py-8 bg-gray-700 grid-cols-main">
-    <div class="grid grid-cols-6 gap">
-      <div>
+    <div class="grid grid-cols-main gap">
+      <div class="grid-content-start grid-content lg:col-len-1">
         <h4 class="mb-2 text-lg font-bold">
           Follow Me
         </h4>
@@ -15,14 +15,13 @@
           </li>
         </ul>
       </div>
-      <div class="col-span-3">
+      <div class="col-len-6 grid-content-start lg:col-start-auto lg:col-len-3">
         <h4 class="mb-2 text-lg font-bold">
           About this site
         </h4>
         <div>
-          This site was built by Nathan Snyder. Any and all logos are property
-          of their respective owners, and do not indicate an endorsement of this
-          site by those owners. Source and license for this site is available on
+          This site was built by Nathan Snyder. Source and license for this site
+          is available on
           <a :href="urls.githubSource" target="_blank">Github</a>. Find a bug?
           <a :href="'mailto:' + emailAddress">Let me know.</a>
         </div>

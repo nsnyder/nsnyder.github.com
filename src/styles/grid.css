@@ -2,6 +2,7 @@
   /* stylelint-disable-next-line length-zero-no-unit */
   --grid-gap-x: 0rem;
   --grid-gap-y: 1rem;
+  --grid-gap-y-short: 0.5rem;
   --grid-padding: 0.5rem;
   --screen-xl: 1280px;
 }
@@ -22,10 +23,6 @@
   display: contents;
 }
 
-.gap {
-  gap: var(--grid-gap-y) var(--grid-gap-x);
-}
-
 .grid-cols-main {
   @apply grid;
 
@@ -38,6 +35,46 @@
 
 .grid-cols-main > * {
   grid-column: content / content-end;
+}
+
+.grid-content {
+  grid-column: content / content-end;
+}
+
+@responsive {
+  /* Increase the specificity on this tag so it'll override col-spans. */
+  .grid-content-start {
+    grid-column-start: content-start;
+  }
+
+  /**
+   * Because of the way .col-span-{n} classes work, they specify more
+   * than just the width, which messes with the starting position.
+   * So, within my grid, we'll remedy this with these classes.
+   */
+  .col-len-1 {
+    grid-column-end: span 1;
+  }
+
+  .col-len-2 {
+    grid-column-end: span 2;
+  }
+
+  .col-len-3 {
+    grid-column-end: span 3;
+  }
+
+  .col-len-4 {
+    grid-column-end: span 4;
+  }
+
+  .col-len-5 {
+    grid-column-end: span 5;
+  }
+
+  .col-len-6 {
+    grid-column-end: span 6;
+  }
 }
 
 @screen lg {
@@ -61,10 +98,6 @@
 
   .grid-sidebar {
     grid-column: sidebar;
-  }
-
-  .grid-content {
-    grid-column: content / content-end;
   }
 }
 
@@ -99,4 +132,12 @@
   @apply bleed;
 
   grid-row: wip-banner;
+}
+
+.gap {
+  gap: var(--grid-gap-y) var(--grid-gap-x);
+}
+
+.gap-y-short {
+  gap: var(--grid-gap-y-short) var(--grid-gap-x);
 }

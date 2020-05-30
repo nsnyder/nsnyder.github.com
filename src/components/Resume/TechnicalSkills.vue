@@ -1,9 +1,11 @@
 <template>
-  <div class="contents">
+  <div class="grid-cols-main">
     <!-- TODO: Pick a great font for headings. -->
-    <h2 class="pt-0 pb-2 text-xl font-bold lg:text-right grid-sidebar">
-      Technical Skills
-    </h2>
+    <div class="pt-0 pb-2 text-xl font-bold lg:text-right grid-sidebar">
+      <h2 class="skew-label">
+        Technical Skills
+      </h2>
+    </div>
     <div
       ref="grid"
       class="grid grid-cols-1 gap md:grid-cols-2 lg:grid-cols-3 grid-content"

@@ -1,32 +1,31 @@
 <template>
-  <div class="grid-cols-main">
+  <div ref="grid" class="grid-cols-main gap">
     <!-- TODO: Pick a great font for headings. -->
-    <h2 class="pt-0 pb-2 text-xl font-bold lg:text-right grid-sidebar">
-      Experience
-    </h2>
-    <div ref="grid">
-      <div
-        v-for="(entry, index) in experienceEntries"
-        :key="index"
-        class="col-span-4 p-2 px-4 rounded shadow-sm bg-gradient-shades-of-gray"
-        :class="entry.classes || {}"
-      >
-        <div class="mb-2">
-          <h3 class="text-lg font-bold text-gray-800">
-            {{ entry.title }}
-          </h3>
-          <h4 class="text-sm italic text-gray-700">
-            {{ entry.subtitle }}
-          </h4>
-        </div>
-        <p
-          class="duration-1000 transform"
-          :class="{
-            'opacity-0 -translate-x-4': index > visibleElementsCount - 1,
-          }"
-          v-text="entry.description"
-        />
+    <div class="pt-0 pb-2 text-xl font-bold lg:text-right grid-sidebar">
+      <h2 class="skew-label">
+        Experience
+      </h2>
+    </div>
+    <div
+      v-for="(entry, index) in experienceEntries"
+      :key="index"
+      class="grid-content-terse"
+    >
+      <div class="mb-2">
+        <h3 class="text-3xl font-bold text-gray-800">
+          {{ entry.title }}
+        </h3>
+        <h4 class="text-sm italic text-gray-700">
+          {{ entry.subtitle }}
+        </h4>
       </div>
+      <p
+        class="duration-1000 transform"
+        :class="{
+          'opacity-0 -translate-x-4': index > visibleElementsCount - 1,
+        }"
+        v-text="entry.description"
+      />
     </div>
   </div>
 </template>
@@ -46,21 +45,8 @@
     props: {},
 
     setup() {
-      const createClassObjectFromArray: (
-        array: Array<string>
-      ) => { [key: string]: true } = array =>
-        array.reduce(
-          (previous, entry) =>
-            Object.assign<{ [key: string]: true }, { [key: string]: true }>(
-              previous,
-              { [entry]: true }
-            ),
-          {}
-        );
-
       const experienceEntries = ref([
         {
-          classes: createClassObjectFromArray(["logo-mark trs-background"]),
           subtitle: "Software Engineer 2 — 2015 to present",
           title: "The Restaurant Store",
           description: `
@@ -74,7 +60,6 @@
             `,
         },
         {
-          classes: createClassObjectFromArray(["logo-mark solo-background"]),
           subtitle: "Programming Intern — 2012 to 2015 (seasonal)",
           title: "Solo Labs",
           description: `
@@ -85,7 +70,6 @@
             `,
         },
         {
-          classes: createClassObjectFromArray(["logo-mark gcc-background"]),
           subtitle: "Computer Science — 2011 to 2015",
           title: "Grove City College",
           description: `
@@ -117,38 +101,21 @@
 </script>
 
 <style scoped>
-  /*
-    Add relative positioning so that the absolute pseudo element sticks to it.
-    We also want to establish a new stacking context, so add a z-index.
-  */
-  .logo-mark {
-    @apply relative z-0;
+  .back-divider {
+    @apply inline-block relative;
   }
 
-  .logo-mark::after {
-    content: "";
-    background-size: auto 5em;
-    opacity: 0.1;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: var(--background-image);
+  .back-divider::before {
+    @apply h-px w-20 inline-block bg-indigo-400 absolute -mx-24;
+
+    top: 54%;
+    content: " ";
   }
 
-  .gcc-background::after {
-    --background-image: url("/img/gcc-logo.png");
-  }
+  .back-divider::after {
+    @apply h-px w-20 inline-block bg-indigo-400 absolute mx-4;
 
-  .solo-background::after {
-    --background-image: url("/img/solo-logo.svg");
-  }
-
-  .trs-background::after {
-    --background-image: url("/img/trs-logo.png");
+    top: 54%;
+    content: " ";
   }
 </style>
