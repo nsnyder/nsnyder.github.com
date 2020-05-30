@@ -1,12 +1,9 @@
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export default () => {
-  const supportsObservers = (): boolean => {
-    return (
-      "IntersectionObserver" in window &&
-      "IntersectionObserverEntry" in window &&
-      "intersectionRatio" in window.IntersectionObserverEntry.prototype
-    );
-  };
+  const supportsObservers = (): boolean =>
+    "IntersectionObserver" in window &&
+    "IntersectionObserverEntry" in window &&
+    "intersectionRatio" in window.IntersectionObserverEntry.prototype;
 
   const observe = (
     element: Element,
@@ -23,29 +20,25 @@ export default () => {
 
       // Create the observer with the given options.
       const observer = new IntersectionObserver(([entry]) => {
-        let eventFired = false;
+        let intersected = false;
 
-        // We're not going to fire non-intersection events for observe once,
-        // because they would be unlikely to ever be fired.
-        if (
-          !entry.isIntersecting &&
-          !observeOnce &&
-          typeof onNoIntersection === "function"
-        ) {
+        // Non-intersection events won't disconnect the observer.
+        if (!entry.isIntersecting && typeof onNoIntersection === "function") {
           onNoIntersection();
         }
 
         if (entry.isIntersecting && typeof onIntersection === "function") {
           onIntersection();
-          eventFired = true;
+          intersected = true;
         }
 
-        // If we're only firing this event once, and it fired, stop watching.
-        if (observeOnce && eventFired) {
+        // If we're only firing this event once, and it intersected, stop watching.
+        if (observeOnce && intersected) {
           observer.disconnect();
         }
       }, options);
 
+      // Connect the observer.
       observer.observe(element);
 
       return true;
@@ -55,13 +48,12 @@ export default () => {
       return false;
     }
   };
+
   const observeOnce = (
     element: Element,
     onIntersection: () => void,
     options?: IntersectionObserverInit
-  ): boolean => {
-    return observe(element, true, onIntersection, undefined, options);
-  };
+  ): boolean => observe(element, true, onIntersection, undefined, options);
 
   return {
     observe,
