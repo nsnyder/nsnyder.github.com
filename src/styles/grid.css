@@ -1,0 +1,99 @@
+:root {
+  /* stylelint-disable-next-line length-zero-no-unit */
+  --grid-gutter: 0rem;
+  --grid-gaps: 1rem;
+  --grid-padding: 0.5rem;
+  --screen-xl: 1280px;
+}
+
+.grid-me {
+  grid-row: me;
+}
+
+.grid-about {
+  grid-row: about;
+}
+
+.grid-social {
+  grid-row: social;
+}
+
+.grid-cols-main {
+  @apply grid;
+
+  grid-template-columns:
+    [full-start] calc(var(--grid-gaps) - var(--grid-gutter))
+    [content-start] repeat(6, 1fr) [content-end]
+    calc(var(--grid-gaps) - var(--grid-gutter)) [full-end];
+  gap: var(--grid-gaps) var(--grid-gutter);
+}
+
+.grid-cols-main > * {
+  grid-column: content / content-end;
+}
+
+/* TODO: Fix this so !important isn't necessary. */
+.grid-start-content {
+  grid-column-start: content !important;
+}
+
+@screen lg {
+  :root {
+    --grid-gutter: 1rem;
+    --grid-gaps: 2rem;
+  }
+
+  .grid-cols-main {
+    grid-template-columns:
+      [full-start] calc(var(--grid-gaps) - var(--grid-gutter))
+      [sidebar-start] 12rem [sidebar-end content-start]
+      repeat(6, 1fr) [content-end right-start]
+      minmax(calc(var(--grid-gaps) - var(--grid-gutter)), calc(100vw - var(--screen-xl)))
+      [right-end full-end];
+  }
+
+  .grid-content-terse {
+    grid-column: content / span 4;
+  }
+
+  .grid-sidebar {
+    grid-column: sidebar;
+  }
+
+  .grid-to-content {
+    grid-column: full / sidebar;
+  }
+}
+
+.bleed {
+  grid-column: full;
+}
+
+/*
+  If we have multiple versions of the main grid directly nested,
+  bleed the nested grid so that it takes the full page width.
+*/
+.grid-cols-main > .grid-cols-main {
+  @apply bleed;
+}
+
+.header-rows {
+  grid-template-rows:
+    [wip-banner-start full-start] min-content [wip-banner-end]
+    1fr
+    [me-start] min-content [me-end about-start]
+    min-content [about-end]
+    1fr
+    [social-start] min-content [social-end full-end];
+  gap: 0 var(--grid-gutter);
+}
+
+.header-full-height {
+  grid-row: full;
+}
+
+.header-wip-banner {
+  @apply bleed;
+
+  grid-row: wip-banner;
+}
