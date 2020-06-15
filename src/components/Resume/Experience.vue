@@ -1,17 +1,14 @@
 <template>
-  <div class="section-constrained">
+  <div class="grid-cols-main">
     <!-- TODO: Pick a great font for headings. -->
-    <h2 class="pt-0 pb-2 text-xl font-bold">
+    <h2 class="pt-0 pb-2 text-xl font-bold lg:text-right grid-sidebar">
       Experience
     </h2>
-    <div
-      ref="grid"
-      class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3"
-    >
+    <div ref="grid">
       <div
         v-for="(entry, index) in experienceEntries"
         :key="index"
-        class="p-2 px-4 rounded shadow-sm bg-gradient-shades-of-gray"
+        class="col-span-4 p-2 px-4 rounded shadow-sm bg-gradient-shades-of-gray"
         :class="entry.classes || {}"
       >
         <div class="mb-2">

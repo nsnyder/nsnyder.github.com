@@ -1,12 +1,12 @@
 <template>
-  <div class="section-constrained">
+  <div class="grid-cols-main">
     <!-- TODO: Pick a great font for headings. -->
-    <h2 class="pt-0 pb-2 text-xl font-bold">
+    <h2 class="pt-0 pb-2 text-xl font-bold lg:text-right grid-sidebar">
       Technical Skills
     </h2>
     <div
       ref="grid"
-      class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3"
+      class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
     >
       <div
         v-for="(entry, index) in technicalEntries"

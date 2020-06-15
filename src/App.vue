@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="font-sans">
+  <div id="app" class="font-sans grid-cols-main">
     <Header />
     <Resume />
     <Footer />

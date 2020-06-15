@@ -7,5 +7,6 @@ a {
 @tailwind components;
 @tailwind utilities;
 
+@import "./grid.css";
 @import "./utilities.css";
 @import "./typography.css";
