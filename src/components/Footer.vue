@@ -1,29 +1,31 @@
 <template>
   <footer class="py-8 bg-gray-700 grid-cols-main">
-    <div class="col-span-1 grid-start-content">
-      <h4 class="mb-2 text-lg font-bold">
-        Follow Me
-      </h4>
-      <ul class="grid grid-flow-col grid-rows-5 col-gap-8">
-        <li v-for="(link, index) in socialLinks" :key="index">
-          <a
-            v-bind="link.attributes"
-            class="inline-block my-1"
-            v-text="link.text"
-          />
-        </li>
-      </ul>
-    </div>
-    <div class="flex-grow-0 col-span-3">
-      <h4 class="mb-2 text-lg font-bold">
-        About this site
-      </h4>
+    <div class="grid grid-cols-6 gap">
       <div>
-        This site was built by Nathan Snyder. Any and all logos are property of
-        their respective owners, and do not indicate an endorsement of this site
-        by those owners. Source and license for this site is available on
-        <a :href="urls.githubSource" target="_blank">Github</a>. Find a bug?
-        <a :href="'mailto:' + emailAddress">Let me know.</a>
+        <h4 class="mb-2 text-lg font-bold">
+          Follow Me
+        </h4>
+        <ul class="grid grid-flow-col grid-rows-5 col-gap-8">
+          <li v-for="(link, index) in socialLinks" :key="index">
+            <a
+              v-bind="link.attributes"
+              class="inline-block my-1"
+              v-text="link.text"
+            />
+          </li>
+        </ul>
+      </div>
+      <div class="col-span-3">
+        <h4 class="mb-2 text-lg font-bold">
+          About this site
+        </h4>
+        <div>
+          This site was built by Nathan Snyder. Any and all logos are property
+          of their respective owners, and do not indicate an endorsement of this
+          site by those owners. Source and license for this site is available on
+          <a :href="urls.githubSource" target="_blank">Github</a>. Find a bug?
+          <a :href="'mailto:' + emailAddress">Let me know.</a>
+        </div>
       </div>
     </div>
   </footer>

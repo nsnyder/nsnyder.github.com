@@ -1,7 +1,7 @@
 :root {
   /* stylelint-disable-next-line length-zero-no-unit */
-  --grid-gutter: 0rem;
-  --grid-gaps: 1rem;
+  --grid-gap-x: 0rem;
+  --grid-gap-y: 1rem;
   --grid-padding: 0.5rem;
   --screen-xl: 1280px;
 }
@@ -18,37 +18,40 @@
   grid-row: social;
 }
 
+.contents {
+  display: contents;
+}
+
+.gap {
+  gap: var(--grid-gap-y) var(--grid-gap-x);
+}
+
 .grid-cols-main {
   @apply grid;
 
   grid-template-columns:
-    [full-start] calc(var(--grid-gaps) - var(--grid-gutter))
+    [full-start] calc(var(--grid-gap-y) - var(--grid-gap-x))
     [content-start] repeat(6, 1fr) [content-end]
-    calc(var(--grid-gaps) - var(--grid-gutter)) [full-end];
-  gap: var(--grid-gaps) var(--grid-gutter);
+    calc(var(--grid-gap-y) - var(--grid-gap-x)) [full-end];
+  gap: var(--grid-gap-y) var(--grid-gap-x);
 }
 
 .grid-cols-main > * {
   grid-column: content / content-end;
 }
 
-/* TODO: Fix this so !important isn't necessary. */
-.grid-start-content {
-  grid-column-start: content !important;
-}
-
 @screen lg {
   :root {
-    --grid-gutter: 1rem;
-    --grid-gaps: 2rem;
+    --grid-gap-x: 1rem;
+    --grid-gap-y: 2rem;
   }
 
   .grid-cols-main {
     grid-template-columns:
-      [full-start] calc(var(--grid-gaps) - var(--grid-gutter))
+      [full-start] calc(var(--grid-gap-y) - var(--grid-gap-x))
       [sidebar-start] 12rem [sidebar-end content-start]
       repeat(6, 1fr) [content-end right-start]
-      minmax(calc(var(--grid-gaps) - var(--grid-gutter)), calc(100vw - var(--screen-xl)))
+      minmax(calc(var(--grid-gap-y) - var(--grid-gap-x)), calc(100vw - var(--screen-xl)))
       [right-end full-end];
   }
 
@@ -60,8 +63,8 @@
     grid-column: sidebar;
   }
 
-  .grid-to-content {
-    grid-column: full / sidebar;
+  .grid-content {
+    grid-column: content / content-end;
   }
 }
 
@@ -85,7 +88,7 @@
     min-content [about-end]
     1fr
     [social-start] min-content [social-end full-end];
-  gap: 0 var(--grid-gutter);
+  gap: 0 var(--grid-gap-x);
 }
 
 .header-full-height {
