@@ -2,7 +2,7 @@ import { Ref } from "@vue/composition-api";
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export default () => {
-  const incrementVisibility = (
+  const incrementCounter = (
     firstRun: boolean,
     counter: Ref<number>,
     max: Readonly<Ref<number>>,
@@ -15,19 +15,19 @@ export default () => {
     }
     if (counter.value < max.value) {
       setTimeout(() => {
-        incrementVisibility(false, counter, max, duration);
+        incrementCounter(false, counter, max, duration);
       }, duration);
     }
   };
-  const startHandlingVisibility = (
+  const startIncrementing = (
     counter: Ref<number>,
     max: Readonly<Ref<number>>,
     duration: number
   ): void => {
-    incrementVisibility(true, counter, max, duration);
+    incrementCounter(true, counter, max, duration);
   };
 
   return {
-    startHandlingVisibility,
+    startIncrementing,
   };
 };

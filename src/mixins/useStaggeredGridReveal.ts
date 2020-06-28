@@ -5,7 +5,7 @@ import useStaggeredIncrements from "~/mixins/useStaggeredIncrements";
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export default () => {
   const { observeOnce } = useObservers();
-  const { startHandlingVisibility } = useStaggeredIncrements();
+  const { startIncrementing } = useStaggeredIncrements();
   const staggerDuration = 500;
 
   const showAll = (counter: Ref<number>, max: Readonly<Ref<number>>): void => {
@@ -28,12 +28,8 @@ export default () => {
 
     const observed = observeOnce(
       grid.value,
-      () => {
-        startHandlingVisibility(counter, max, staggerDuration);
-      },
-      {
-        threshold: 0.1,
-      }
+      () => startIncrementing(counter, max, staggerDuration),
+      { threshold: 0.1 }
     );
 
     // If we couldn't start our observer, show all entries immediately.
