@@ -6,6 +6,8 @@
         Technical Skills
       </h2>
     </div>
+
+    <!-- TODO: Adapt this to fit with the larger grid structure better. -->
     <div
       ref="grid"
       class="grid grid-cols-1 gap-2 lg:gap-4 md:grid-cols-2 lg:grid-cols-3 grid-content"
