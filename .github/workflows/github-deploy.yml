@@ -27,6 +27,7 @@ jobs:
            echo ::set-env name=commitmsg::$(git log --format=%B -n 1 ${{ env.GITHUB_SHA }})
       - name: "Tell IFTTT when the site is deployed"
         uses: cixo/ifttt-trigger@v0.3
+        continue-on-error: true
         with:
           key: "${{ secrets.IFTTT_KEY }}"
           event: "site_deployed"
