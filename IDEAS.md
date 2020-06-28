@@ -17,6 +17,12 @@ I thought it a good idea to take a look at some other personal sites around the 
 and see what sorts of things I liked, and what sorts of things I didn't. This
 is a collection of some of my observations.
 
+#### https://ethanmarcotte.com/wrote/css-grid-without-max-width/
+
+I like everything about this site. It's sleek and simple, but with a clear personality.
+But I'm linking this specific page, because I love what he's doing with columns.
+I'll probably steal a snippet or two to use on my site.
+
 #### http://www.goldsquare.co
 
 - Like
@@ -156,8 +162,8 @@ is a collection of some of my observations.
 Diamond w/ a character in the middle:
 ```html
 <div>
-  <div class="-mt-4 h-8 w-8 bg-white rotate-45 transform block flex items-center justify-center">
-    <div class="-rotate-45 transform block">N</div>
+  <div class="flex items-center justify-center block w-8 h-8 -mt-4 transform rotate-45 bg-white">
+    <div class="block transform -rotate-45">N</div>
   </div>
 </div>
 ```

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="grid-cols-main">
     <Experience />
     <TechnicalSkills />
   </div>

@@ -1,12 +1,13 @@
 <template>
-  <footer class="bg-gray-700">
-    <div class="section-constrained sm:flex">
-      <!-- TODO: Pick a great font for headings. -->
-      <div class="max-w-md py-2">
+  <footer class="py-8 bg-gray-700 grid-cols-main">
+    <div class="grid grid-cols-main">
+      <div class="grid-content-start grid-content md:col-len-1 lg:col-len-1">
         <h4 class="mb-2 text-lg font-bold">
           Follow Me
         </h4>
-        <ul class="grid grid-flow-col grid-rows-5 col-gap-8">
+        <ul
+          class="grid grid-flow-row grid-cols-3 col-gap-8 sm:grid-cols-4 md:grid-flow-col md:grid-cols-1 md:grid-rows-5"
+        >
           <li v-for="(link, index) in socialLinks" :key="index">
             <a
               v-bind="link.attributes"
@@ -16,14 +17,15 @@
           </li>
         </ul>
       </div>
-      <div class="flex-grow-0 max-w-md py-2 md:max-w-xl sm:px-8">
+      <div
+        class="col-len-6 grid-content-start md:col-start-auto md:col-len-4 lg:col-len-3"
+      >
         <h4 class="mb-2 text-lg font-bold">
           About this site
         </h4>
         <div>
-          This site was built by Nathan Snyder. Any and all logos are property
-          of their respective owners, and do not indicate an endorsement of this
-          site by those owners. Source and license for this site is available on
+          This site was built by Nathan Snyder. Source and license for this site
+          is available on
           <a :href="urls.githubSource" target="_blank">Github</a>. Find a bug?
           <a :href="'mailto:' + emailAddress">Let me know.</a>
         </div>

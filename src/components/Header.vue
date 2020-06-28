@@ -1,49 +1,38 @@
 <template>
   <div
-    class="flex flex-col items-center justify-between min-h-screen bg-fixed section bg-gradient-blue-purple"
-    :class="{ 'flex-before': !showWipBanner }"
+    class="items-baseline min-h-screen bg-fixed grid-cols-main header-rows bg-gradient-blue-purple"
   >
-    <div
-      v-if="showWipBanner"
-      class="flex items-center justify-between w-full text-center text-gray-200 align-middle bg-gray-800 flex-before"
-    >
-      <div class="flex-1" />
-      <div>
-        This site is a work in progress, but the "Contact Me!" link works 😉
-      </div>
-      <div class="flex-1 text-right">
-        <a
-          href="#"
-          class="inline-block p-4 mx-2 text-gray-200 no-underline md:py-2"
-          @click="hideWipBanner"
-        >
-          &times;
-        </a>
-      </div>
-    </div>
-    <header class="w-full p-2 text-center">
-      <h1 class="my-5 text-5xl font-display md:text-6xl">
+    <div class="grid-me">
+      <h1
+        class="px-8 text-3xl origin-bottom-left skew-label sm:text-5xl md:text-6xl"
+      >
         Nathan Snyder
       </h1>
-      <div class="max-w-xl mx-auto my-5 mb-8 md:text-xl">
+    </div>
+
+    <div class="grid-about grid-content-terse">
+      <div class="my-4 text-xl md:text-2xl">
         Hi! I'm a software engineer at The Restaurant Store. I love tackling
         complex projects, learning new things, and building tools that help
         people get things done quickly and effectively.
       </div>
-      <a
-        :href="'mailto:' + emailAddress"
-        class="my-5 font-bold text-white transition-all duration-300 border-white btn-md hover:bg-white hover:text-blue-600"
-      >
-        Contact Me!
-      </a>
-    </header>
-    <div class="flex w-full text-left text-white">
+      <div>
+        <a
+          :href="'mailto:' + emailAddress"
+          class="no-underline duration-100 border-black skew-label hover:translate-x-1"
+        >
+          Contact Me
+        </a>
+      </div>
+    </div>
+
+    <div class="flex w-full py-2 space-x-2 text-left text-white grid-social">
       <a
         v-for="(link, index) in socialLinks"
         :key="index"
         v-bind="link.attributes || {}"
         target="_blank"
-        class="p-1 mx-1 duration-100 transform hover:-translate-y-1"
+        class="p-1 duration-100 transform hover:-translate-y-1"
       >
         <SvgIcon
           class="w-6 h-6 text-white"
@@ -58,7 +47,7 @@
 <script lang="ts">
   import SvgIcon from "~/components/partials/SvgIcon.vue";
   import { emailAddress, urls } from "~/constants";
-  import { defineComponent, onMounted, ref } from "@vue/composition-api";
+  import { defineComponent } from "@vue/composition-api";
 
   export default defineComponent({
     name: "Header",
@@ -70,17 +59,6 @@
     props: {},
 
     setup() {
-      const wipBannerSessionName = "wipBannerHidden";
-      const showWipBanner = ref(true);
-      const hideWipBanner = (): void => {
-        showWipBanner.value = false;
-        sessionStorage.setItem(wipBannerSessionName, "true");
-      };
-      const initializeWipBannerState = (): void => {
-        showWipBanner.value =
-          sessionStorage.getItem(wipBannerSessionName) === "true";
-      };
-
       const socialLinks = [
         {
           icon: "Github",
@@ -114,11 +92,7 @@
         },
       ];
 
-      onMounted(() => initializeWipBannerState());
-
       return {
-        showWipBanner,
-        hideWipBanner,
         emailAddress,
         socialLinks,
       };
