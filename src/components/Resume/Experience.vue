@@ -99,23 +99,3 @@
     },
   });
 </script>
-
-<style scoped>
-  .back-divider {
-    @apply inline-block relative;
-  }
-
-  .back-divider::before {
-    @apply h-px w-20 inline-block bg-indigo-400 absolute -mx-24;
-
-    top: 54%;
-    content: " ";
-  }
-
-  .back-divider::after {
-    @apply h-px w-20 inline-block bg-indigo-400 absolute mx-4;
-
-    top: 54%;
-    content: " ";
-  }
-</style>

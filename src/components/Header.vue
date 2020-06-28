@@ -26,13 +26,13 @@
       </div>
     </div>
 
-    <div class="flex w-full py-2 text-left text-white grid-social">
+    <div class="flex w-full py-2 space-x-2 text-left text-white grid-social">
       <a
         v-for="(link, index) in socialLinks"
         :key="index"
         v-bind="link.attributes || {}"
         target="_blank"
-        class="p-1 mx-1 duration-100 transform hover:-translate-y-1"
+        class="p-1 duration-100 transform hover:-translate-y-1"
       >
         <SvgIcon
           class="w-6 h-6 text-white"
@@ -99,9 +99,3 @@
     },
   });
 </script>
-
-<style scoped>
-  .grid-social > *:first-child {
-    @apply ml-0;
-  }
-</style>

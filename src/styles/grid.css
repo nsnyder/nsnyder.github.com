@@ -115,7 +115,7 @@
 
 .header-rows {
   grid-template-rows:
-    [wip-banner-start full-start] min-content [wip-banner-end]
+    [banner-start full-start] min-content [banner-end]
     1fr
     [me-start] min-content [me-end about-start]
     min-content [about-end]
@@ -128,10 +128,10 @@
   grid-row: full;
 }
 
-.header-wip-banner {
+.header-banner {
   @apply bleed;
 
-  grid-row: wip-banner;
+  grid-row: banner;
 }
 
 .gap-y-short {
