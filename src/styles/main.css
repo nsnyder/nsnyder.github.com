@@ -4,8 +4,10 @@ a {
   @apply text-blue-600 underline;
 }
 
-@tailwind components;
-@tailwind utilities;
-
+@import "./grid.css";
 @import "./utilities.css";
 @import "./typography.css";
+
+/* To avoid specificity issues, load these last. */
+@tailwind components;
+@tailwind utilities;

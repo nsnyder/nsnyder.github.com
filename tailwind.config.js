@@ -25,6 +25,7 @@ module.exports = {
   },
   variants: {
     padding: ["responsive"],
+    "border-width": ["hover"],
   },
   plugins: [
     require("./tailwind-plugins/gradient"),

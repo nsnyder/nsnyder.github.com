@@ -1,0 +1,139 @@
+:root {
+  /* stylelint-disable-next-line length-zero-no-unit */
+  --grid-gap-x: 0rem;
+  --grid-gap-y: 1rem;
+  --grid-gap-y-short: 0.5rem;
+  --grid-padding: 0.5rem;
+  --screen-xl: 1280px;
+}
+
+.grid-me {
+  grid-row: me;
+}
+
+.grid-about {
+  grid-row: about;
+}
+
+.grid-social {
+  grid-row: social;
+}
+
+.contents {
+  display: contents;
+}
+
+.grid-cols-main {
+  @apply grid;
+
+  grid-template-columns:
+    [full-start] calc(var(--grid-gap-y) - var(--grid-gap-x))
+    [content-start] repeat(6, 1fr) [content-end]
+    calc(var(--grid-gap-y) - var(--grid-gap-x)) [full-end];
+  gap: var(--grid-gap-y) var(--grid-gap-x);
+}
+
+.grid-cols-main > * {
+  grid-column: content / content-end;
+}
+
+.grid-content {
+  grid-column: content / content-end;
+}
+
+@responsive {
+  /* Increase the specificity on this tag so it'll override col-spans. */
+  .grid-content-start {
+    grid-column-start: content-start;
+  }
+
+  /**
+   * Because of the way .col-span-{n} classes work, they specify more
+   * than just the width, which messes with the starting position.
+   * So, within my grid, we'll remedy this with these classes.
+   */
+  .col-len-1 {
+    grid-column-end: span 1;
+  }
+
+  .col-len-2 {
+    grid-column-end: span 2;
+  }
+
+  .col-len-3 {
+    grid-column-end: span 3;
+  }
+
+  .col-len-4 {
+    grid-column-end: span 4;
+  }
+
+  .col-len-5 {
+    grid-column-end: span 5;
+  }
+
+  .col-len-6 {
+    grid-column-end: span 6;
+  }
+}
+
+@screen lg {
+  :root {
+    --grid-gap-x: 1rem;
+    --grid-gap-y: 2rem;
+  }
+
+  .grid-cols-main {
+    grid-template-columns:
+      [full-start] calc(var(--grid-gap-y) - var(--grid-gap-x))
+      [sidebar-start] 12rem [sidebar-end content-start]
+      repeat(6, 1fr) [content-end right-start]
+      minmax(calc(var(--grid-gap-y) - var(--grid-gap-x)), calc(100vw - var(--screen-xl)))
+      [right-end full-end];
+  }
+
+  .grid-content-terse {
+    grid-column: content / span 4;
+  }
+
+  .grid-sidebar {
+    grid-column: sidebar;
+  }
+}
+
+.bleed {
+  grid-column: full;
+}
+
+/*
+  If we have multiple versions of the main grid directly nested,
+  bleed the nested grid so that it takes the full page width.
+*/
+.grid-cols-main > .grid-cols-main {
+  @apply bleed;
+}
+
+.header-rows {
+  grid-template-rows:
+    [banner-start full-start] min-content [banner-end]
+    1fr
+    [me-start] min-content [me-end about-start]
+    min-content [about-end]
+    1fr
+    [social-start] min-content [social-end full-end];
+  gap: 0 var(--grid-gap-x);
+}
+
+.header-full-height {
+  grid-row: full;
+}
+
+.header-banner {
+  @apply bleed;
+
+  grid-row: banner;
+}
+
+.gap-y-short {
+  gap: var(--grid-gap-y-short) var(--grid-gap-x);
+}
