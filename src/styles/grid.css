@@ -134,10 +134,6 @@
   grid-row: wip-banner;
 }
 
-.gap {
-  gap: var(--grid-gap-y) var(--grid-gap-x);
-}
-
 .gap-y-short {
   gap: var(--grid-gap-y-short) var(--grid-gap-x);
 }

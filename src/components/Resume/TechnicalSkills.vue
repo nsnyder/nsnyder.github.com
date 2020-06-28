@@ -1,14 +1,14 @@
 <template>
   <div class="grid-cols-main">
     <!-- TODO: Pick a great font for headings. -->
-    <div class="pt-0 pb-2 text-xl font-bold lg:text-right grid-sidebar">
-      <h2 class="skew-label">
+    <div class="text-xl font-bold lg:text-right grid-sidebar">
+      <h2 class="mt-4 skew-label">
         Technical Skills
       </h2>
     </div>
     <div
       ref="grid"
-      class="grid grid-cols-1 gap md:grid-cols-2 lg:grid-cols-3 grid-content"
+      class="grid grid-cols-1 gap-2 lg:gap-4 md:grid-cols-2 lg:grid-cols-3 grid-content"
     >
       <div
         v-for="(entry, index) in technicalEntries"

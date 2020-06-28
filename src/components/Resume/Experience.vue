@@ -1,8 +1,8 @@
 <template>
-  <div ref="grid" class="grid-cols-main gap">
+  <div ref="grid" class="grid-cols-main">
     <!-- TODO: Pick a great font for headings. -->
-    <div class="pt-0 pb-2 text-xl font-bold lg:text-right grid-sidebar">
-      <h2 class="skew-label">
+    <div class="text-xl font-bold lg:text-right grid-sidebar">
+      <h2 class="mt-4 skew-label">
         Experience
       </h2>
     </div>

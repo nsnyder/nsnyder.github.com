@@ -1,11 +1,13 @@
 <template>
   <footer class="py-8 bg-gray-700 grid-cols-main">
-    <div class="grid grid-cols-main gap">
-      <div class="grid-content-start grid-content lg:col-len-1">
+    <div class="grid grid-cols-main">
+      <div class="grid-content-start grid-content md:col-len-1 lg:col-len-1">
         <h4 class="mb-2 text-lg font-bold">
           Follow Me
         </h4>
-        <ul class="grid grid-flow-col grid-rows-5 col-gap-8">
+        <ul
+          class="grid grid-flow-row grid-cols-3 col-gap-8 sm:grid-cols-4 md:grid-flow-col md:grid-cols-1 md:grid-rows-5"
+        >
           <li v-for="(link, index) in socialLinks" :key="index">
             <a
               v-bind="link.attributes"
@@ -15,7 +17,9 @@
           </li>
         </ul>
       </div>
-      <div class="col-len-6 grid-content-start lg:col-start-auto lg:col-len-3">
+      <div
+        class="col-len-6 grid-content-start md:col-start-auto md:col-len-4 lg:col-len-3"
+      >
         <h4 class="mb-2 text-lg font-bold">
           About this site
         </h4>
