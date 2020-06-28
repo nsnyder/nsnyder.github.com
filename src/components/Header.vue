@@ -11,7 +11,7 @@
     </div>
 
     <div class="grid-about grid-content-terse">
-      <div class="my-4 text-xl">
+      <div class="my-4 text-xl md:text-2xl">
         Hi! I'm a software engineer at The Restaurant Store. I love tackling
         complex projects, learning new things, and building tools that help
         people get things done quickly and effectively.
