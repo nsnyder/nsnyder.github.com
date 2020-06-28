@@ -2,9 +2,13 @@
   <div
     class="items-baseline min-h-screen bg-fixed grid-cols-main header-rows bg-gradient-blue-purple"
   >
-    <h1 class="text-5xl font-display sm:text-6xl grid-me">
-      Nathan Snyder
-    </h1>
+    <div class="grid-me">
+      <h1
+        class="px-8 text-3xl origin-bottom-left skew-label sm:text-5xl md:text-6xl"
+      >
+        Nathan Snyder
+      </h1>
+    </div>
 
     <div class="grid-about grid-content-terse">
       <div class="my-4 text-xl">
@@ -15,7 +19,7 @@
       <div>
         <a
           :href="'mailto:' + emailAddress"
-          class="no-underline duration-100 border-black skew-label short hover:translate-x-1"
+          class="no-underline duration-100 border-black skew-label hover:translate-x-1"
         >
           Contact Me
         </a>
