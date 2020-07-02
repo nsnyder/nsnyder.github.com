@@ -2,7 +2,17 @@
   <div
     class="items-baseline min-h-screen bg-fixed grid-cols-main header-rows bg-gradient-blue-purple"
   >
-    <div class="grid-me">
+    <div
+      class="absolute bottom-0 z-0 grid w-full h-64 grid-cols-4 grid-rows-4 overflow-hidden md:grid-cols-12"
+    >
+      <div
+        class="col-start-2 col-end-13 row-start-3 row-end-5 origin-top-right transform bg-orange-700 -rotate-12 md:row-start-2 lg:row-start-1"
+      />
+      <div
+        class="col-start-1 col-end-13 row-start-3 row-end-5 origin-top-left transform bg-orange-600 md:row-start-2 rotate-30 lg:row-start-1"
+      />
+    </div>
+    <div class="z-10 grid-me">
       <h1
         class="px-8 text-3xl origin-bottom-left skew-label sm:text-5xl md:text-6xl"
       >
@@ -10,7 +20,7 @@
       </h1>
     </div>
 
-    <div class="grid-about grid-content-terse">
+    <div class="z-10 grid-about grid-content-terse">
       <div class="my-4 text-xl md:text-2xl">
         Hi! I'm a software engineer at The Restaurant Store. I love tackling
         complex projects, learning new things, and building tools that help
@@ -26,7 +36,9 @@
       </div>
     </div>
 
-    <div class="flex w-full py-2 space-x-2 text-left text-white grid-social">
+    <div
+      class="z-10 flex w-full py-2 space-x-2 text-left text-white grid-social"
+    >
       <a
         v-for="(link, index) in socialLinks"
         :key="index"
