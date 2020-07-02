@@ -92,12 +92,14 @@
       [right-end full-end];
   }
 
-  .grid-content-terse {
-    grid-column: content / span 4;
-  }
-
   .grid-sidebar {
     grid-column: sidebar;
+  }
+}
+
+@responsive {
+  .grid-content-terse {
+    grid-column: content / span 4;
   }
 }
 
