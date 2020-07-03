@@ -5,15 +5,17 @@
       role="img"
       aria-label="Nathan sitting on a pier in Los Angeles"
     />
-    <div
-      class="absolute bottom-0 grid w-full h-64 grid-cols-4 grid-rows-4 overflow-hidden pointer-events-none md:grid-cols-12"
-    >
+    <div class="w-full h-full bleed">
       <div
-        class="col-start-2 col-end-13 row-start-3 row-end-5 origin-top-right transform bg-teal-700 shadow-md -rotate-12 md:row-start-2 lg:row-start-1"
-      />
-      <div
-        class="col-start-1 col-end-13 row-start-3 row-end-5 origin-top-left transform bg-teal-600 shadow-md md:row-start-2 rotate-30 lg:row-start-1"
-      />
+        class="absolute bottom-0 grid w-full h-64 grid-cols-4 grid-rows-4 overflow-hidden pointer-events-none md:grid-cols-12"
+      >
+        <div
+          class="col-start-2 col-end-13 row-start-3 row-end-5 origin-top-right transform bg-teal-700 shadow-md -rotate-12 md:row-start-2 lg:row-start-1"
+        />
+        <div
+          class="col-start-1 col-end-13 row-start-3 row-end-5 origin-top-left transform bg-teal-600 shadow-md md:row-start-2 rotate-30 lg:row-start-1"
+        />
+      </div>
     </div>
     <div class="grid-me">
       <h1
