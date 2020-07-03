@@ -42,7 +42,9 @@
 }
 
 @responsive {
-  /* Increase the specificity on this tag so it'll override col-spans. */
+  /**
+   * Increase the specificity on this tag so it'll override col-spans.
+   */
   .grid-content-start {
     grid-column-start: content-start;
   }
@@ -121,6 +123,13 @@
 */
 .grid-cols-main > .grid-cols-main {
   @apply bleed-x;
+}
+
+/**
+ * Enforce the grid gap on adjecent grid elements that would not otherwise have a gap.
+ */
+*:not(.grid-cols-main) > .grid-cols-main ~ .grid-cols-main {
+  margin-top: var(--grid-gap-y);
 }
 
 .header-rows {
