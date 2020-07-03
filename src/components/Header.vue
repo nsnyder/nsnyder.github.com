@@ -1,5 +1,5 @@
 <template>
-  <div class="items-baseline min-h-screen grid-cols-main header-rows">
+  <div class="items-baseline min-h-full grid-cols-main header-rows">
     <div
       class="w-full h-full bleed la-bg"
       role="img"
