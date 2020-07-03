@@ -2,7 +2,7 @@
   <div ref="grid" class="grid-cols-main">
     <!-- TODO: Pick a great font for headings. -->
     <div class="text-xl font-bold lg:text-right grid-sidebar">
-      <h2 class="mt-4 skew-label">
+      <h2 class="skew-label">
         Experience
       </h2>
     </div>
