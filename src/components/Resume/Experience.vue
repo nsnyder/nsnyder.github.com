@@ -9,7 +9,7 @@
     <div
       v-for="(entry, index) in experienceEntries"
       :key="index"
-      class="grid-content-terse"
+      class="lg:grid-content-terse"
     >
       <div class="mb-2">
         <h3 class="text-3xl font-bold text-gray-800">
