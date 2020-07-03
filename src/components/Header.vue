@@ -1,7 +1,10 @@
 <template>
-  <div
-    class="items-baseline min-h-screen bg-fixed grid-cols-main header-rows bg"
-  >
+  <div class="items-baseline min-h-screen grid-cols-main header-rows">
+    <div
+      class="w-full h-full bg-fixed bleed la-bg"
+      role="img"
+      aria-label="Nathan sitting on a pier in Los Angeles"
+    />
     <div
       class="absolute bottom-0 z-0 grid w-full h-64 grid-cols-4 grid-rows-4 overflow-hidden md:grid-cols-12"
     >
@@ -113,10 +116,10 @@
 </script>
 
 <style scoped>
-  .bg {
+  .la-bg {
     /* stylelint-disable-next-line */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url("/img/bg.jpg");
+      url("/img/nathan-los-angeles-pier.jpg");
     background-size: cover;
     background-position-y: bottom;
     background-position-x: 70%;
