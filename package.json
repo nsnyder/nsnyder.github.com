@@ -49,7 +49,6 @@
     "last 2 versions"
   ],
   "gitHooks": {
-    "post-checkout": ".githooks/post-checkout.sh",
     "pre-commit": "vti diagnostics && lint-staged"
   },
   "lint-staged": {

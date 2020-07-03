@@ -92,17 +92,27 @@
       [right-end full-end];
   }
 
-  .grid-content-terse {
-    grid-column: content / span 4;
-  }
-
   .grid-sidebar {
     grid-column: sidebar;
   }
 }
 
-.bleed {
+@responsive {
+  .grid-content-terse {
+    grid-column: content / span 4;
+  }
+}
+
+.bleed-x {
   grid-column: full;
+}
+
+.bleed-y {
+  grid-row: full;
+}
+
+.bleed {
+  @apply bleed-x bleed-y;
 }
 
 /*
@@ -110,7 +120,7 @@
   bleed the nested grid so that it takes the full page width.
 */
 .grid-cols-main > .grid-cols-main {
-  @apply bleed;
+  @apply bleed-x;
 }
 
 .header-rows {
@@ -129,7 +139,7 @@
 }
 
 .header-banner {
-  @apply bleed;
+  @apply bleed-x;
 
   grid-row: banner;
 }

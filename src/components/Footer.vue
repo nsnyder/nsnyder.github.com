@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-8 bg-gray-700 grid-cols-main">
+  <footer class="py-8 bg-teal-800 grid-cols-main">
     <div class="grid grid-cols-main">
       <div class="grid-content-start grid-content md:col-len-1 lg:col-len-1">
         <h4 class="mb-2 text-lg font-bold">

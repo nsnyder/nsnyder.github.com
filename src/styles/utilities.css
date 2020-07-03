@@ -10,6 +10,14 @@
   @apply inline-block px-4 py-2 font-bold text-white uppercase origin-bottom-right transform -skew-x-12 bg-gray-900;
 }
 
+.skew-label.light {
+  @apply text-gray-800 bg-gray-200;
+}
+
+a.skew-label {
+  @apply border-b-4 border-teal-500;
+}
+
 .skew-label.rotate-tall {
   --transform-rotate: var(--skew-label-rotation);
 }
