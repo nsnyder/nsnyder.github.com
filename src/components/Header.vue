@@ -5,7 +5,7 @@
       role="img"
       aria-label="Nathan sitting on a pier in Los Angeles"
     />
-    <div class="w-full h-full bleed">
+    <div class="relative w-full h-full bleed">
       <div
         class="absolute bottom-0 grid w-full h-64 grid-cols-4 grid-rows-4 overflow-hidden pointer-events-none md:grid-cols-12"
       >
