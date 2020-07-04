@@ -1,6 +1,6 @@
 <template>
   <div class="absolute bottom-0 left-0 right-0">
-    <div class="tri">
+    <div class="triangle-container">
       <div class="absolute top-0 left-0 w-full h-full">
         <div
           class="grid w-full h-full grid-cols-12 grid-rows-4 overflow-hidden pointer-events-none"
@@ -46,7 +46,7 @@
 </script>
 
 <style scoped>
-  .tri {
+  .triangle-container {
     @apply relative;
 
     padding-top: min(16rem, calc(100% * 1 / 4));

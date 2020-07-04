@@ -21,12 +21,6 @@ module.exports = {
     }),
     stripes: theme => ({
       construction: [theme("colors.orange.700"), theme("colors.gray.900")],
-      // split: [
-      //   "12deg",
-      //   theme("colors.gray.300"),
-      //   theme("colors.gray.200"),
-      //   "50%",
-      // ],
     }),
   },
   variants: {

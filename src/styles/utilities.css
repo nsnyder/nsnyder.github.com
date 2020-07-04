@@ -39,7 +39,3 @@ a.skew-label {
     --transform-rotate: var(--skew-label-rotation);
   }
 }
-
-.bg-stripe-split {
-  background: repeating-linear-gradient(102deg, #e2e8f0, #e2e8f0 50%, #edf2f7 50%, #edf2f7 100%);
-}
