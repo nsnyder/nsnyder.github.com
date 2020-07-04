@@ -1,15 +1,21 @@
 <template>
-  <div
-    class="absolute bottom-0 grid w-full h-64 grid-cols-4 grid-rows-4 overflow-hidden pointer-events-none md:grid-cols-12 tri"
-  >
-    <div
-      class="col-start-2 col-end-13 row-start-3 row-end-5 origin-top-right transform shadow-md -rotate-12 md:row-start-2 lg:row-start-1"
-      :class="{ [colorClassDark]: true }"
-    />
-    <div
-      class="col-start-1 col-end-13 row-start-3 row-end-5 origin-top-left transform shadow-md md:row-start-2 rotate-30 lg:row-start-1"
-      :class="{ [colorClassLight]: true }"
-    />
+  <div class="absolute bottom-0 left-0 right-0">
+    <div class="tri">
+      <div class="absolute top-0 left-0 w-full h-full">
+        <div
+          class="grid w-full h-full grid-cols-12 grid-rows-4 overflow-hidden pointer-events-none"
+        >
+          <div
+            class="col-start-1 col-end-13 row-start-1 row-end-5 origin-top-right transform shadow-md -rotate-12"
+            :class="{ [colorClassDark]: true }"
+          />
+          <div
+            class="col-start-1 col-end-13 row-start-1 row-end-5 origin-top-left transform shadow-md rotate-30"
+            :class="{ [colorClassLight]: true }"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -38,3 +44,11 @@
     },
   });
 </script>
+
+<style scoped>
+  .tri {
+    @apply relative;
+
+    padding-top: min(16rem, calc(100% * 1 / 4));
+  }
+</style>
