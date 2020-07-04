@@ -11,7 +11,8 @@
         color-class-dark="bg-teal-700"
       />
     </div>
-    <div class="grid-me">
+
+    <div class="relative grid-me">
       <h1
         class="px-8 text-3xl origin-bottom-left skew-label light sm:text-5xl md:text-6xl"
       >
@@ -19,7 +20,7 @@
       </h1>
     </div>
 
-    <div class="grid-about sm:grid-content-terse">
+    <div class="relative grid-about sm:grid-content-terse">
       <div class="my-4 text-xl text-gray-200 md:text-2xl">
         Hi! I'm a software engineer at The Restaurant Store. I love tackling
         complex projects, learning new things, and building tools that help
@@ -35,7 +36,9 @@
       </div>
     </div>
 
-    <div class="flex w-full py-2 space-x-2 text-left text-white grid-social">
+    <div
+      class="relative flex w-full py-2 space-x-2 text-left text-white grid-social"
+    >
       <a
         v-for="(link, index) in socialLinks"
         :key="index"

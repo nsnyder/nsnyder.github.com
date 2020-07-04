@@ -49,6 +49,6 @@
   .triangle-container {
     @apply relative;
 
-    padding-top: min(16rem, calc(100% * 1 / 4));
+    padding-top: clamp(8rem, calc(100% * 1 / 4), 16rem);
   }
 </style>
