@@ -15,23 +15,32 @@
       <div
         v-for="(entry, index) in technicalEntries"
         :key="index"
-        class="p-2 px-4 rounded shadow-sm bg-gradient-shades-of-gray"
+        class="relative overflow-hidden bg-gray-100 rounded shadow-sm"
       >
-        <div class="mb-2">
-          <h3 class="text-lg font-bold text-gray-800">
-            {{ entry.title }}
-          </h3>
+        <triangles
+          color-class-light="bg-gray-200"
+          color-class-dark="bg-gray-300"
+        />
+        <div class="relative p-2 px-4">
+          <div class="mb-2">
+            <h3 class="text-lg font-bold text-gray-800">
+              {{ entry.title }}
+            </h3>
+          </div>
+          <ul
+            class="duration-1000 transform"
+            :class="{
+              'opacity-0 -translate-x-4': index > visibleElementsCount - 1,
+            }"
+          >
+            <li
+              v-for="(bullet, bulletIndex) in entry.bullets"
+              :key="bulletIndex"
+            >
+              {{ bullet }}
+            </li>
+          </ul>
         </div>
-        <ul
-          class="duration-1000 transform"
-          :class="{
-            'opacity-0 -translate-x-4': index > visibleElementsCount - 1,
-          }"
-        >
-          <li v-for="(bullet, bulletIndex) in entry.bullets" :key="bulletIndex">
-            {{ bullet }}
-          </li>
-        </ul>
       </div>
     </div>
   </div>
@@ -45,9 +54,14 @@
     ref,
   } from "@vue/composition-api";
   import useStaggeredGridReveal from "~/mixins/useStaggeredGridReveal";
+  import Triangles from "~/components/partials/Triangles.vue";
 
   export default defineComponent({
     name: "TechnicalSkills",
+
+    components: {
+      Triangles,
+    },
 
     props: {},
 
