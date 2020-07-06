@@ -1,5 +1,15 @@
 @tailwind base;
 
+/**
+ * Do a simple reset for heights, because we'll need 100% height
+ * when 100vh doesn't work on mobile.
+ */
+html,
+body,
+#app {
+  height: 100%;
+}
+
 a {
   @apply text-teal-600 underline;
 }

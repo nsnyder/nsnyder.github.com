@@ -2,16 +2,6 @@
   --skew-label-rotation: -12deg;
 }
 
-html,
-body,
-#app {
-  height: 100%;
-}
-
-.btn-md {
-  @apply inline-block px-4 py-2 no-underline border-2 rounded-full;
-}
-
 .skew-label {
   @apply inline-block px-4 py-2 font-bold text-white uppercase origin-bottom-right transform -skew-x-12 bg-gray-900;
 }
@@ -22,14 +12,6 @@ body,
 
 a.skew-label {
   @apply border-b-4 border-teal-500;
-}
-
-.skew-label.rotate-tall {
-  --transform-rotate: var(--skew-label-rotation);
-}
-
-.skew-label.rotate-short {
-  --transform-rotate: calc(var(--skew-label-rotation) / 2);
 }
 
 @screen lg {
