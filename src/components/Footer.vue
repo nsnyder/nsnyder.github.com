@@ -26,8 +26,11 @@
         <div>
           This site was built by Nathan Snyder. Source and license for this site
           is available on
-          <a :href="urls.githubSource" target="_blank">Github</a>. Find a bug?
+          <!-- eslint-disable -->
+          <a :href="urls.githubSource" target="_blank" rel="noopener">Github</a>.
+          Find a bug?
           <a :href="'mailto:' + emailAddress">Let me know.</a>
+          <!-- eslint-enable -->
         </div>
       </div>
     </div>
