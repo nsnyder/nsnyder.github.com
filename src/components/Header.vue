@@ -57,6 +57,7 @@
 </template>
 
 <script lang="ts">
+  import StringPairs from "~/types/StringPairs";
   import SvgIcon from "~/components/partials/SvgIcon.vue";
   import Triangles from "~/components/partials/Triangles.vue";
   import { emailAddress, urls } from "~/constants";
@@ -73,7 +74,11 @@
     props: {},
 
     setup() {
-      const socialLinks = [
+      const socialLinks: {
+        icon: string;
+        attributes: StringPairs;
+        svgAttributes: StringPairs;
+      }[] = [
         {
           icon: "Github",
           attributes: {
@@ -105,6 +110,9 @@
           },
         },
       ];
+
+      // Implement best security practices for external links.
+      socialLinks.forEach(link => (link.attributes.rel = "noopener"));
 
       return {
         emailAddress,
