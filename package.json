@@ -36,7 +36,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "execa": "^4.0.2",
     "lint-staged": "^10.2.11",
-    "postcss": "^7.0.32",
+    "postcss": "^7.0.36",
     "prettier": "^1.19.1",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
