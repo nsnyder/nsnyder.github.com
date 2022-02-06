@@ -47,7 +47,7 @@
     setup() {
       const experienceEntries = ref([
         {
-          subtitle: "Software Engineer 2 — 2015 to present",
+          subtitle: "Software Engineer 3 — 2015 to present",
           title: "The Restaurant Store",
           description: `
               I have enjoyed both personal and professional growth during my time at The Restaurant Store.
