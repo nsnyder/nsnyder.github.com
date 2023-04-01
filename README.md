@@ -1,5 +1,7 @@
 # www.snydern.com
 
+[![Deploy to Github pages](https://github.com/nsnyder/nsnyder.github.com/actions/workflows/github-deploy.yml/badge.svg)](https://github.com/nsnyder/nsnyder.github.com/actions/workflows/github-deploy.yml)
+
 [Nathan Snyder's website](https://www.snydern.com) is built using:
 - Vue
 - TailwindCSS
