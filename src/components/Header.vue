@@ -100,13 +100,13 @@
           },
         },
         {
-          icon: "Twitter",
+          icon: "Bluesky",
           attributes: {
-            href: urls.twitterProfile,
-            title: "My Twitter timeline",
+            href: urls.blueSkyProfile,
+            title: "My Blue Sky profile",
           },
           svgAttributes: {
-            title: "My Twitter timeline",
+            title: "My Blue Sky profile",
           },
         },
       ];

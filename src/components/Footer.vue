@@ -57,9 +57,9 @@
           },
         },
         {
-          text: "Twitter",
+          text: "Blue Sky",
           attributes: {
-            href: urls.twitterProfile,
+            href: urls.blueSkyProfile,
           },
         },
         {

@@ -47,7 +47,7 @@
     setup() {
       const experienceEntries = ref([
         {
-          subtitle: "Software Engineer 3 — 2015 to present",
+          subtitle: "Senior Software Engineer 1 — 2015 to present",
           title: "The Restaurant Store",
           description: `
               I have enjoyed both personal and professional growth during my time at The Restaurant Store.
@@ -56,7 +56,7 @@
               on significant roles in overhauling our full website, our point of sale and mailing list
               systems. With a desire to make everything we do simpler, more intuitive, and more reliable
               for those who interact with our software on a daily basis, my coworkers and I have
-              advanced our company's goals through our software engineering. 
+              advanced our company's goals through our software engineering.
             `,
         },
         {
@@ -64,8 +64,8 @@
           title: "Solo Labs",
           description: `
               I had multiple summer and winter internships with Solo Labs in college.
-              At Solo Labs I was responsible for maintaining and updating company software 
-              and assisting end-users as they familiarized themselves with the software used in 
+              At Solo Labs I was responsible for maintaining and updating company software
+              and assisting end-users as they familiarized themselves with the software used in
               day-to-day company operations.
             `,
         },
