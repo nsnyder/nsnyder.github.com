@@ -2,9 +2,7 @@
   <footer class="py-8 bg-teal-800 grid-cols-main">
     <div class="grid grid-cols-main">
       <div class="grid-content-start grid-content md:col-len-1 lg:col-len-1">
-        <h4 class="mb-2 text-lg font-bold">
-          Follow Me
-        </h4>
+        <h4 class="mb-2 text-lg font-bold">Follow Me</h4>
         <ul
           class="grid grid-flow-row grid-cols-3 col-gap-8 sm:grid-cols-4 md:grid-flow-col md:grid-cols-1 md:grid-rows-5"
         >
@@ -20,15 +18,13 @@
       <div
         class="col-len-6 grid-content-start md:col-start-auto md:col-len-4 lg:col-len-3"
       >
-        <h4 class="mb-2 text-lg font-bold">
-          About this site
-        </h4>
+        <h4 class="mb-2 text-lg font-bold">About this site</h4>
         <div>
           This site was built by Nathan Snyder. Source and license for this site
           is available on
           <!-- eslint-disable -->
-          <a :href="urls.githubSource" target="_blank" rel="noopener">Github</a>.
-          Find a bug?
+          <a :href="urls.githubSource" target="_blank" rel="noopener">Github</a
+          >. Find a bug?
           <a :href="'mailto:' + emailAddress">Let me know.</a>
           <!-- eslint-enable -->
         </div>
@@ -38,7 +34,7 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from "@vue/composition-api";
+  import { defineComponent } from "vue";
   import { emailAddress, urls } from "~/constants";
 
   export default defineComponent({
@@ -90,6 +86,8 @@
 </script>
 
 <style scoped>
+  @reference "tailwindcss";
+
   /* Set the default footer text color */
   * {
     @apply text-gray-200;

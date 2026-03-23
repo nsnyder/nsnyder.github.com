@@ -1,4 +1,4 @@
-import { Ref } from "@vue/composition-api";
+import { Ref } from "vue";
 import useObservers from "~/mixins/useObservers";
 import useStaggeredIncrements from "~/mixins/useStaggeredIncrements";
 

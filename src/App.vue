@@ -7,12 +7,12 @@
 </template>
 
 <script lang="ts">
-  import Vue from "vue";
+  import { defineComponent } from "vue";
   import Footer from "~/components/Footer.vue";
   import Header from "~/components/Header.vue";
   import Resume from "~/components/Resume/Resume.vue";
 
-  export default Vue.extend({
+  export default defineComponent({
     name: "App",
 
     components: {
@@ -20,8 +20,6 @@
       Header,
       Resume,
     },
-
-    props: {},
   });
 </script>
 

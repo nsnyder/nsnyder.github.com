@@ -52,7 +52,7 @@
     onMounted,
     computed,
     ref,
-  } from "@vue/composition-api";
+  } from "vue";
   import useStaggeredGridReveal from "~/mixins/useStaggeredGridReveal";
   import Triangles from "~/components/partials/Triangles.vue";
 
@@ -100,7 +100,7 @@
       const entriesCount = computed(() => technicalEntries.value.length);
 
       // Mixin.
-      const grid = ref<HTMLElement>(null);
+      const grid = ref<HTMLElement | null>(null);
       const { observeGrid } = useStaggeredGridReveal();
 
       onMounted(() => observeGrid(grid, visibleElementsCount, entriesCount));

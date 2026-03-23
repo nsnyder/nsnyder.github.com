@@ -1,4 +1,4 @@
-import { Ref } from "@vue/composition-api";
+import { Ref } from "vue";
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export default () => {

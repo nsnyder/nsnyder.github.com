@@ -43,7 +43,7 @@
   grid-row: social;
 }
 
-@responsive {
+@layer utilities {
   .grid-content {
     grid-column: content;
   }
@@ -90,7 +90,7 @@
  * By default, cause element within grids to use the content space.
  */
 .grid-cols-main > * {
-  @apply grid-content;
+  grid-column: content;
 }
 
 .grid-cols-main {
@@ -103,7 +103,7 @@
   gap: var(--grid-gap-y) var(--grid-gap-x);
 }
 
-@screen lg {
+@media (min-width: 1024px) {
   :root {
     --grid-gap-x: 1rem;
     --grid-gap-y: 2rem;
@@ -114,7 +114,10 @@
       [full-start] calc(var(--grid-gap-y) - var(--grid-gap-x))
       [sidebar-start] 12rem [sidebar-end content-start]
       repeat(6, 1fr) [content-end right-start]
-      minmax(calc(var(--grid-gap-y) - var(--grid-gap-x)), calc(100vw - var(--screen-xl)))
+      minmax(
+        calc(var(--grid-gap-y) - var(--grid-gap-x)),
+        calc(100vw - var(--screen-xl))
+      )
       [right-end full-end];
   }
 
@@ -138,7 +141,8 @@
 }
 
 .bleed {
-  @apply bleed-x bleed-y;
+  grid-column: full;
+  grid-row: full;
 }
 
 /**
@@ -146,7 +150,7 @@
  * bleed the nested grid so that it takes the full page width.
  */
 .grid-cols-main > .grid-cols-main {
-  @apply bleed-x;
+  grid-column: full;
 }
 
 /**

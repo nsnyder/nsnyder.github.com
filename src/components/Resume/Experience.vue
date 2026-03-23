@@ -36,7 +36,7 @@
     onMounted,
     ref,
     computed,
-  } from "@vue/composition-api";
+  } from "vue";
   import useStaggeredGridReveal from "~/mixins/useStaggeredGridReveal";
 
   export default defineComponent({
@@ -86,7 +86,7 @@
       const entriesCount = computed(() => experienceEntries.value.length);
 
       // Mixin.
-      const grid = ref<HTMLElement>(null);
+      const grid = ref<HTMLElement | null>(null);
       const { observeGrid } = useStaggeredGridReveal();
 
       onMounted(() => observeGrid(grid, visibleElementsCount, entriesCount));

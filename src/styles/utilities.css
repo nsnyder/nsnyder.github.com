@@ -3,7 +3,7 @@
 }
 
 .skew-label {
-  @apply inline-block px-4 py-2 font-bold text-white uppercase origin-bottom-right transform -skew-x-12 bg-gray-900;
+  @apply inline-block px-4 py-2 font-bold text-white uppercase origin-bottom-right -skew-x-12 bg-gray-900;
 }
 
 .skew-label.light {
@@ -14,7 +14,7 @@ a.skew-label {
   @apply border-b-4 border-teal-500;
 }
 
-@screen lg {
+@media (min-width: 1024px) {
   .grid-sidebar .skew-label {
     @apply mt-4;
 

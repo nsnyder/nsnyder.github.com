@@ -1,8 +1,7 @@
 const plugin = require("tailwindcss/plugin");
 
-module.exports = plugin(({ addUtilities, e, theme, variants }) => {
+module.exports = plugin(({ addUtilities, theme }) => {
   const gradients = theme("gradients", {});
-  const gradientVariants = variants("gradients", []);
 
   const utilities = {};
   Object.entries(gradients).forEach(([name, [direction, start, end]]) => {
@@ -11,10 +10,10 @@ module.exports = plugin(({ addUtilities, e, theme, variants }) => {
       start = direction;
       direction = "to right";
     }
-    utilities[`.bg-gradient-${e(name)}`] = {
+    utilities[`.bg-gradient-${name}`] = {
       backgroundImage: `linear-gradient(${direction}, ${start}, ${end})`,
     };
   });
 
-  addUtilities(utilities, gradientVariants);
+  addUtilities(utilities);
 });

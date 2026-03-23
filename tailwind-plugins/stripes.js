@@ -1,8 +1,7 @@
 const plugin = require("tailwindcss/plugin");
 
-module.exports = plugin(({ addUtilities, e, theme, variants }) => {
+module.exports = plugin(({ addUtilities, theme }) => {
   const stripes = theme("stripes", {});
-  const stripeVariants = variants("stripes", []);
 
   const utilities = {};
   Object.entries(stripes).forEach(
@@ -16,7 +15,7 @@ module.exports = plugin(({ addUtilities, e, theme, variants }) => {
       if (!width) {
         width = 10;
       }
-      utilities[`.bg-stripe-${e(name)}`] = {
+      utilities[`.bg-stripe-${name}`] = {
         background: `repeating-linear-gradient(
         ${direction},
         ${color1},
@@ -27,5 +26,5 @@ module.exports = plugin(({ addUtilities, e, theme, variants }) => {
     }
   );
 
-  addUtilities(utilities, stripeVariants);
+  addUtilities(utilities);
 });

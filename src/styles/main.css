@@ -1,4 +1,5 @@
-@tailwind base;
+@import "tailwindcss";
+@config "../../tailwind.config.js";
 
 /**
  * Do a simple reset for heights, because we'll need 100% height
@@ -16,7 +17,3 @@ a {
 
 @import "./grid.css";
 @import "./utilities.css";
-
-/* To avoid specificity issues, load these last. */
-@tailwind components;
-@tailwind utilities;

@@ -4,13 +4,7 @@ module.exports = {
     "at-rule-no-unknown": [
       true,
       {
-        ignoreAtRules: [
-          "tailwind",
-          "apply",
-          "variants",
-          "responsive",
-          "screen",
-        ],
+        ignoreAtRules: ["tailwind", "apply", "layer", "variant", "config"],
       },
     ],
     "color-no-invalid-hex": true,

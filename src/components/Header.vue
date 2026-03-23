@@ -61,7 +61,7 @@
   import SvgIcon from "~/components/partials/SvgIcon.vue";
   import Triangles from "~/components/partials/Triangles.vue";
   import { emailAddress, urls } from "~/constants";
-  import { defineComponent } from "@vue/composition-api";
+  import { defineComponent } from "vue";
 
   export default defineComponent({
     name: "Header",
@@ -112,7 +112,7 @@
       ];
 
       // Implement best security practices for external links.
-      socialLinks.forEach(link => (link.attributes.rel = "noopener"));
+      socialLinks.forEach((link) => (link.attributes.rel = "noopener"));
 
       return {
         emailAddress,
@@ -123,15 +123,20 @@
 </script>
 
 <style scoped>
+  @reference "tailwindcss";
+
   .la-bg {
     @apply bg-cover bg-fixed bg-bottom;
 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
       url("/img/nathan-los-angeles-pier.jpg");
     background-position-x: 70%;
   }
 
-  @screen md {
-    background-position-x: center;
+  @media (min-width: 768px) {
+    .la-bg {
+      background-position-x: center;
+    }
   }
 </style>
