@@ -1,5 +1,5 @@
 export const emailAddress = "nathan@snydern.com";
-export const twitterUsername = "NathanFromPA";
+export const twitterUsername = "snydern.com";
 
 // Urls that may appear around the site.
 export const urls = {
@@ -8,7 +8,7 @@ export const urls = {
   githubSource: "https://github.com/nsnyder/nsnyder.github.com",
   instagramProfile: "https://www.instagram.com/NathanFromPA",
   linkedInProfile: "https://www.linkedin.com/in/nasnyder/",
-  twitterProfile: `https://twitter.com/${twitterUsername}`,
+  twitterProfile: `https://bsky.app/profile/${twitterUsername}`,
 };
 
 export default {
