@@ -8,5 +8,5 @@ module.exports = {
       },
     },
   },
-  publicPath: "/nsnyder.github.com/",
+  publicPath: "/",
 };
