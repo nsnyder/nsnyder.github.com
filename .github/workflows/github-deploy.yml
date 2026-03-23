@@ -1,4 +1,4 @@
-name: Deploy to Github pages
+name: Deploy to Github Pages
 on:
   push:
     branches:
@@ -8,27 +8,19 @@ jobs:
     name: Deploying to master
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Node.js for use with actions
-        uses: actions/setup-node@v1.1.0
-        with:
-          version:  12.x
       - name: Checkout branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
 
       - name: Clean install dependencies
         run: npm ci
 
       - name: Run deploy script
         run: |
-          git config user.name "nsnyder" && git config user.email "nathan@snydern.com"
+          git config user.name "nsnyder"
+          git config user.email "nathan@snydern.com"
           npm run github-deploy
-      - name: Get commit message
-        run: |
-           echo ::set-env name=commitmsg::$(git log --format=%B -n 1 ${{ env.GITHUB_SHA }})
-      - name: "Tell IFTTT when the site is deployed"
-        uses: alfredosalzillo/ifttt-webhook-action@master
-        with:
-          key: "${{ secrets.IFTTT_KEY }}"
-          event: "site_deployed"
-          value1: "https://www.snydern.com"
-          value2: "${{ env.commitmsg }}"
