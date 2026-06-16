@@ -6,7 +6,7 @@
       aria-label="Nathan sitting on a pier in Los Angeles"
     />
     <div class="relative w-full h-full bleed">
-      <triangles
+      <BackgroundTriangles
         color-class-light="bg-teal-600"
         color-class-dark="bg-teal-700"
       />
@@ -56,32 +56,26 @@
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
   import StringPairs from "~/types/StringPairs";
   import SvgIcon from "~/components/partials/SvgIcon.vue";
-  import Triangles from "~/components/partials/Triangles.vue";
+  import BackgroundTriangles from "~/components/partials/BackgroundTriangles.vue";
   import { emailAddress, urls } from "~/constants";
-  import { defineComponent } from "vue";
+  import { type LinkHTMLAttributes, computed } from "vue";
 
-  export default defineComponent({
-    name: "Header",
+  const socialLinks = computed(
+    (): {
+      icon: string;
+      attributes: LinkHTMLAttributes;
+      svgAttributes: StringPairs;
+    }[] => {
+      const commonLinkAttributes: LinkHTMLAttributes = { rel: "noopener" };
 
-    components: {
-      SvgIcon,
-      Triangles,
-    },
-
-    props: {},
-
-    setup() {
-      const socialLinks: {
-        icon: string;
-        attributes: StringPairs;
-        svgAttributes: StringPairs;
-      }[] = [
+      return [
         {
           icon: "Github",
           attributes: {
+            ...commonLinkAttributes,
             href: urls.githubProfile,
             title: "My Github profile",
           },
@@ -92,6 +86,7 @@
         {
           icon: "LinkedIn",
           attributes: {
+            ...commonLinkAttributes,
             href: urls.linkedInProfile,
             title: "My LinkedIn profile",
           },
@@ -102,6 +97,7 @@
         {
           icon: "Bluesky",
           attributes: {
+            ...commonLinkAttributes,
             href: urls.blueSkyProfile,
             title: "My Blue Sky profile",
           },
@@ -110,16 +106,8 @@
           },
         },
       ];
-
-      // Implement best security practices for external links.
-      socialLinks.forEach((link) => (link.attributes.rel = "noopener"));
-
-      return {
-        emailAddress,
-        socialLinks,
-      };
-    },
-  });
+    }
+  );
 </script>
 
 <style scoped>

@@ -19,30 +19,11 @@
   </div>
 </template>
 
-<script lang="ts">
-  import { defineComponent } from "vue";
-
-  export default defineComponent({
-    name: "Triangles",
-
-    props: {
-      colorClassLight: {
-        required: true,
-        type: String,
-      },
-      colorClassDark: {
-        required: true,
-        type: String,
-      },
-    },
-
-    setup(props) {
-      return {
-        colorClassDark: props.colorClassDark,
-        colorClassLight: props.colorClassLight,
-      };
-    },
-  });
+<script setup lang="ts">
+  defineProps<{
+    colorClassLight: string;
+    colorClassDark: string;
+  }>();
 </script>
 
 <style scoped>
