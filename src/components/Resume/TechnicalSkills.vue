@@ -2,9 +2,7 @@
   <div class="grid-cols-main">
     <!-- TODO: Pick a great font for headings. -->
     <div class="text-xl font-bold lg:text-right grid-sidebar">
-      <h2 class="mt-4 skew-label">
-        Technical Skills
-      </h2>
+      <h2 class="mt-4 skew-label">Technical Skills</h2>
     </div>
 
     <!-- TODO: Adapt this to fit with the larger grid structure better. -->
@@ -17,7 +15,7 @@
         :key="index"
         class="relative overflow-hidden bg-gray-100 rounded shadow-sm"
       >
-        <triangles
+        <BackgroundTriangles
           color-class-light="bg-gray-200"
           color-class-dark="bg-gray-300"
         />
@@ -46,70 +44,47 @@
   </div>
 </template>
 
-<script lang="ts">
-  import {
-    defineComponent,
-    onMounted,
-    computed,
-    ref,
-  } from "vue";
+<script setup lang="ts">
+  import { onMounted, computed, ref } from "vue";
   import useStaggeredGridReveal from "~/mixins/useStaggeredGridReveal";
-  import Triangles from "~/components/partials/Triangles.vue";
+  import BackgroundTriangles from "~/components/partials/BackgroundTriangles.vue";
 
-  export default defineComponent({
-    name: "TechnicalSkills",
-
-    components: {
-      Triangles,
+  const technicalEntries = ref([
+    {
+      title: "Frontend Technologies",
+      bullets: [
+        "HTML5",
+        "CSS3",
+        "Javascript",
+        "VueJS",
+        "VueX",
+        "Sass CSS",
+        "npm",
+      ],
     },
-
-    props: {},
-
-    setup() {
-      const technicalEntries = ref([
-        {
-          title: "Frontend Technologies",
-          bullets: [
-            "HTML5",
-            "CSS3",
-            "Javascript",
-            "VueJS",
-            "VueX",
-            "Sass CSS",
-            "npm",
-          ],
-        },
-        {
-          title: "Backend Technologies",
-          bullets: ["PHP", "C#", "Laravel", "SQL Server"],
-        },
-        {
-          title: "Concepts and Tools",
-          bullets: [
-            "Agile Development",
-            "MVC Patterns",
-            "Object Oriented Programming",
-            "Git Version Control",
-            "PHP Storm",
-            "Visual Studio Code",
-          ],
-        },
-      ]);
-
-      const visibleElementsCount = ref(0);
-      const entriesCount = computed(() => technicalEntries.value.length);
-
-      // Mixin.
-      const grid = ref<HTMLElement | null>(null);
-      const { observeGrid } = useStaggeredGridReveal();
-
-      onMounted(() => observeGrid(grid, visibleElementsCount, entriesCount));
-
-      return {
-        grid,
-        technicalEntries,
-        visibleElementsCount,
-      };
+    {
+      title: "Backend Technologies",
+      bullets: ["PHP", "C#", "Laravel", "SQL Server"],
     },
-  });
+    {
+      title: "Concepts and Tools",
+      bullets: [
+        "Agile Development",
+        "MVC Patterns",
+        "Object Oriented Programming",
+        "Git Version Control",
+        "PHP Storm",
+        "Visual Studio Code",
+      ],
+    },
+  ]);
+
+  const visibleElementsCount = ref(0);
+  const entriesCount = computed(() => technicalEntries.value.length);
+
+  // Mixin.
+  const grid = ref<HTMLElement | null>(null);
+  const { observeGrid } = useStaggeredGridReveal();
+
+  onMounted(() => observeGrid(grid, visibleElementsCount, entriesCount));
 </script>
