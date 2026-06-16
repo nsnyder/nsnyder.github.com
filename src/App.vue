@@ -1,26 +1,15 @@
 <template>
   <div id="app" class="font-sans">
-    <Header />
-    <Resume />
-    <Footer />
+    <PageHeader />
+    <MyResume />
+    <PageFooter />
   </div>
 </template>
 
-<script lang="ts">
-  import { defineComponent } from "vue";
-  import Footer from "~/components/Footer.vue";
-  import Header from "~/components/Header.vue";
-  import Resume from "~/components/Resume/Resume.vue";
-
-  export default defineComponent({
-    name: "App",
-
-    components: {
-      Footer,
-      Header,
-      Resume,
-    },
-  });
+<script setup lang="ts">
+  import PageFooter from "~/components/PageFooter.vue";
+  import PageHeader from "~/components/PageHeader.vue";
+  import MyResume from "~/components/Resume/MyResume.vue";
 </script>
 
 <style>

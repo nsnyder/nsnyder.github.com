@@ -33,56 +33,41 @@
   </footer>
 </template>
 
-<script lang="ts">
-  import { defineComponent } from "vue";
+<script setup lang="ts">
   import { emailAddress, urls } from "~/constants";
 
-  export default defineComponent({
-    name: "Footer",
-
-    props: {},
-
-    setup() {
-      const socialLinks = [
-        {
-          text: "Github",
-          attributes: {
-            href: urls.githubProfile,
-          },
-        },
-        {
-          text: "LinkedIn",
-          attributes: {
-            href: urls.linkedInProfile,
-          },
-        },
-        {
-          text: "Blue Sky",
-          attributes: {
-            href: urls.blueSkyProfile,
-          },
-        },
-        {
-          text: "Blog",
-          attributes: {
-            href: urls.blogUrl,
-          },
-        },
-        {
-          text: "Instagram",
-          attributes: {
-            href: urls.instagramProfile,
-          },
-        },
-      ];
-
-      return {
-        emailAddress,
-        socialLinks,
-        urls,
-      };
+  const socialLinks = [
+    {
+      text: "Github",
+      attributes: {
+        href: urls.githubProfile,
+      },
     },
-  });
+    {
+      text: "LinkedIn",
+      attributes: {
+        href: urls.linkedInProfile,
+      },
+    },
+    {
+      text: "Blue Sky",
+      attributes: {
+        href: urls.blueSkyProfile,
+      },
+    },
+    {
+      text: "Blog",
+      attributes: {
+        href: urls.blogUrl,
+      },
+    },
+    {
+      text: "Instagram",
+      attributes: {
+        href: urls.instagramProfile,
+      },
+    },
+  ];
 </script>
 
 <style scoped>
